@@ -5,17 +5,12 @@ This README is for learning only. Reproduction or redistribution without giving 
 
 # React!  
 
-[Getting Npm & Node](#npm-and-node)
-
-[Css, Tailwind](#css-framework-tailwind)
-
-[Project structure & Folders](#index-dot-html)
-
-[React Routing](#react-routing)  
-
-[React Routing Complex](#complex-routing)
-
-[Hosting](#hosting)
+1. [Getting Npm & Node](#npm-and-node)
+2. [Css, Tailwind](#css-framework-tailwind)
+3. [Project structure & Folders](#index-dot-html)
+4. [React Routing](#react-routing)  
+5. [React Routing Complex](#complex-routing)
+6. [Hosting](#hosting)
 
 # Npm and Node
 
@@ -26,7 +21,9 @@ This README is for learning only. Reproduction or redistribution without giving 
 > #### Steps
 >
 > - Making a folder, opening in VS code, in terminal  
->   `npm create vite@latest Client`
+>   ```jsx
+>    npm create vite@latest Client
+>    ```
 > - package name : client
 > - Select framework: react
 > - select variant: javascript
@@ -56,9 +53,9 @@ This README is for learning only. Reproduction or redistribution without giving 
 | display: flex      | flex                |
 
 > Run the code inside **Client** folder 
-```jsx
-npm install tailwindcss @tailwindcss/vite
-```
+> ```jsx
+> npm install tailwindcss @tailwindcss/vite
+> ```
 
 #### Setting up Tailwindcss
 
