@@ -4,7 +4,16 @@ const Footer = () => {
   return (
     <footer className="p-4 bg-black/20 backdrop-blur-sm text-center text-white">
       <p>
-        &copy; CSE: <span className="rabbit-glow">Mr_Rabbit</span>
+        &copy; CSE | <span className="rabbit-glow">Mr_Rabbit</span> |{" "}
+        <span>
+          <a
+            href="https://github.com/RabbitJahir"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            GitHub
+          </a>
+        </span>
       </p>
 
       <p>
