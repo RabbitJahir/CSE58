@@ -1,7 +1,9 @@
 # Written by @RabbitJahir — official source: https://github.com/RabbitJahir/CSE58
 ## 📌 Usage Notice
 This README is for learning only. Reproduction or redistribution without giving the Author's name is prohibited.  
->#############################################################################################################  
+
+---  
+---
 
 # React!  
 
@@ -11,6 +13,9 @@ This README is for learning only. Reproduction or redistribution without giving 
 4. [React Routing](#react-routing)  
 5. [React Routing Complex](#complex-routing)
 6. [Hosting](#hosting)
+
+---
+---
 
 # Npm and Node
 
@@ -38,19 +43,132 @@ This README is for learning only. Reproduction or redistribution without giving 
 
 > to run the code in browser, go to client folder in terminal and type `npm run dev`, hit enter. 
 
+---
+
 [TOP](#react)
+
+---
+---
 
 # CSS Framework, Tailwind
 
 > Tailwindcss is how we make our css more efficient.
 > `<p className='text-white text-lg'>Learning to use Tailwind!</p>`
 
-| css                | Tailwind            |
-| ------------------ | ------------------- |
-| text-color: white; | text-white          |
-| text-size: 30px;   | text-lg, sm, xl, xs |
-| display: flex      | flex                |
-| display: flex      | flex                |
+# Tailwind CSS Cheat Sheet
+
+## 1. Text / Typography
+
+| CSS Property                    | Tailwind Classes                  |
+|---------------------------------|----------------------------------|
+| `color: white;`                 | `text-white`                     |
+| `color: black;`                 | `text-black`                     |
+| `color: red;`                   | `text-red-500`                   |
+| `font-size: 12px;`              | `text-xs`                        |
+| `font-size: 14px;`              | `text-sm`                        |
+| `font-size: 16px;`              | `text-base`                      |
+| `font-size: 18px;`              | `text-lg`                        |
+| `font-size: 24px;`              | `text-xl`                        |
+| `font-size: 30px;`              | `text-2xl`                       |
+| `font-weight: normal;`          | `font-normal`                    |
+| `font-weight: bold;`            | `font-bold`                      |
+| `text-align: left;`             | `text-left`                      |
+| `text-align: center;`           | `text-center`                    |
+| `text-align: right;`            | `text-right`                     |
+| `text-decoration: underline;`   | `underline`                      |
+| `text-decoration: none;`        | `no-underline`                   |
+| `line-height: 1.5;`             | `leading-relaxed`                |
+| `letter-spacing: 2px;`          | `tracking-wider`                 |
+| `text-transform: uppercase;`    | `uppercase`                      |
+| `text-transform: lowercase;`    | `lowercase`                      |
+| `text-transform: capitalize;`   | `capitalize`                     |
+
+---
+
+## 2. Layout / Display
+
+| CSS Property                     | Tailwind Classes                  |
+|----------------------------------|----------------------------------|
+| `display: block;`                | `block`                           |
+| `display: inline-block;`         | `inline-block`                    |
+| `display: inline;`               | `inline`                          |
+| `display: flex;`                 | `flex`                            |
+| `flex-direction: row;`           | `flex-row`                        |
+| `flex-direction: column;`        | `flex-col`                        |
+| `justify-content: start;`        | `justify-start`                   |
+| `justify-content: center;`       | `justify-center`                  |
+| `justify-content: end;`          | `justify-end`                     |
+| `justify-content: space-between;`| `justify-between`                 |
+| `justify-content: space-around;` | `justify-around`                  |
+| `align-items: start;`            | `items-start`                     |
+| `align-items: center;`           | `items-center`                    |
+| `align-items: end;`              | `items-end`                       |
+| `flex-wrap: wrap;`               | `flex-wrap`                       |
+| `flex-wrap: nowrap;`             | `flex-nowrap`                     |
+| `gap: 4px;`                      | `gap-1`                            |
+| `gap: 8px;`                      | `gap-2`                            |
+
+---
+
+## 3. Spacing (Margin & Padding)
+
+| CSS Property          | Tailwind Classes       |
+|-----------------------|----------------------|
+| `margin: 0;`          | `m-0`                |
+| `margin: 4px;`        | `m-1`                |
+| `margin: 8px;`        | `m-2`                |
+| `margin-top: 8px;`    | `mt-2`               |
+| `margin-bottom: 16px;`| `mb-4`               |
+| `padding: 0;`         | `p-0`                |
+| `padding: 4px;`       | `p-1`                |
+| `padding: 8px;`       | `p-2`                |
+| `padding-top: 16px;`  | `pt-4`               |
+| `padding-bottom: 16px;`| `pb-4`              |
+
+---
+
+## 4. Background & Borders
+
+| CSS Property                  | Tailwind Classes        |
+|--------------------------------|-----------------------|
+| `background-color: red;`       | `bg-red-500`          |
+| `background-color: blue;`      | `bg-blue-500`         |
+| `background-color: green;`     | `bg-green-500`        |
+| `border: 1px solid black;`     | `border border-black` |
+| `border-radius: 4px;`          | `rounded`             |
+| `border-radius: 9999px;`       | `rounded-full`        |
+| `border-top: 2px;`             | `border-t-2`          |
+| `border-bottom: 2px;`          | `border-b-2`          |
+
+---
+
+## 5. Width & Height
+
+| CSS Property       | Tailwind Classes    |
+|-------------------|-------------------|
+| `width: 100%;`     | `w-full`           |
+| `width: 50%;`      | `w-1/2`            |
+| `height: 100%;`    | `h-full`           |
+| `height: 50%;`     | `h-1/2`            |
+| `min-width: 100px;`| `min-w-[100px]`    |
+| `max-width: 500px;`| `max-w-[500px]`    |
+
+---
+
+## 6. Positioning
+
+| CSS Property                  | Tailwind Classes        |
+|--------------------------------|-----------------------|
+| `position: relative;`          | `relative`            |
+| `position: absolute;`          | `absolute`            |
+| `position: fixed;`             | `fixed`               |
+| `top: 0;`                      | `top-0`               |
+| `right: 0;`                    | `right-0`             |
+| `bottom: 0;`                   | `bottom-0`            |
+| `left: 0;`                     | `left-0`              |
+| `z-index: 10;`                 | `z-10`                |
+
+---
 
 > Run the code inside **Client** folder 
 > ```jsx
@@ -60,15 +178,31 @@ This README is for learning only. Reproduction or redistribution without giving 
 #### Setting up Tailwindcss
 
 > go to `vite.config.js` folder  
-> add this line `import tailwindcss from '@tailwindcss/vite' `  
+> add this line 
+>```jsx
+>import tailwindcss from '@tailwindcss/vite' 
+>```  
 > with other imports.  
 > `tailwindcss() ` with other plugins.  
->  `plugins: [react(), tailwindcss()],`something like this.
+>  ```jsx
+>  plugins: [react(), tailwindcss()],
+>```
+>something like this.
 
 > Inside `index.css`  
->  delete everything and paste `@import "tailwindcss";`  
+>  delete everything and paste 
+>```jsx
+>@import "tailwindcss";
+>```  
+
+---
+---
 
 [TOP](#react)
+
+---
+---
+
 # index dot html
 
 > the entry point that a browser or any other hosting platform looks for. **No change** in index.html untill you understand everything.
@@ -78,10 +212,10 @@ This README is for learning only. Reproduction or redistribution without giving 
 > index.css inside src, just the css code
 
     structure ` import './name.css' `
-
+---
 # src
 
-> the main folder where we actually make files and write codes.
+> The main folder where we actually create files and write codes.
 
 > **main.jsx** is the entry script to other scripts, this renders our app, auto imports libraries, we can add more when needed.
 
@@ -92,7 +226,7 @@ This README is for learning only. Reproduction or redistribution without giving 
 
 > **StrictMode** a safety wrapper, warns about open APIs, double renders to catch any side effect, it is safe to remove in production, but better to keep it. And this gets stripped automatically in builds. Third-party libraries can act weird when in strictmode.
 
-> **createRoot** finds the div id=root from index.html. we see that App is wrapped in basically everything. So, App is the main place where we start coding, editing our webpage.
+> **createRoot** finds the div id=root from index.html. We see that App is wrapped in basically everything. So, App is the main place where we start coding, editing our webpage.
 
 > **Important** to load every page that we want to edit in a file, first we load the code, then the code runs when we call it.
 ```jsx
@@ -101,11 +235,12 @@ This README is for learning only. Reproduction or redistribution without giving 
 
 > **NOTE**  
 > we use import App_name because we use 
-```jsx
-jsx export default App_name 
-``` 
+>```jsx
+> export default App_name 
+>``` 
 >at end of every jsx files.
-
+---
+---
 # File Structure
 
 > JSX, or JavaScript XML, is a syntax extension for JavaScript primarily used with React to create UI components by writing HTML-like code directly inside JavaScript files. So we use function to make a static web page, or javascript.
@@ -138,6 +273,8 @@ export default AppName;
 
 const is the modern way.
 
+---
+---
 # public
 
 > Use this folder to add pdfs for a clean structure, and just call them in the jsx files.
@@ -151,6 +288,9 @@ const is the modern way.
 > `<a href="name-of.pdf"></a>`  
 > `<a href="if-inside/a-folder/name-of.pdf"></a> `  
 > we dont need to use `../` to go back or `/pages` href in react automatically goes inside public and looks for pdfs or images.
+
+---
+---
 
 # node_modulus
 
@@ -175,7 +315,7 @@ const is the modern way.
 - > word-wrap : in npm, too break words by characters, can be used to display in broswer.
 
 - > natural-compare : uses human friendly sorting method.
-
+---
 # libraries
 
 - `npm install react-wrap-balancer` to auto balance titles or divs
@@ -183,7 +323,14 @@ const is the modern way.
 - `npm install react-router-dom` navigation between pages
 - `npm install tailwind-scrollbar-hide` hides scrollbar  
 
+---
+---
+
 [TOP](#react)
+
+---
+---
+
 # React-Routing
 
 > Any file you make, it must be PascalCase.
@@ -196,41 +343,41 @@ const is the modern way.
 
 - First we install `npm install react-router-dom` in Client
 
-- import The library in main.jsx
-
-```jsx
-    import {BrowserRouter} from 'react-router-dom'
-
-	createRoot(document.getElementById('root')).render(
-	  <BrowserRouter>
-	    <App />
-	  </BrowserRouter>
-	)
-```
+> import The library in main.jsx
+>
+>```jsx
+>    import {BrowserRouter} from 'react-router-dom'
+>
+>	createRoot(document.getElementById('root')).render(
+>	  <BrowserRouter>
+>	    <App />
+>	  </BrowserRouter>
+>	)
+>```
 
 > BrowserRouter is a component of the react-router-dom library.
 >
 > - We wrap our main router with `<BrowserRouter> </BrowserRouter> `
 > - For now, App.jsx is the main file where we do our wiring .
 
-- Add the routings in App.jsx:
-
-```jsx
-	import {Routes, Route} from 'react-router-dom';
-
-	function App(){
-	  return(
-	    <>
-	      <div>
-	      <Routes>
-		<Route path='/' element={ } />
-		<Route path=' ' element={ } />
-	      </Routes>
-	      </div>
-	    </>
-	  );
-	}
-```
+> Add the routings in App.jsx:
+>
+>```jsx
+>	import {Routes, Route} from 'react-router-dom';
+>
+>	function App(){
+>	  return(
+>	    <>
+>	      <div>
+>	      <Routes>
+>		<Route path='/' element={ } />
+>		<Route path=' ' element={ } />
+>	      </Routes>
+>	      </div>
+>	    </>
+>	  );
+>	}
+>```
 
 > Routes and Route are also components.
 >
@@ -251,184 +398,203 @@ const is the modern way.
 
 ### `Link`
 
-```jsx 
- import { Link } from 'react-router-dom' 
-```
-
+>```jsx 
+> import { Link } from 'react-router-dom' 
+>```
+>
 > Link is how we make links that connects to different pages.
 >
 > - As HomePage is now the entry page, we will use links inside homepage,
-  
+
+---
+---  
 [TOP](#react)
+
+---
+---
 
 # Complex Routing
 
 > Routing for bigger projects, better to learn this. **RouterProvider**
 
 > **main.jsx**  
-```jsx
+>
+>```jsx
+>
+>import { createRoot } from "react-dom/client";
+>import "./index.css";
+>import App from "./App.jsx";
+>
+>createRoot(document.getElementById("root")).render(<App />);
+>```
 
-import { createRoot } from "react-dom/client";
-import "./index.css";
-import App from "./App.jsx";
-
-createRoot(document.getElementById("root")).render(<App />);
-```
 > **App.jsx**
-```jsx
-import { RouterProvider } from "react-router-dom";
-import router from "./router/router";
+>```jsx
+>import { RouterProvider } from "react-router-dom";
+>import router from "./router/router";
+>
+>const App = () => {
+>  return <RouterProvider router={router} />;
+>};
+>
+>export default App;
+>```
 
-const App = () => {
-  return <RouterProvider router={router} />;
-};
-
-export default App;
-```
 > Make a new folder in **src**, name it `router`, inside `router.jsx`
-```jsx
-import { createBrowserRouter } from "react-router-dom";
-
-import Home from "../MainPages/Home";
-import S12 from "../MainPages/S12";
-import Calendar from "../S12/Calendar/Calendar"
-import Wad from "../S12/Wad/index";
-import Opde from "../S12/Opde/index";
-import Discrete from "../S12/Discrete/index";
-import Oop from "../S12/Oop/index";
-import Eee from "../S12/Eee/index";
-import Ed from "../S12/Ed/index";
-import Bs from "../S12/Bs/index";
-import EeeLab from "../S12/Eee/EeeLab/EeeLab";
-import OopMid from "../S12/Oop/OopMid";
-import JavaCodes from "../S12/Oop/JavaCodes";
-import BsTimeLine from "../S12/Bs/BsHistory/BsTimeLine";
-import HtmlCodes  from "../S12/Wad/HtmlCodes";
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <Home />,
-  },
-  {
-    path: "/S12",
-    element: <S12 />,
-  },
-  {
-    path: "/S12/Calendar",
-    element: <Calendar />,
-  },
-  {
-    path: "/S12/Discrete",
-    element: <Discrete />,
-  },
-  {
-    path: "/S12/Wad",
-    element: <Wad />,
-  },
-  {
-    path: "/S12/Wad/HtmlCodes",
-    element: <HtmlCodes />,
-  },
-  {
-    path: "/S12/Oop",
-    element: <Oop />,
-  },
-  {
-    path: "/S12/Oop/JavaCodes",
-    element: <JavaCodes />,
-  },
-  {
-    path: "/S12/Oop/OopMid",
-    element: <OopMid/>,
-  },
-  {
-    path: "/S12/Opde",
-    element: <Opde />,
-  },
-  {
-    path: "/S12/Eee",
-    element: <Eee />,
-  },
-  {
-    path: "/S12/Eee/EeeLab",
-    element: <EeeLab />,
-  },
-  {
-    path: "/S12/Ed",
-    element: <Ed />,
-  },
-  {
-    path: "/S12/Bs",
-    element: <Bs />,
-  },
-  {
-    path: "/S12/Bs/BsHistory/BsTimeLine",
-    element: <BsTimeLine />,
-  },
-]);
-
-export default router;
-```
+>
+>```jsx
+>import { createBrowserRouter } from "react-router-dom";
+>
+>import Home from "../MainPages/Home";
+>import S12 from "../MainPages/S12";
+>import Calendar from "../S12/Calendar/Calendar"
+>import Wad from "../S12/Wad/index";
+>import Opde from "../S12/Opde/index";
+>import Discrete from "../S12/Discrete/index";
+>import Oop from "../S12/Oop/index";
+>import Eee from "../S12/Eee/index";
+>import Ed from "../S12/Ed/index";
+>import Bs from "../S12/Bs/index";
+>import EeeLab from "../S12/Eee/EeeLab/EeeLab";
+>import OopMid from "../S12/Oop/OopMid";
+>import JavaCodes from "../S12/Oop/JavaCodes";
+>import BsTimeLine from "../S12/Bs/BsHistory/BsTimeLine";
+>import HtmlCodes  from "../S12/Wad/HtmlCodes";
+>
+>const router = createBrowserRouter([
+>  {
+>    path: "/",
+>    element: <Home />,
+>  },
+>  {
+>    path: "/S12",
+>    element: <S12 />,
+>  },
+>  {
+>    path: "/S12/Calendar",
+>    element: <Calendar />,
+>  },
+>  {
+>    path: "/S12/Discrete",
+>    element: <Discrete />,
+>  },
+>  {
+>    path: "/S12/Wad",
+>    element: <Wad />,
+>  },
+>  {
+>    path: "/S12/Wad/HtmlCodes",
+>    element: <HtmlCodes />,
+>  },
+>  {
+>    path: "/S12/Oop",
+>    element: <Oop />,
+>  },
+>  {
+>    path: "/S12/Oop/JavaCodes",
+>    element: <JavaCodes />,
+>  },
+>  {
+>    path: "/S12/Oop/OopMid",
+>    element: <OopMid/>,
+>  },
+>  {
+>    path: "/S12/Opde",
+>    element: <Opde />,
+>  },
+>  {
+>    path: "/S12/Eee",
+>    element: <Eee />,
+>  },
+>  {
+>    path: "/S12/Eee/EeeLab",
+>    element: <EeeLab />,
+>  },
+>  {
+>    path: "/S12/Ed",
+>    element: <Ed />,
+>  },
+>  {
+>    path: "/S12/Bs",
+>    element: <Bs />,
+>  },
+>  {
+>    path: "/S12/Bs/BsHistory/BsTimeLine",
+>    element: <BsTimeLine />,
+>  },
+>]);
+>
+>export default router;
+>```
+>
 > A sample Structure, **path names can never be same**, even when in same folder, for example for Eee and EeeLab, Opde and OpdeMid, they are in same folder, but path has something extra, name of that folder, to make it unique
 
 ### children
 
 > Parent and children, to open a block on the same page, shows contents of the children, in parent page.
 > better way, use open, setOpen, when a block is clicked it opens and reclick hides it.
-```jsx
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-import OpdeMid from "./OpdeMid";
-import OpdeFinal from "./OpdeFinal";
-
-const Index = () => {
-  const [open, setOpen] = useState(null);
-
-  const toggle = (section) => {
-    if (open === section) {
-      setOpen(null);
-    } else {
-      setOpen(section);
-    }
-  };
-
-  return(
-		<button onClick={() => toggle("OpdeMid")}>Mid Syllabus</button>
-      {open === "OpdeMid" && <OpdeMid />}
-
-    <button onClick={() => toggle("OpdeFinal")}>Final Syllabus</button>
-      {open === "OpdeFinal" && <OpdeFinal />}
-	)
-}
-
-export default Index;
-```
+>```jsx
+>import React, { useState } from "react";
+>import { Link } from "react-router-dom";
+>import OpdeMid from "./OpdeMid";
+>import OpdeFinal from "./OpdeFinal";
+>
+>const Index = () => {
+>  const [open, setOpen] = useState(null);
+>
+>  const toggle = (section) => {
+>    if (open === section) {
+>      setOpen(null);
+>    } else {
+>      setOpen(section);
+>    }
+>  };
+>
+>  return(
+>		<button onClick={() => toggle("OpdeMid")}>Mid Syllabus</button>
+>      {open === "OpdeMid" && <OpdeMid />}
+>
+>    <button onClick={() => toggle("OpdeFinal")}>Final Syllabus</button>
+>      {open === "OpdeFinal" && <OpdeFinal />}
+>	)
+>}
+>
+>export default Index;
+>```
 > AI it, play with it, learn it, your way.
   
+---
+---
+
 [TOP](#react)
+
+---
+---
 
 # Hosting
 
 ### Auto Refresh Error
 
-> When hosting vite, there may be an error, page shows 404 when refreshed. To solve this, add  **vercel.json** in **Client** folder and paste this .
-
-```jsx
-{
-  "rewrites": [
-    { "source": "/(.*)", "destination": "/index.html" }
-  ]
-}
-```
-
+> When hosting vite, there may be an error, page shows 404 when refreshed. To solve this, add  
+> **vercel. json** in **Client** folder and paste this .
+>
+> ```jsx
+> {
+>   "rewrites": [
+>    { "source": "/(.*)", "destination": "/index.html" }
+>  ]
+>}
+>```
+>
 > - React Router uses client-side routing.
 > - Pasting that code makes React Router takes over client-side and renders the correct page.  
     
+---
+---
 
 [TOP](#react)
 
->#############################################################################################################
-
+---
+---
   
 <sub>© 2026 RabbitJahir. All rights reserved.</sub>
