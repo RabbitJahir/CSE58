@@ -29,7 +29,7 @@ const Footer = () => {
       drop-shadow-[0_0_5px_#FFD700]
       "
         >
-          inspirators: BitRanger, Zirconium001, Orange, LulzSec6824, HelloTeam
+          inspirators: BitRanger, Zirconium001, greyscale021, LulzSec6824, HelloTeam
         </span>
       </p>
     </footer>
