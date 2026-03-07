@@ -1,0 +1,150 @@
+@import "tailwindcss";
+@import "tailwind-scrollbar-hide/v4";
+
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #0f0f0f 100%);
+  color: #ffffff;
+  min-height: 100vh;
+}
+
+a.active {
+  color: #646cff;
+}
+
+/*-------------------------------------------ALL-BUTTON----------------------------------------------------------------*/
+button {
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 0.8em 1.6em;
+  font-size: 1em;
+  font-weight: 600;
+  font-family: inherit;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+
+  color: #ffffff;
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.5),
+    inset 0 1px 1px rgba(255, 255, 255, 0.05);
+}
+
+button:hover {
+  border-color: #646cff;
+
+  box-shadow:
+    0 0 10px #646cff,
+    0 0 20px #646cff55,
+    0 6px 25px rgba(0, 0, 0, 0.6);
+
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: translateY(0);
+  box-shadow:
+    0 0 5px #646cff,
+    inset 0 3px 8px rgba(0, 0, 0, 0.6);
+}
+
+/* Parent container styling */
+.mid-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem; /* space between buttons */
+  margin-top: 1.5rem;
+  padding: 1.5rem;
+  background: linear-gradient(
+    135deg,
+    #3b3b8f,
+    #646cff
+  ); /* dark card background */
+  border-radius: 1rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* SubButtons styling */
+.SubButton {
+  display: inline-block;
+  width: 16rem; /* fixed width */
+  padding: 0.75em 1.5em;
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  border: none;
+  border-radius: 0.75rem;
+  cursor: pointer;
+
+  /* Gradient background for subtle differences */
+  background: linear-gradient(135deg, #2a2a2a, #3a3a3a);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.SubButton:hover {
+  background: linear-gradient(135deg, #3a3a3a, #4a4a4a);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+  border: 2px solid #646cff; /* subtle neon border */
+}
+
+/* Active / glowing when section is open */
+.SubButton.active {
+  background: linear-gradient(135deg, #3b3b8f, #646cff);
+  box-shadow:
+    0 0 20px #646cff,
+    0 0 35px #646cff77;
+  transform: translateY(-1px);
+}
+
+/* Optional: style sub text */
+.SubButton sub {
+  font-size: 0.7em;
+  color: #cccccc;
+}
+
+/*-----------------------------------------FOOTER-SHINE-----------------------------------------------------------*/
+.rabbit-glow {
+  color: white;
+  position: relative;
+
+  background: linear-gradient(
+    90deg,
+    white 0%,
+    white 40%,
+    #ef4444 50%,
+    white 60%,
+    white 100%
+  );
+
+  background-size: 200% 100%;
+
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: rabbit-glow 2.5s linear infinite;
+}
+
+@keyframes rabbit-glow {
+  0% {
+    background-position: -100% center;
+  }
+  100% {
+    background-position: 100% center;
+  }
+}
+
+/*------------------------------------------------------------------------------------------------------------------*/
+
+html, body, #root {
+  overflow-x: hidden;
+}
+
