@@ -5,7 +5,7 @@ import Footer from "../../components/Footer";
 
 const w = () => {
   return (
-    <div className="min-h-screen text-white font-sans overflow-x-auto">
+    <div className="min-h-screen flex flex-col">
       <header className="flex flex-col sm:flex-row items-center justify-between p-4 bg-black/20 backdrop-blur-sm text-white w-full gap-2 sm:gap-4">
         {/* Left: logo */}
         <div className="flex items-center gap-4">
