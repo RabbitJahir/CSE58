@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Footer from "../../../components/Footer";
-import Header from "../../../components/Header";
+import Logosrc from "../../../components/Logosrc";
 
 const BsTimeLine = () => {
   const events = [
@@ -40,16 +40,34 @@ const BsTimeLine = () => {
 
   return (
     <div className="min-h-screen bg-blue-900 text-white font-sans overflow-x-auto">
-      {/* Home Box */}
-      <Header/>
-      <div className="home-box p-6 text-center">
+      <header className="flex flex-col sm:flex-row items-center justify-between p-4 bg-blue-950 text-white w-full gap-2 sm:gap-4">
+        {/* Left: logo */}
+        <div className="flex items-center gap-4">
+          <Logosrc className="mx-auto sm:mx-0" />
+        </div>
+
+        {/* Right: buttons */}
+        <div className="flex flex-wrap gap-2">
+          <Link to="/">
+            <button className="px-3 py-1 bg-yellow-500 text-black rounded hover:bg-yellow-400">
+              Home Page
+            </button>
+          </Link>
+          <Link to="/S12">
+            <button className="px-3 py-1 bg-yellow-500 text-black rounded hover:bg-yellow-400">
+              S 12 Page
+            </button>
+          </Link>
+          <Link to="/S12/Bs">
+            <button className="px-3 py-1 bg-yellow-500 text-black rounded hover:bg-yellow-400">
+              BS Page
+            </button>
+          </Link>
+        </div>
+      </header>
+
+      <div className="p-6 text-center">
         <h2 className="text-2xl mb-2">Welcome to Bengal Timeline Page</h2>
-        <Link
-          to="/S12/Bs"
-          className="inline-block px-4 py-2 bg-yellow-500 text-black rounded hover:bg-yellow-400"
-        >
-          BS page
-        </Link>
       </div>
 
       <h1 className="text-3xl text-yellow-400 text-center mt-10">
@@ -95,7 +113,7 @@ const BsTimeLine = () => {
           ))}
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </div>
   );
 };
