@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { oopCodes } from "./OopCodes";//same folder
+import {Codes } from "./Codes"; //same folder!
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
 
-const JavaCodes = () => {
+const HtmlCodes = () => {
   const [open, setOpen] = useState(null);
 
   const toggle = (id) => {
@@ -20,10 +20,10 @@ const JavaCodes = () => {
       <Header/>
       <main className="flex-grow p-4 flex flex-col gap-4 w-full max-w-4xl mx-auto">
       <h1 className="text-3xl font-bold text-center mb-6 text-white">
-        OOP Mid Java Codes
+        Html Codes
       </h1>
 
-      {oopCodes.map((snippet, index) => (
+      {Codes.map((snippet, index) => (
         <div key={snippet.id} className="bg-black/20 p-4 rounded-lg text-white relative">
           <button
             className="flex justify-between items-center w-full text-left font-bold"
@@ -54,4 +54,4 @@ const JavaCodes = () => {
   );
 };
 
-export default JavaCodes;
+export default HtmlCodes;

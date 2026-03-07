@@ -14,6 +14,7 @@ import EeeLab from "../S12/Eee/EeeLab/EeeLab";
 import OopMid from "../S12/Oop/OopMid";
 import JavaCodes from "../S12/Oop/JavaCodes";
 import BsTimeLine from "../S12/Bs/BsHistory/BsTimeLine";
+import HtmlCodes  from "../S12/Wad/HtmlCodes";
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,10 @@ const router = createBrowserRouter([
   {
     path: "/S12/Wad",
     element: <Wad />,
+  },
+  {
+    path: "/S12/Wad/HtmlCodes",
+    element: <HtmlCodes />,
   },
   {
     path: "/S12/Oop",

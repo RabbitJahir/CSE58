@@ -27,6 +27,8 @@ const Index = () => {
           </button>
         </a>
 
+        <Link className="SubButton" to="HtmlCodes"> Html Codes </Link>
+
         <button onClick={() => toggle("WadMid")} className="SubButton">
           Mid Syllabus
         </button>
