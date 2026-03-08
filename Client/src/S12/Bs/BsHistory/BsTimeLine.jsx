@@ -40,32 +40,33 @@ const BsTimeLine = () => {
 
   return (
     <div className="min-h-screen bg-blue-900 text-white font-sans overflow-x-auto">
-      <header className="flex flex-col sm:flex-row items-center justify-between p-4 bg-blue-950 text-white w-full gap-2 sm:gap-4">
-        {/* Left: logo */}
+        {/*------------------------------HEADER----------------------------------------------- */}
+      <header className="s12header">
+      
         <div className="flex items-center gap-4">
-          <Logosrc className="mx-auto sm:mx-0" />
+          <Logosrc  />
         </div>
 
-        {/* Right: buttons */}
+        
         <div className="flex flex-wrap gap-2">
           <Link to="/">
-            <button className="px-3 py-1 bg-yellow-500 text-black rounded hover:bg-yellow-400">
+            <button >
               Home Page
             </button>
           </Link>
           <Link to="/S12">
-            <button className="px-3 py-1 bg-yellow-500 text-black rounded hover:bg-yellow-400">
+            <button >
               S 12 Page
             </button>
           </Link>
           <Link to="/S12/Bs">
-            <button className="px-3 py-1 bg-yellow-500 text-black rounded hover:bg-yellow-400">
+            <button >
               BS Page
             </button>
           </Link>
         </div>
       </header>
-
+  {/*------------------------------MAIN----------------------------------------------- */}
       <div className="p-6 text-center">
         <h2 className="text-2xl mb-2">Welcome to Bengal Timeline Page</h2>
       </div>

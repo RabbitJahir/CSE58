@@ -17,42 +17,37 @@ const Index = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="flex flex-col sm:flex-row items-center justify-between p-4 bg-black/20 backdrop-blur-sm text-white w-full gap-2 sm:gap-4">
-        {/* Left: logo */}
+      {/*------------------------------MAIN----------------------------------------------- */}
+      <header className="s12header">
         <div className="flex items-center gap-4">
-          <Logosrc className="mx-auto sm:mx-0" />
+          <Logosrc/>
         </div>
 
-        {/* Right: buttons */}
         <div className="flex flex-wrap gap-2">
           <Link to="/">
-            <button className="px-3 py-1 bg-yellow-500 text-black rounded hover:bg-yellow-400">
-              Home Page
-            </button>
+            <button>Home Page</button>
           </Link>
           <Link to="/S12">
-            <button className="px-3 py-1 bg-yellow-500 text-black rounded hover:bg-yellow-400">
-              S 12 Page
-            </button>
+            <button>S 12 Page</button>
           </Link>
         </div>
       </header>
-      
+      {/*------------------------------MAIN----------------------------------------------- */}
       <main className="flex-grow p-4 text-white flex flex-col items-center gap-4">
         <h2 className="text-2xl font-bold">
           Fundamentals of Electrical Engineering Page
         </h2>
-        <a href="/Eee/EeeMainBook.pdf">
+        <a href="/S12/Eee/EeeMainBook.pdf">
           <button className="SubButton">
             Main Book <sub>-Download</sub>
           </button>
         </a>
-        
+
         <Link to="EeeLab" className="SubButton">
           Eee Lab Page
         </Link>
 
-        <button className="SubButton" onClick={() => toggle("EeeMid")} >
+        <button className="SubButton" onClick={() => toggle("EeeMid")}>
           Mid Syllabus
         </button>
         {open === "EeeMid" && <EeeMid />}

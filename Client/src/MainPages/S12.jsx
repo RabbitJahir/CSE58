@@ -1,14 +1,13 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
 import "./S12.css";
-import Header from "../components/Header";
 import Footer from "../components/Footer";
 import Logosrc from "../components/Logosrc";
 
 const S12 = () => {
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="flex flex-col sm:flex-row items-center justify-between p-4 bg-black/20 backdrop-blur-sm text-white w-full gap-2 sm:gap-4">
+      <header className="s12header">
         {/* Left: logo */}
         <div className="flex items-center gap-4">
           <Logosrc className="mx-auto sm:mx-0" />

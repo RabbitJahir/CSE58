@@ -1,23 +1,12 @@
-import React, { useState } from "react";
-import EdMid from "./EdMid";
-import EdFinal from "./EdFinal";
-import Footer from "../../components/Footer";
+import React from "react";
 import Logosrc from "../../components/Logosrc";
 import { Link } from "react-router-dom";
+import Footer from "../../components/Footer";
 
-const Index = () => {
-  const [open, setOpen] = useState(null);
-  const toggle = (section) => {
-    if (open === section) {
-      setOpen(null);
-    } else {
-      setOpen(section);
-    }
-  };
-
+const index = () => {
   return (
     <div className="min-h-screen flex flex-col">
-      {/*------------HEADER----------------------------------------------- */}
+      {/*------------------------------HEADER----------------------------------------------- */}
       <header className="s12header">
         <div className="flex items-center gap-4">
           <Logosrc />
@@ -34,17 +23,19 @@ const Index = () => {
       </header>
       {/*------------------------------MAIN----------------------------------------------- */}
       <main className="flex-grow p-4 text-white flex flex-col items-center gap-4">
-        <h2 className="text-2xl font-bold">Engineering Drawing Page</h2>
+        <img src="/S12/Calendar/calendar.jpeg" alt="uni_calendar"></img>
+        <a className="SubButton" href="/S12/Calendar/calendar.jpeg">
+          2A Calendar<sub> -Download</sub>
+        </a>
 
-        <button onClick={() => toggle("EdMid")}>Mid Syllabus</button>
-        {open === "EdMid" && <EdMid />}
-
-        <button onClick={() => toggle("EdFinal")}>Final Syllabus</button>
-        {open === "EdFinal" && <EdFinal />}
+        <img src="/S12/Calendar/ramadan.jpeg" alt="ramadan_calendar"></img>
+        <a className="SubButton" href="/S12/Calendar/ramadan.jpeg">
+          2A Calendar<sub> -Download</sub>
+        </a>
       </main>
       <Footer />
     </div>
   );
 };
 
-export default Index;
+export default index;

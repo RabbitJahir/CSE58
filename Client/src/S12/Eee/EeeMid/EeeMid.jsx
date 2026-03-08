@@ -17,17 +17,17 @@ const EeeMid = () => {
       </button>
       {open === "EeeCh1" && (
         <div className="flex flex-col gap-2">
-          <a href="/Eee/EeeCh1Book.pdf">
+          <a href="/S12/Eee/EeeCh1Book.pdf">
             <button className="SubButton">
               Book <sub>-Download</sub>
             </button>
           </a>
-          <a href="/Eee/EeeCh1Notes.pdf">
+          <a href="/S12/Eee/EeeCh1Notes.pdf">
             <button className="SubButton">
               Notes <sub>-Download</sub>
             </button>
           </a>
-          <a href="/Eee/EeeCh1Answers.pdf">
+          <a href="/S12/Eee/EeeCh1Answers.pdf">
             <button className="SubButton">
               Answers <sub>-Download</sub>
             </button>
@@ -40,17 +40,17 @@ const EeeMid = () => {
       </button>
       {open === "EeeCh2" && (
         <div className="flex flex-col gap-2">
-          <a href="/Eee/EeeCh2Book.pdf">
+          <a href="/S12/Eee/EeeCh2Book.pdf">
             <button className="SubButton">
               Book <sub>-Download</sub>
             </button>
           </a>
-          <a href="/Eee/EeeCh2Notes.pdf">
+          <a href="/S12/Eee/EeeCh2Notes.pdf">
             <button className="SubButton">
               Notes <sub>-Download</sub>
             </button>
           </a>
-          <a href="/Eee/EeeCh2Ques.pdf">
+          <a href="/S12/Eee/EeeCh2Ques.pdf">
             <button className="SubButton">
               Questions <sub>-Download</sub>
             </button>

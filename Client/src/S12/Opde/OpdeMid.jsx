@@ -7,15 +7,15 @@ const OpdeMid = () => {
         <button className="SubButton ">Separation Method <sub>-Download</sub></button>
       </a>
 
-      <a href="/Opde/OpdeOrthogonal.pdf">
+      <a href="/S12/Opde/OpdeOrthogonal.pdf">
         <button className="SubButton">Orthogonal <sub>-Download</sub></button>
       </a>
 
-      <a href="/Opde/OpdeHomogeneous.pdf">
+      <a href="/S12/Opde/OpdeHomogeneous.pdf">
         <button className="SubButton">Homogeneous Method <sub>-Download</sub></button>
       </a>
 
-      <a href="/Opde/OpdeExact.pdf">
+      <a href="/S12/Opde/OpdeExact.pdf">
         <button className="SubButton">Exact Differential Equation <sub>-Download</sub></button>
       </a>
     </div>

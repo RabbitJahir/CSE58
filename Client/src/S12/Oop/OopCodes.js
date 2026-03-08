@@ -31,19 +31,6 @@ class Dog extends Animal {
     }
 }`,
   },
-  {
-    id: 3,
-    title: "WTF",
-    description: "NONE",
-    code: `WOW`,
-  },
-  {
-    id: 4,
-    title: "WTF",
-    description: "NONE",
-    code: `WOW`,
-  },
-  
 
-/* */
+  /* */
 ];

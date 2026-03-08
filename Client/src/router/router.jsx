@@ -2,7 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 
 import Home from "../MainPages/Home";
 import S12 from "../MainPages/S12";
-import Calendar from "../S12/Calendar/Calendar"
+import Calendar from "../S12/Calendar/index"
 import Wad from "../S12/Wad/index";
 import Opde from "../S12/Opde/index";
 import Discrete from "../S12/Discrete/index";

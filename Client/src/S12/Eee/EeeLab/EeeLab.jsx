@@ -20,35 +20,28 @@ const EeeLab = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="flex flex-col sm:flex-row items-center justify-between p-4 bg-black/20 backdrop-blur-sm text-white w-full gap-2 sm:gap-4">
-        {/* Left: logo */}
+      {/*------------------------------MAIN----------------------------------------------- */}
+      <header className="s12header">
         <div className="flex items-center gap-4">
-          <Logosrc className="mx-auto sm:mx-0" />
+          <Logosrc />
         </div>
 
-        {/* Right: buttons */}
         <div className="flex flex-wrap gap-2">
           <Link to="/">
-            <button className="px-3 py-1 bg-yellow-500 text-black rounded hover:bg-yellow-400">
-              Home Page
-            </button>
+            <button>Home Page</button>
           </Link>
           <Link to="/S12">
-            <button className="px-3 py-1 bg-yellow-500 text-black rounded hover:bg-yellow-400">
-              S 12 Page
-            </button>
+            <button>S 12 Page</button>
           </Link>
           <Link to="/S12/Eee">
-            <button className="px-3 py-1 bg-yellow-500 text-black rounded hover:bg-yellow-400">
-              EEE Page
-            </button>
+            <button>EEE Page</button>
           </Link>
         </div>
       </header>
-      
+      {/*------------------------------MAIN----------------------------------------------- */}
       <main className="flex-grow p-4 text-white flex flex-col items-center gap-4">
         <h2 className="text-2xl font-bold">Eee Lab Page</h2>
-        <a href="/Eee/EeeLab/EeeLabCO.pdf">
+        <a href="/S12/Eee/EeeLab/EeeLabCO.pdf">
           <button className="SubButton">
             EEE Lab Course Outline <sub>-Download</sub>
           </button>
@@ -58,9 +51,14 @@ const EeeLab = () => {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <button className="SubButton">Tinkercard <br/>Tinkercad is an online tool for creating and simulating electronic circuits and 3D designs.<br/>Go to designs and create!</button>
+          <button className="SubButton">
+            Tinkercard <br />
+            Tinkercad is an online tool for creating and simulating electronic
+            circuits and 3D designs.
+            <br />
+            Go to designs and create!
+          </button>
         </a>
-        
 
         <button onClick={() => toggle("EeeLabResistor")}>
           Resistor Colors
