@@ -10,10 +10,12 @@ This README is for learning only. Reproduction or redistribution without giving 
 1. [Getting Npm & Node](#npm-and-node)
 2. [Css, Tailwind](#css-framework-tailwind)
 3. [Project structure & Folders](#index-dot-html)
-4. [React Routing](#react-routing)  
-5. [React Routing Complex](#complex-routing)
-6. [Hosting](#hosting)
-
+4. [Libraries](#libraries)
+5. [React Routing](#react-routing)  
+6. [React Routing Complex](#complex-routing)
+7. [Hosting](#hosting)
+8. [File Optimization](#optimization)
+9. [Build Tools & Performance Testing](#build-tools)
 ---
 ---
 
@@ -322,6 +324,7 @@ const is the modern way.
 - `npm install mathjs` better to install for any kind of math stuffs
 - `npm install react-router-dom` navigation between pages
 - `npm install tailwind-scrollbar-hide` hides scrollbar  
+- `npm install --save-dev vite-plugin-image-optimizer sharp svgo`  auto-compress JPEGs and generate WebP/AVIF during builds—even for `/public` folder.
 
 ---
 ---
@@ -589,6 +592,88 @@ const is the modern way.
 > - React Router uses client-side routing.
 > - Pasting that code makes React Router takes over client-side and renders the correct page.  
     
+---
+---
+
+[TOP](#react)
+
+---
+---
+
+# Optimization
+
+### Optimize File Size & Formats (Vite Plugin)
+
+> Install this library in Client folder. 
+>```jsx
+>npm install --save-dev vite-plugin-image-optimizer
+>```
+>Auto-compress JPEGs and generate WebP/AVIF during builds—even for `/public` folder.
+
+>Update `vite.config.js` The ImageOptimizer is inside `plugins[]`
+> ```jsx
+>import { defineConfig } from 'vite';
+>import react from '@vitejs/plugin-react';
+>import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
+>
+>export default defineConfig({
+>  plugins: [
+>    react(),
+>    ViteImageOptimizer({
+>      includePublic: ['/S12/Calendar/*'],  // Target your folder with images
+>      png: { quality: 80 },
+>      jpeg: { quality: 85 },
+>      webp: { lossless: false, quality: 90 },
+>      avif: { speed: 6, quality: 75 },
+>    }),
+>  ],
+>});
+>```
+---
+### Native Lazy Loading:
+>loading="lazy" (browser-native, no JS needed) and fixed dimensions to prevent layout shifts.
+>```jsx
+><img 
+>  src="/S12/Calendar/calendar.jpeg" 
+>  alt="2A University Calendar" 
+>  loading="lazy" 
+>  width="800" 
+>  height="600" 
+>/>
+>```
+>DONT just copy paste! **Learn!**
+
+---
+---
+
+# Build Tools
+
+> `npm run dev` runs file locally, usually at port 5173
+> - Hot reload
+> - Fast debugging
+> This is only for development, not for real performance testing.
+
+> `npm run build` production version of the site.
+> - Combines and optimizes files
+> - Minifies JS and CSS
+> - Removes development tools
+> - `dist` folder is created. 
+> Distribution, contains the final optimized version of your website that is ready to be deployed to a server.
+> Combines files, Minifies code, Removes development tools, Optimizes assets, Then it puts the final result in `dist/`
+
+> `npm run preview` Runs a local server for the built site, usually at port 4173.
+> - It lets you test the production build locally.
+> - Always do build before preview.
+
+> `ngrok http 5173/4173`
+> ngrok is a tool to expose local server to the internet, for testing, only people with the link can access the path.
+> Host project in ngrok, give to friends, try on different devices.
+> How to install? AI, Google.
+
+## Lighthouse
+
+>Open Build Tools, look for lighthouse, run it, see the score, learn more about lighthouse. AI, Google.
+
 ---
 ---
 

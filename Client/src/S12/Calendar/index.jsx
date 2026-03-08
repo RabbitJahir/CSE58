@@ -23,12 +23,24 @@ const index = () => {
       </header>
       {/*------------------------------MAIN----------------------------------------------- */}
       <main className="flex-grow p-4 text-white flex flex-col items-center gap-4">
-        <img src="/S12/Calendar/calendar.jpeg" alt="uni_calendar"></img>
+        <img
+          src="/S12/Calendar/calendar.jpeg"
+          alt="uni_calendar"
+          loading="lazy"
+          width="800"
+          height="600"
+        ></img>
         <a className="SubButton" href="/S12/Calendar/calendar.jpeg">
           2A Calendar<sub> -Download</sub>
         </a>
 
-        <img src="/S12/Calendar/ramadan.jpeg" alt="ramadan_calendar"></img>
+        <img
+          src="/S12/Calendar/ramadan.jpeg"
+          alt="ramadan_calendar"
+          loading="lazy"
+          width="800"
+          height="600"
+        ></img>
         <a className="SubButton" href="/S12/Calendar/ramadan.jpeg">
           2A Calendar<sub> -Download</sub>
         </a>
