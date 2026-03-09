@@ -1,18 +1,13 @@
 import { Link } from "react-router-dom";
 import Logosrc from "../components/Logosrc";
 import Footer from "../components/Footer";
+import HomeHeader from "./HomeHeader";
 
 const Home = () => {
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="homeheader">
-        <Logosrc />
-
-        <h1 className="flex-1 text-3xl font-bold text-center text-white">
-          Welcome to CSE 58 Batch Website
-        </h1>
-      </header>
-
+      <HomeHeader/>
+      
       <main className="flex-grow flex flex-col items-center gap-6 w-full px-4">
         {/* 3 main links */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl">
@@ -25,7 +20,7 @@ const Home = () => {
             <h2>OU1TS</h2>
             <p>
               Create an account and start exploring! <br />
-             {/* The beginning of an amazing journey! Discover handy resources and tools! For everyone!<br/>*/}
+              {/* The beginning of an amazing journey! Discover handy resources and tools! For everyone!<br/>*/}
               <i>TIP</i> : go to tools, b1t scheduler.
             </p>
           </a>
@@ -54,9 +49,7 @@ const Home = () => {
 
         {/* other links */}
         <Link to="/S12">
-          <div className="SubButton">
-            S_12
-          </div>
+          <div className="SubButton">S_12</div>
         </Link>
       </main>
 

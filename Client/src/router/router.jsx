@@ -16,6 +16,7 @@ import OopMid from "../S12/Oop/OopMid";
 import JavaCodes from "../S12/Oop/JavaCodes";
 import BsTimeLine from "../S12/Bs/BsHistory/BsTimeLine";
 import HtmlCodes from "../S12/Wad/HtmlCodes";
+import DiscreteCh1 from "../S12/Discrete/DiscreteCh1"; 
 
 const router = createBrowserRouter([
   {
@@ -26,17 +27,35 @@ const router = createBrowserRouter([
   { path: "/S12", element: <S12 />, errorElement: <ErrorPage /> },
   { path: "/S12/Calendar", element: <Calendar />, errorElement: <ErrorPage /> },
   { path: "/S12/Discrete", element: <Discrete />, errorElement: <ErrorPage /> },
+  {
+    path: "/S12/Discrete/DiscreteCh1",
+    element: <DiscreteCh1 />,
+    errorElement: <ErrorPage />,
+  },
   { path: "/S12/Wad", element: <Wad />, errorElement: <ErrorPage /> },
-  { path: "/S12/Wad/HtmlCodes", element: <HtmlCodes />, errorElement: <ErrorPage /> },
+  {
+    path: "/S12/Wad/HtmlCodes",
+    element: <HtmlCodes />,
+    errorElement: <ErrorPage />,
+  },
   { path: "/S12/Oop", element: <Oop />, errorElement: <ErrorPage /> },
-  { path: "/S12/Oop/JavaCodes", element: <JavaCodes />, errorElement: <ErrorPage /> },
+  {
+    path: "/S12/Oop/JavaCodes",
+    element: <JavaCodes />,
+    errorElement: <ErrorPage />,
+  },
   { path: "/S12/Oop/OopMid", element: <OopMid />, errorElement: <ErrorPage /> },
   { path: "/S12/Opde", element: <Opde />, errorElement: <ErrorPage /> },
   { path: "/S12/Eee", element: <Eee />, errorElement: <ErrorPage /> },
   { path: "/S12/Eee/EeeLab", element: <EeeLab />, errorElement: <ErrorPage /> },
   { path: "/S12/Ed", element: <Ed />, errorElement: <ErrorPage /> },
   { path: "/S12/Bs", element: <Bs />, errorElement: <ErrorPage /> },
-  { path: "/S12/Bs/BsHistory/BsTimeLine", element: <BsTimeLine />, errorElement: <ErrorPage /> },
+  {
+    path: "/S12/Bs/BsHistory/BsTimeLine",
+    element: <BsTimeLine />,
+    errorElement: <ErrorPage />,
+  },
+
   { path: "*", element: <ErrorPage /> },
 ]);
 

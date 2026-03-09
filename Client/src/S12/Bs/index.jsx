@@ -3,7 +3,7 @@ import BsMid from "./BsMid";
 import BsFinal from "./BsFinal";
 import Footer from "../../components/Footer";
 import { Link } from "react-router-dom";
-import Logosrc from "../../components/Logosrc";
+import Header from "../../components/Header";
 
 const Index = () => {
   const [open, setOpen] = useState(null);
@@ -14,53 +14,41 @@ const Index = () => {
       setOpen(section);
     }
   };
-
+  const links = [
+    { to: "/", label: "Home Page", className: "HeaderButton" },
+    { to: "/S12", label: "S 12 Page", className: "HeaderButton" },
+  ];
   return (
     <div className="min-h-screen flex flex-col w-full overflow-x-hidden">
-      {/*--------------------------------------HEADER----------------------------------------------------*/}
-      <header className="s12header">
-        {/* Left: logo */}
-        <div className="flex items-center gap-4">
-          <Logosrc />
-        </div>
-
-        {/* Right: buttons */}
-        <div className="flex flex-wrap gap-2">
-          <Link to="/">
-            <button>Home Page</button>
-          </Link>
-          <Link to="/S12">
-            <button>S 12 Page</button>
-          </Link>
-        </div>
-      </header>
+      <Header links={links} />
       {/*------------------------------MAIN----------------------------------------------- */}
       <main className="flex-grow p-4 text-white flex flex-col items-center gap-4 ">
         <h2 className="text-2xl font-bold">Bangladesh Studies Page</h2>
-        <a href="/S12/Bs/BsCO.pdf">
-          <button className="SubButton">
-            BS Course Outline <sub>-Download</sub>
-          </button>
+        <a href="/S12/Bs/BsCO.pdf" className="SubButton">
+          BS Course Outline <sub>-Download</sub>
         </a>
 
-        <a
-          href="https://en.banglapedia.org/index.php?title=Main_Page"
+        <Link
+          to="https://en.banglapedia.org/index.php?title=Main_Page"
+          className="SubButton"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <button className="SubButton">
-            Banglapedia (A-Z of Bengal History) <sub>-link</sub>
-          </button>
-        </a>
+          Banglapedia (A-Z of Bengal History) <sub>-link</sub>
+        </Link>
 
         <Link className="SubButton" to="/S12/Bs/BsHistory/BsTimeLine">
           Bangladesh TimeLine
         </Link>
 
-        <button onClick={() => toggle("BsMid")}>Mid Syllabus</button>
+        <Link className="SubButton" onClick={() => toggle("BsMid")}>
+          Mid Syllabus
+        </Link>
         {open === "BsMid" && <BsMid />}
 
-        <button onClick={() => toggle("BsFinal")}>Final Syllabus</button>
+        <Link className="SubButton" onClick={() => toggle("BsFinal")}>
+          Final Syllabus
+        </Link>
         {open === "BsFinal" && <BsFinal />}
       </main>
       <Footer />

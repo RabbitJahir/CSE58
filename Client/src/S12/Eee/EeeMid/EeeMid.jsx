@@ -1,57 +1,54 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 const EeeMid = () => {
   const [open, setOpen] = useState(null);
-  const toggle = (section) => {
-    if (open === section) {
-      setOpen(null);
-    } else {
-      setOpen(section);
-    }
-  };
+  const toggle = (section) => setOpen(open === section ? null : section);
 
   return (
-    <div className="flex flex-col items-center gap-4">
-      <button onClick={() => toggle("EeeCh1")} className="SubButton">
+    <div className="mid-container">
+      {/* Chapter 1 */}
+      <Link onClick={() => toggle("EeeCh1")} className="SubButton">
         Ch 1
-      </button>
+      </Link>
       {open === "EeeCh1" && (
-        <div className="flex flex-col gap-2">
-          <a href="/S12/Eee/EeeCh1Book.pdf">
-            <button className="SubButton">
+        <div className="flex flex-col gap-2 w-full">
+          <a href="/S12/Eee/EeeCh1Book.pdf" className="w-full">
+            <button className="SubButton w-full">
               Book <sub>-Download</sub>
             </button>
           </a>
-          <a href="/S12/Eee/EeeCh1Notes.pdf">
-            <button className="SubButton">
+          <a href="/S12/Eee/EeeCh1Notes.pdf" className="w-full">
+            <button className="SubButton w-full">
               Notes <sub>-Download</sub>
             </button>
           </a>
-          <a href="/S12/Eee/EeeCh1Answers.pdf">
-            <button className="SubButton">
+          <a href="/S12/Eee/EeeCh1Answers.pdf" className="w-full">
+            <button className="SubButton w-full">
               Answers <sub>-Download</sub>
             </button>
           </a>
         </div>
       )}
 
-      <button onClick={() => toggle("EeeCh2")} className="SubButton">
+      {/* Chapter 2 */}
+      <Link onClick={() => toggle("EeeCh2")} className="SubButton">
         Ch 2
-      </button>
+      </Link>
       {open === "EeeCh2" && (
-        <div className="flex flex-col gap-2">
-          <a href="/S12/Eee/EeeCh2Book.pdf">
-            <button className="SubButton">
+        <div className="flex flex-col gap-2 w-full">
+          <a href="/S12/Eee/EeeCh2Book.pdf" className="w-full">
+            <button className="SubButton w-full">
               Book <sub>-Download</sub>
             </button>
           </a>
-          <a href="/S12/Eee/EeeCh2Notes.pdf">
-            <button className="SubButton">
+          <a href="/S12/Eee/EeeCh2Notes.pdf" className="w-full">
+            <button className="SubButton w-full">
               Notes <sub>-Download</sub>
             </button>
           </a>
-          <a href="/S12/Eee/EeeCh2Ques.pdf">
-            <button className="SubButton">
+          <a href="/S12/Eee/EeeCh2Ques.pdf" className="w-full">
+            <button className="SubButton w-full">
               Questions <sub>-Download</sub>
             </button>
           </a>

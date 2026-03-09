@@ -1,8 +1,9 @@
 import React from "react";
+import "./Footer.css";
 
 const Footer = () => {
   return (
-    <footer className="p-4 bg-black/20 backdrop-blur-sm text-center text-white">
+    <footer className="p-4 bg-black/20 backdrop-blur-sm text-center">
       <p>
         &copy; CSE | <span className="rabbit-glow">Mr_Rabbit</span> |{" "}
         <span>

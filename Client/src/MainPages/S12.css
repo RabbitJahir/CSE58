@@ -142,7 +142,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 28px;
+  height: 22px;
   background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
@@ -154,7 +154,7 @@
 .links a.web::after {
   content: "";
   position: absolute;
-  top: 8px;
+  top: 6px;
   left: 8px;
   width: 12px;
   height: 12px;
@@ -170,8 +170,8 @@
 .links a.web span::before {
   content: "HTML CSS  JS";
   position: absolute;
-  top: -15px;
-  left: 100px; /* space after buttons */
+  top: 10px;
+  left: 10px; /* space after buttons */
   font-size: 12px;
   font-weight: 600;
   color: #134c9c;
@@ -187,7 +187,6 @@
   margin-top: 36px; /* adjusted */
 }
 
-/* Hover for web */
 @media (hover: hover) {
   .links a.web:hover {
     box-shadow: 0 0 0 2px #facc15;
@@ -278,20 +277,19 @@
   right: 6px;
 }
 
-/* Hover – powered on */
-@media (hover: hover) {
-  .links a.electrical:hover {
-    box-shadow:
-      0 0 0 2px #facc15,
-      0 10px 22px rgba(0, 0, 0, 0.45);
-  }
-}
+
 
 /* Text span on top */
 .links a.electrical span {
   position: relative;
   z-index: 2;
   display: block;
+}
+
+@media (hover: hover) {
+  .links a.electrical:hover {
+    box-shadow: 0 0 0 2px #facc15;
+  }
 }
 
 /*------------------------------------BS---------------------------------------------*/
@@ -316,13 +314,13 @@
   background: #f42a41; /* red circle */
   border-radius: 50%;
 }
-/* Hover – powered on */
+
 @media (hover: hover) {
   .links a.bd:hover {
-    transform: scale(1.06);
     box-shadow: 0 0 0 2px #facc15;
   }
 }
+
 
 /* ---------------------------------------------Home portal ---------------------------*/
 .links a.ed {
@@ -333,14 +331,14 @@
   letter-spacing: 0.3px;
   border-radius: 14px;
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
-  padding: 40px 40px 20px; /* adjusted for icon */
+  padding: 20px 40px; /* adjusted for icon */
 }
 
 /* Roof icon (CSS only) */
 .links a.ed::before {
   content: "";
   position: absolute;
-  top: 10px;
+  top: 6px;
   left: 50%;
   width: 18px;
   height: 18px;
@@ -353,7 +351,7 @@
 .links a.ed::after {
   content: "";
   position: absolute;
-  top: 20px;
+  top: 16px;
   left: 50%;
   width: 14px;
   height: 10px;
@@ -362,68 +360,19 @@
   border-radius: 2px;
 }
 
-/* Desktop hover */
 @media (hover: hover) {
   .links a.ed:hover {
-    transform: scale(1.06);
-    box-shadow:
-      0 0 0 2px #facc15,
-      0 8px 18px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 0 2px #facc15;
   }
 }
 
-/* Active states for custom buttons to preserve their styles */
-.links a.discrete:active {
-  background: #f8fafc;
-  color: #111827;
-  border: 2px dashed #64748b;
-  transform: scale(0.98);
-  box-shadow: 0 0 0 2px #facc15;
+@media (hover: hover) {
+  .links a.opde:hover {
+    box-shadow: 0 0 0 2px #facc15;
+  }
 }
 
-.links a.oop:active {
-  background: #0f172a;
-  color: #e5e7eb;
-  transform: scale(0.98);
-  box-shadow: 0 0 0 2px #facc15;
-}
 
-.links a.web:active {
-  background: #e0f2fe;
-  color: #075985;
-  transform: scale(0.98);
-  box-shadow: 0 0 0 2px #facc15;
-}
 
-.links a.electrical:active {
-  background: linear-gradient(135deg, #1f2933, #111827);
-  color: #e5e7eb;
-  transform: scale(0.98);
-  box-shadow: 0 0 0 2px #facc15;
-}
 
-.links a.calendar:active {
-  transform: scale(0.98);
-  box-shadow: 0 0 0 2px #facc15;
-}
 
-.links a.bd:active {
-  background: #006a4f;
-  color: #ffffff;
-  transform: scale(0.98);
-  box-shadow: 0 0 0 2px #facc15;
-}
-
-.links a.ed:active {
-  background: linear-gradient(135deg, #ffcc80, #ffb74d);
-  color: #3a2a00;
-  transform: scale(0.98);
-  box-shadow: 0 0 0 2px #facc15;
-}
-
-.links a.opde:active {
-  background: linear-gradient(135deg, #ffcc80, #ffb74d);
-  color: #3a2a00;
-  transform: scale(0.98);
-  box-shadow: 0 0 0 2px #facc15;
-}

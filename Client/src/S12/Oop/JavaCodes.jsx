@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { oopCodes } from "./OopCodes"; //same folder
+import { oopCodes } from "./OopCodes"; 
 import Footer from "../../components/Footer";
-import Logosrc from "../../components/Logosrc";
 import { Link } from "react-router-dom";
+import Header from "../../components/Header";
 
 const JavaCodes = () => {
   const [open, setOpen] = useState(null);
@@ -16,27 +16,17 @@ const JavaCodes = () => {
     alert("Code copied!");
   };
 
+  const links = [
+  { to: "/", label: "Home Page", className: "HeaderButton" },
+  { to: "/S12", label: "S 12 Page", className: "HeaderButton" },
+  { to: "/S12/Oop", label: "OOP Page", className: "HeaderButton" },
+];
+
+
   return (
     <div className="min-h-screen flex flex-col">
-      {/*------------------------------HEADER----------------------------------------------- */}
-      <header className="s12header">
-        <div className="flex items-center gap-4">
-          <Logosrc />
-        </div>
-
-        {/* Right: buttons */}
-        <div className="flex flex-wrap gap-2">
-          <Link to="/">
-            <button>Home Page</button>
-          </Link>
-          <Link to="/S12">
-            <button>S 12 Page</button>
-          </Link>
-          <Link to="/S12/Oop">
-            <button>OOP Page</button>
-          </Link>
-        </div>
-      </header>
+      
+      <Header links={links} />
       {/*------------------------------MAIN----------------------------------------------- */}
       <main className="flex-grow p-4 flex flex-col gap-4 w-full max-w-4xl mx-auto">
         <h1 className="text-3xl font-bold text-center mb-6 text-white">
@@ -49,7 +39,7 @@ const JavaCodes = () => {
             className="bg-black/20 p-4 rounded-lg text-white relative"
           >
             <button
-              className="flex justify-between items-center w-full text-left font-bold"
+              className="HeaderButton"
               onClick={() => toggle(snippet.id)}
             >
               <span>

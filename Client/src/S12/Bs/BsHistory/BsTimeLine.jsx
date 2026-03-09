@@ -1,8 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Footer from "../../../components/Footer";
-import Logosrc from "../../../components/Logosrc";
-
+import Header from "../../../components/Header";
+const links = [
+  { to: "/", label: "Home Page", className: "HeaderButton" },
+  { to: "/S12", label: "S 12 Page", className: "HeaderButton" },
+  {to: "/S12/Bs", label:"BS Page", className: "HeaderButton"},
+];
 const BsTimeLine = () => {
   const events = [
     { date: "320 - 550", title: "Gupta Empire" },
@@ -48,30 +52,7 @@ const BsTimeLine = () => {
 
   return (
     <div className="min-h-screen bg-blue-900 text-white font-sans overflow-x-auto">
-      {/*------------------------------HEADER----------------------------------------------- */}
-      <header className="s12header flex flex-col gap-4 p-4">
-        <div className="flex items-center gap-4">
-          <Logosrc />
-        </div>
-
-        <div className="flex flex-wrap gap-2">
-          <Link to="/">
-            <button className="px-3 py-1 bg-yellow-400 text-black rounded hover:bg-yellow-300 transition">
-              Home Page
-            </button>
-          </Link>
-          <Link to="/S12">
-            <button className="px-3 py-1 bg-yellow-400 text-black rounded hover:bg-yellow-300 transition">
-              S 12 Page
-            </button>
-          </Link>
-          <Link to="/S12/Bs">
-            <button className="px-3 py-1 bg-yellow-400 text-black rounded hover:bg-yellow-300 transition">
-              BS Page
-            </button>
-          </Link>
-        </div>
-      </header>
+      <Header links={links}/>
 
       {/*------------------------------MAIN----------------------------------------------- */}
       <div className="p-6 text-center">
@@ -90,8 +71,8 @@ const BsTimeLine = () => {
           {events.map((event, idx) => (
             <div key={idx} className="event relative w-56 mx-10">
               {event.externalLink ? (
-                <a
-                  href={event.externalLink}
+                <Link
+                  to={event.externalLink}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="block bg-black/30 p-4 border-2 border-yellow-400 rounded text-center text-white hover:bg-yellow-400 hover:text-black transition-colors"
@@ -101,7 +82,7 @@ const BsTimeLine = () => {
                   </span>
                   {event.title} <br />
                   <b>click me</b>
-                </a>
+                </Link>
               ) : event.link ? (
                 <Link
                   to={event.link}

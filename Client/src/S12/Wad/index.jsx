@@ -4,6 +4,7 @@ import WadMid from "./WadMid";
 import WadFinal from "./WadFinal";
 import Footer from "../../components/Footer";
 import Logosrc from "../../components/Logosrc";
+import Header from "../../components/Header";
 
 const Index = () => {
   const [open, setOpen] = useState(null);
@@ -14,24 +15,13 @@ const Index = () => {
       setOpen(section);
     }
   };
-
+  const links = [
+    { to: "/", label: "Home Page", className: "HeaderButton" },
+    { to: "/S12", label: "S 12 Page", className: "HeaderButton" },
+  ];
   return (
     <div className="min-h-screen flex flex-col">
-      {/*------------------------------HEADER----------------------------------------------- */}
-      <header className="s12header">
-        <div className="flex items-center gap-4">
-          <Logosrc />
-        </div>
-
-        <div className="flex flex-wrap gap-2">
-          <Link to="/">
-            <button>Home Page</button>
-          </Link>
-          <Link to="/S12">
-            <button>S 12 Page</button>
-          </Link>
-        </div>
-      </header>
+      <Header links={links}/>
       {/*------------------------------MAIN----------------------------------------------- */}
       <main className="flex-grow p-4 text-white flex flex-col items-center gap-4">
         <h2 className="text-2xl font-bold">Web Application & Design Page</h2>
@@ -47,14 +37,14 @@ const Index = () => {
           Html Codes{" "}
         </Link>
 
-        <button onClick={() => toggle("WadMid")} className="SubButton">
+        <Link onClick={() => toggle("WadMid")} className="SubButton">
           Mid Syllabus
-        </button>
+        </Link>
         {open === "WadMid" && <WadMid />}
 
-        <button onClick={() => toggle("WadFinal")} className="SubButton">
+        <Link onClick={() => toggle("WadFinal")} className="SubButton">
           Final Syllabus
-        </button>
+        </Link>
         {open === "WadFinal" && <WadFinal />}
       </main>
       <Footer />

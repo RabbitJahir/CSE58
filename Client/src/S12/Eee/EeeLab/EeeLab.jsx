@@ -4,8 +4,8 @@ import EeeLabResistor from "./EeeLabResistor";
 import EeeLabEx1 from "./EeeLabEx1";
 import EeeLabEx2 from "./EeeLabEx2";
 import EeeLabEx3 from "./EeeLabEx3";
-import Logosrc from "../../../components/Logosrc";
 import { Link } from "react-router-dom";
+import Header from "../../../components/Header";
 
 const EeeLab = () => {
   const [open, setOpen] = useState(null);
@@ -17,61 +17,51 @@ const EeeLab = () => {
       setOpen(section);
     }
   };
-
+  const links = [
+    { to: "/", label: "Home Page", className: "HeaderButton" },
+    { to: "/S12", label: "S 12 Page", className: "HeaderButton" },
+    { to: "/S12/Eee", label: "EEE Page", className: "HeaderButton" },
+  ];
   return (
     <div className="min-h-screen flex flex-col">
-      {/*------------------------------MAIN----------------------------------------------- */}
-      <header className="s12header">
-        <div className="flex items-center gap-4">
-          <Logosrc />
-        </div>
-
-        <div className="flex flex-wrap gap-2">
-          <Link to="/">
-            <button>Home Page</button>
-          </Link>
-          <Link to="/S12">
-            <button>S 12 Page</button>
-          </Link>
-          <Link to="/S12/Eee">
-            <button>EEE Page</button>
-          </Link>
-        </div>
-      </header>
+      <Header links={links} />
       {/*------------------------------MAIN----------------------------------------------- */}
       <main className="flex-grow p-4 text-white flex flex-col items-center gap-4">
         <h2 className="text-2xl font-bold">Eee Lab Page</h2>
-        <a href="/S12/Eee/EeeLab/EeeLabCO.pdf">
-          <button className="SubButton">
-            EEE Lab Course Outline <sub>-Download</sub>
-          </button>
+        <a href="/S12/Eee/EeeLab/EeeLabCO.pdf" className="SubButton">
+          EEE Lab Course Outline <sub>-Download</sub>
         </a>
-        <a
-          href="https://www.tinkercad.com/dashboard"
+        <Link
+          to="https://www.tinkercad.com/dashboard"
+          className="SubButton"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <button className="SubButton">
-            Tinkercard <br />
-            Tinkercad is an online tool for creating and simulating electronic
-            circuits and 3D designs.
-            <br />
-            Go to designs and create!
-          </button>
-        </a>
+          Tinkercard <br />
+          Tinkercad is an online tool for creating and simulating electronic
+          circuits and 3D designs.
+          <br />
+          Go to designs and create!
+        </Link>
 
-        <button onClick={() => toggle("EeeLabResistor")}>
+        <Link className="SubButton" onClick={() => toggle("EeeLabResistor")}>
           Resistor Colors
-        </button>
+        </Link>
         {open === "EeeLabResistor" && <EeeLabResistor />}
 
-        <button onClick={() => toggle("EeeLabEx1")}>Experiment 1</button>
+        <Link className="SubButton" onClick={() => toggle("EeeLabEx1")}>
+          Experiment 1
+        </Link>
         {open === "EeeLabEx1" && <EeeLabEx1 />}
 
-        <button onClick={() => toggle("EeeLabEx2")}>Experiment 2</button>
+        <Link className="SubButton" onClick={() => toggle("EeeLabEx2")}>
+          Experiment 2
+        </Link>
         {open === "EeeLabEx2" && <EeeLabEx2 />}
 
-        <button onClick={() => toggle("EeeLabEx3")}>Experiment 3</button>
+        <Link className="SubButton" onClick={() => toggle("EeeLabEx3")}>
+          Experiment 3
+        </Link>
         {open === "EeeLabEx3" && <EeeLabEx3 />}
       </main>
       <Footer />

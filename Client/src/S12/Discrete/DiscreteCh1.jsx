@@ -1,42 +1,37 @@
 import React, { useState } from "react";
-import { Codes } from "./Codes"; //same folder!
-import Footer from "../../components/Footer";
-import Logosrc from "../../components/Logosrc";
-import { Link } from "react-router-dom";
 import Header from "../../components/Header";
+import { discretech1solve } from "./DiscreteCh1Solve"; 
+import Footer from "../../components/Footer";
 
-const HtmlCodes = () => {
+const links = [
+  { to: "/", label: "Home Page", className: "HeaderButton" },
+  { to: "/S12", label: "S 12 Page", className: "HeaderButton" },
+  { to: "/S12/Discrete", label: "Discrete Page", className: "HeaderButton" },
+];
+
+const DiscreteCh1 = () => {
   const [open, setOpen] = useState(null);
 
-  const toggle = (id) => {
-    setOpen(open === id ? null : id);
-  };
+  const toggle = (id) => setOpen(open === id ? null : id);
 
   const copyCode = (code) => {
     navigator.clipboard.writeText(code);
     alert("Code copied!");
   };
-  const links = [
-    { to: "/", label: "Home Page", className: "HeaderButton" },
-    { to: "/S12", label: "S 12 Page", className: "HeaderButton" },
-    { to: "/S12/Wad", label: "WAD Page", className: "HeaderButton" },
-  ];
+
   return (
     <div className="min-h-screen flex flex-col">
-      {/*------------------------------HEADER----------------------------------------------- */}
-      <Header links={links}/>
-      {/*------------------------------MAIN----------------------------------------------- */}
+      <Header links={links} />
+      
       <main className="flex-grow p-4 flex flex-col gap-4 w-full max-w-4xl mx-auto">
-        <h1 className="text-3xl font-bold text-center mb-6 text-white">
-          Html Codes
-        </h1>
+        <h2 className="text-2xl font-bold">Discrete Mathematics Page</h2>
 
-        {Codes.map((snippet, index) => (
+        {discretech1solve.map((snippet, index) => (
           <div
             key={snippet.id}
-            className="bg-black/20 p-4 rounded-lg text-white relative"
+            className="bg-black/20 p-4 rounded-lg text-white relative backdrop-blur-sm"
           >
-            <button 
+            <button
               className="HeaderButton"
               onClick={() => toggle(snippet.id)}
             >
@@ -64,9 +59,10 @@ const HtmlCodes = () => {
           </div>
         ))}
       </main>
-      <Footer />
+      <Footer/>
     </div>
   );
 };
 
-export default HtmlCodes;
+export default DiscreteCh1;
+

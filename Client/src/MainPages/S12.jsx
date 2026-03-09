@@ -3,71 +3,54 @@ import { Link, Outlet } from "react-router-dom";
 import "./S12.css";
 import Footer from "../components/Footer";
 import Logosrc from "../components/Logosrc";
+import SubjectButton from "../components/Buttons";
+import Header from "../components/Header";
+
+const links = [
+  { to: "/", label: "Home Page", className: "HeaderButton" },
+  { to: "/S12", label: "S 12 Page", className: "HeaderButton" },
+];
 
 const S12 = () => {
   return (
     <div className="min-h-screen flex flex-col">
-      <header className="s12header">
-        {/* Left: logo */}
-        <div className="flex items-center gap-4">
-          <Logosrc className="mx-auto sm:mx-0" />
-        </div>
-
-        {/* Right: buttons */}
-        <div className="flex flex-wrap gap-2">
-          <Link to="/">
-            <button className="px-3 py-1 bg-yellow-500 text-black rounded hover:bg-yellow-400">
-              Home Page
-            </button>
-          </Link>
-          <Link to="/S12">
-            <button className="px-3 py-1 bg-yellow-500 text-black rounded hover:bg-yellow-400">
-              S 12 Page
-            </button>
-          </Link>
-        </div>
-      </header>
+      <Header links={links}/>
+      {/*--------------------------------------MAIN----------------------------------------------------*/}
       <main className="flex-grow flex flex-col items-center gap-6 overflow-y-scroll scrollbar-hide">
         <h1 className="text-3xl font-bold text-center text-white">
           2nd Semester
         </h1>
 
-        <ul className="links p-3 flex flex-col gap-3 text-xl text-center">
+        <div className="links p-3 flex flex-col gap-3 text-xl text-center">
           <Link to="Calendar" className="calendar">
-            <li>Calendar</li>
-          </Link>
-
+            Calendar
+          </Link >
           <Link to="Wad" className="web">
-            <li>
-              <span>WAD</span>
-            </li>
+            WAD
           </Link>
-
           <Link to="Oop" className="oop">
-            <li>OOP</li>
+            OOP
           </Link>
           <Link to="Discrete" className="discrete">
-            <li>DISCRETE</li>
+            DISCRETE
           </Link>
           <Link to="Opde" className="opde">
-            <li>OPDE</li>
+            OPDE
           </Link>
           <Link to="Ed" className="ed">
-            <li>ED</li>
+            ED
           </Link>
           <Link to="Eee" className="electrical">
-            <li>
-              <span>EEE</span>
-              <span class="bolt1"></span>
-              <span class="bolt2"></span>
-              <span class="bolt3"></span>
-              <span class="bolt4"></span>
-            </li>
+            <span>EEE</span>
+            <span className="bolt1"></span>
+            <span className="bolt2"></span>
+            <span className="bolt3"></span>
+            <span className="bolt4"></span>
           </Link>
           <Link to="Bs" className="bd">
-            <li>BS</li>
+            BS
           </Link>
-        </ul>
+        </div>
         <Outlet />
       </main>
       <Footer />

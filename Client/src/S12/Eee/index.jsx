@@ -4,6 +4,7 @@ import EeeFinal from "./EeeFinal";
 import Footer from "../../components/Footer";
 import { Link } from "react-router-dom";
 import Logosrc from "../../components/Logosrc";
+import Header from "../../components/Header";
 
 const Index = () => {
   const [open, setOpen] = useState(null);
@@ -14,24 +15,14 @@ const Index = () => {
       setOpen(section);
     }
   };
+ const links = [
+    { to: "/", label: "Home Page", className: "HeaderButton" },
+    { to: "/S12", label: "S 12 Page", className: "HeaderButton" },
+  ];
 
   return (
     <div className="min-h-screen flex flex-col">
-      {/*------------------------------MAIN----------------------------------------------- */}
-      <header className="s12header">
-        <div className="flex items-center gap-4">
-          <Logosrc/>
-        </div>
-
-        <div className="flex flex-wrap gap-2">
-          <Link to="/">
-            <button>Home Page</button>
-          </Link>
-          <Link to="/S12">
-            <button>S 12 Page</button>
-          </Link>
-        </div>
-      </header>
+      <Header links={links} />
       {/*------------------------------MAIN----------------------------------------------- */}
       <main className="flex-grow p-4 text-white flex flex-col items-center gap-4">
         <h2 className="text-2xl font-bold">
@@ -47,15 +38,16 @@ const Index = () => {
           Eee Lab Page
         </Link>
 
-        <button className="SubButton" onClick={() => toggle("EeeMid")}>
+        <Link className="SubButton" onClick={() => toggle("EeeMid")}>
           Mid Syllabus
-        </button>
+        </Link>
         {open === "EeeMid" && <EeeMid />}
 
-        <button onClick={() => toggle("EeeFinal")} className="SubButton">
+        <Link onClick={() => toggle("EeeFinal")} className="SubButton">
           Final Syllabus
-        </button>
+        </Link>
         {open === "EeeFinal" && <EeeFinal />}
+        
       </main>
       <Footer />
     </div>
