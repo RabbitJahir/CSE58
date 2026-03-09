@@ -6,8 +6,16 @@ import Logosrc from "../../../components/Logosrc";
 const BsTimeLine = () => {
   const events = [
     { date: "320 - 550", title: "Gupta Empire" },
-    { date: "600 - 637", title: "King Shashanka", link: "./shashanko" },
-    { date: "750 - 1150", title: "Pala Dynasty (Buddhism)", link: "./pal" },
+    {
+      date: "600 - 637",
+      title: "King Shashanka",
+      externalLink: "https://en.banglapedia.org/index.php?title=Shashanka",
+    },
+    {
+      date: "750 - 1150",
+      title: "Pala Dynasty (Buddhism)",
+      externalLink: "https://en.banglapedia.org/index.php?title=Pala_Dynasty",
+    },
     { date: "736 - 1150", title: "Tomar Dynasty" },
     { date: "900 - 1050", title: "Chandra Dynasty" },
     { date: "1150 - 1204", title: "Sena Dynasty", link: "./sena" },
@@ -40,33 +48,32 @@ const BsTimeLine = () => {
 
   return (
     <div className="min-h-screen bg-blue-900 text-white font-sans overflow-x-auto">
-        {/*------------------------------HEADER----------------------------------------------- */}
-      <header className="s12header">
-      
+      {/*------------------------------HEADER----------------------------------------------- */}
+      <header className="s12header flex flex-col gap-4 p-4">
         <div className="flex items-center gap-4">
-          <Logosrc  />
+          <Logosrc />
         </div>
 
-        
         <div className="flex flex-wrap gap-2">
           <Link to="/">
-            <button >
+            <button className="px-3 py-1 bg-yellow-400 text-black rounded hover:bg-yellow-300 transition">
               Home Page
             </button>
           </Link>
           <Link to="/S12">
-            <button >
+            <button className="px-3 py-1 bg-yellow-400 text-black rounded hover:bg-yellow-300 transition">
               S 12 Page
             </button>
           </Link>
           <Link to="/S12/Bs">
-            <button >
+            <button className="px-3 py-1 bg-yellow-400 text-black rounded hover:bg-yellow-300 transition">
               BS Page
             </button>
           </Link>
         </div>
       </header>
-  {/*------------------------------MAIN----------------------------------------------- */}
+
+      {/*------------------------------MAIN----------------------------------------------- */}
       <div className="p-6 text-center">
         <h2 className="text-2xl mb-2">Welcome to Bengal Timeline Page</h2>
       </div>
@@ -82,38 +89,43 @@ const BsTimeLine = () => {
         <div className="timeline-line flex border-b-4 border-yellow-400 relative w-max">
           {events.map((event, idx) => (
             <div key={idx} className="event relative w-56 mx-10">
-              <div
-                className={`event-content bg-black/30 p-4 border-2 border-yellow-400 rounded text-center ${
-                  event.link || event.externalLink ? "cursor-pointer" : ""
-                }`}
-              >
-                <span className="block font-bold text-yellow-400 text-lg">
-                  {event.date}
-                </span>
-                {event.externalLink ? (
-                  <a
-                    href={event.externalLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="text-white no-underline"
-                  >
-                    {event.title} <br />
-                    <b>click me</b>
-                  </a>
-                ) : event.link ? (
-                  <>
-                    {event.title} <br />
-                    <b>click me</b>
-                    <Link to={event.link} className="absolute inset-0"></Link>
-                  </>
-                ) : (
-                  event.title
-                )}
-              </div>
+              {event.externalLink ? (
+                <a
+                  href={event.externalLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block bg-black/30 p-4 border-2 border-yellow-400 rounded text-center text-white hover:bg-yellow-400 hover:text-black transition-colors"
+                >
+                  <span className="block font-bold text-yellow-400 text-lg">
+                    {event.date}
+                  </span>
+                  {event.title} <br />
+                  <b>click me</b>
+                </a>
+              ) : event.link ? (
+                <Link
+                  to={event.link}
+                  className="block bg-black/30 p-4 border-2 border-yellow-400 rounded text-center text-white hover:bg-yellow-400 hover:text-black transition-colors"
+                >
+                  <span className="block font-bold text-yellow-400 text-lg">
+                    {event.date}
+                  </span>
+                  {event.title} <br />
+                  <b>click me</b>
+                </Link>
+              ) : (
+                <div className="bg-black/30 p-4 border-2 border-yellow-400 rounded text-center">
+                  <span className="block font-bold text-yellow-400 text-lg">
+                    {event.date}
+                  </span>
+                  {event.title}
+                </div>
+              )}
             </div>
           ))}
         </div>
       </div>
+
       <Footer />
     </div>
   );
