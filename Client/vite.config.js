@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
 import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
+import ViteOptimizeVideos from "vite-plugin-optimize-videos";
 import { visualizer } from "rollup-plugin-visualizer";
 
 // https://vite.dev/config/
@@ -16,6 +17,12 @@ export default defineConfig({
       jpeg: { quality: 85 },
       webp: { lossless: false, quality: 90 },
       avif: { speed: 6, quality: 75 },
+    }),
+    ViteOptimizeVideos({
+      outputPath: "dist/S12",
+      compression: "medium", 
+      formats: ["mp4", "webm"],
+      removeAudio: true,
     }),
   ],
 

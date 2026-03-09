@@ -5,6 +5,7 @@ import DiscreteBook from "./DiscreteBook";
 import Footer from "../../components/Footer";
 import Logosrc from "../../components/Logosrc";
 import { Link } from "react-router-dom";
+import LazyVideo from "../../components/LazyVideo";
 
 const Index = () => {
   const [open, setOpen] = useState(null);
@@ -51,6 +52,7 @@ const Index = () => {
           Final Syllabus
         </button>
         {open === "DiscreteFinal" && <DiscreteFinal />}
+        <LazyVideo src="/S12/bash.mp4" width={159} />
       </main>
       <Footer />
     </div>
