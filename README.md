@@ -5,6 +5,10 @@ This README is for learning only. Reproduction or redistribution without giving 
 ---  
 ---
 
+>**NOTE** AI can not create the best ideas, it will help enchane our ideas to it's maximum potential. 
+
+---
+---
 # React!  
 
 1. [Getting Npm & Node](#npm-and-node)
@@ -325,6 +329,7 @@ const is the modern way.
 - `npm install react-router-dom` navigation between pages
 - `npm install tailwind-scrollbar-hide` hides scrollbar  
 - `npm install --save-dev vite-plugin-image-optimizer sharp svgo`  auto-compress JPEGs and generate WebP/AVIF during builds—even for `/public` folder.
+- `npm install --save-dev rollup-plugin-visualizer` see build files/file-sizes, visual diagram of step by step program run.
 
 ---
 ---
@@ -535,7 +540,7 @@ const is the modern way.
 ### children
 
 > Parent and children, to open a block on the same page, shows contents of the children, in parent page.
-> better way, use open, setOpen, when a block is clicked it opens and reclick hides it.
+> Better way, use open, setOpen, when a block is clicked it opens and reclick hides it.
 >```jsx
 >import React, { useState } from "react";
 >import { Link } from "react-router-dom";
@@ -641,6 +646,22 @@ const is the modern way.
 >  height="600" 
 >/>
 >```
+
+> ```jsx
+>npm install --save-dev rollup-plugin-visualizer
+>```
+>
+>vite.config.js
+>```jsx
+>import { defineConfig } from 'vite'
+>import { visualizer } from 'rollup-plugin-visualizer'
+>
+>export default defineConfig({
+>  plugins: [visualizer({ open: true })]
+>})
+>```
+>npm run build, and watch what happens.
+
 >DONT just copy paste! **Learn!**
 
 ---
