@@ -1,0 +1,11 @@
+# Allow all search engines to index main pages
+User-agent: *
+Disallow:
+
+# Block unnecessary static folders
+Disallow: /assets/
+Disallow: /node_modules/
+Disallow: /build/
+
+# Sitemap location
+Sitemap: https://cse58.vercel.app/sitemap.xml

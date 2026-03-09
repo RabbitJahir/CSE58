@@ -75,6 +75,14 @@ const JavaCodes = () => {
             )}
           </div>
         ))}
+        <a
+          href="https://drive.google.com/drive/folders/1Rup6liK_sjp6DnQODJHbkU6Bh0vF2QCP"
+          className="SubButton"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          More Java Codes<sub> - Kamrul Islam</sub>
+        </a>
       </main>
       <Footer />
     </div>
