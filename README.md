@@ -1,29 +1,40 @@
 # Written by @RabbitJahir — official source: https://github.com/RabbitJahir/CSE58
+
 ## 📌 Usage Notice
-This README is for learning only. Reproduction or redistribution without giving the Author's name is prohibited.  
 
----  
----
-
->**NOTE** AI can not create the best ideas, it will help enchane our ideas to it's maximum potential. 
+This README is for learning only. Reproduction or redistribution without giving the Author's name is prohibited.
 
 ---
+
 ---
-> Link to Website: https://cse58.vercel.app/ 
+
+> **NOTE** AI can not create the best ideas, it will help enchane our ideas to it's maximum potential.
+
 ---
+
 ---
-# React!  
+
+> Link to Website: https://cse58.vercel.app/
+
+---
+
+---
+
+# React!
 
 1. [Getting Npm & Node](#npm-and-node)
 2. [Css, Tailwind](#css-framework-tailwind)
 3. [Project structure & Folders](#index-dot-html)
 4. [Libraries](#libraries)
-5. [React Routing](#react-routing)  
+5. [React Routing](#react-routing)
 6. [React Routing Complex](#complex-routing)
 7. [Hosting](#hosting)
 8. [File Optimization](#optimization)
 9. [Build Tools & Performance Testing](#build-tools)
+10. [SEO](#seo-crawlers-ai)
+
 ---
+
 ---
 
 # Npm and Node
@@ -34,10 +45,10 @@ This README is for learning only. Reproduction or redistribution without giving 
 
 > #### Steps
 >
-> - Making a folder, opening in VS code, in terminal  
+> - Making a folder, opening in VS code, in terminal
 >   ```jsx
 >    npm create vite@latest Client
->    ```
+>   ```
 > - package name : client
 > - Select framework: react
 > - select variant: javascript
@@ -50,13 +61,14 @@ This README is for learning only. Reproduction or redistribution without giving 
 > **NOTE**  
 > if you want to install any css frameworks, or any other react liraries, install them inside the **Client** folder, go to Client in your terminal then install.
 
-> to run the code in browser, go to client folder in terminal and type `npm run dev`, hit enter. 
+> to run the code in browser, go to client folder in terminal and type `npm run dev`, hit enter.
 
 ---
 
 [TOP](#react)
 
 ---
+
 ---
 
 # CSS Framework, Tailwind
@@ -68,118 +80,119 @@ This README is for learning only. Reproduction or redistribution without giving 
 
 ## 1. Text / Typography
 
-| CSS Property                    | Tailwind Classes                  |
-|---------------------------------|----------------------------------|
-| `color: white;`                 | `text-white`                     |
-| `color: black;`                 | `text-black`                     |
-| `color: red;`                   | `text-red-500`                   |
-| `font-size: 12px;`              | `text-xs`                        |
-| `font-size: 14px;`              | `text-sm`                        |
-| `font-size: 16px;`              | `text-base`                      |
-| `font-size: 18px;`              | `text-lg`                        |
-| `font-size: 24px;`              | `text-xl`                        |
-| `font-size: 30px;`              | `text-2xl`                       |
-| `font-weight: normal;`          | `font-normal`                    |
-| `font-weight: bold;`            | `font-bold`                      |
-| `text-align: left;`             | `text-left`                      |
-| `text-align: center;`           | `text-center`                    |
-| `text-align: right;`            | `text-right`                     |
-| `text-decoration: underline;`   | `underline`                      |
-| `text-decoration: none;`        | `no-underline`                   |
-| `line-height: 1.5;`             | `leading-relaxed`                |
-| `letter-spacing: 2px;`          | `tracking-wider`                 |
-| `text-transform: uppercase;`    | `uppercase`                      |
-| `text-transform: lowercase;`    | `lowercase`                      |
-| `text-transform: capitalize;`   | `capitalize`                     |
+| CSS Property                  | Tailwind Classes  |
+| ----------------------------- | ----------------- |
+| `color: white;`               | `text-white`      |
+| `color: black;`               | `text-black`      |
+| `color: red;`                 | `text-red-500`    |
+| `font-size: 12px;`            | `text-xs`         |
+| `font-size: 14px;`            | `text-sm`         |
+| `font-size: 16px;`            | `text-base`       |
+| `font-size: 18px;`            | `text-lg`         |
+| `font-size: 24px;`            | `text-xl`         |
+| `font-size: 30px;`            | `text-2xl`        |
+| `font-weight: normal;`        | `font-normal`     |
+| `font-weight: bold;`          | `font-bold`       |
+| `text-align: left;`           | `text-left`       |
+| `text-align: center;`         | `text-center`     |
+| `text-align: right;`          | `text-right`      |
+| `text-decoration: underline;` | `underline`       |
+| `text-decoration: none;`      | `no-underline`    |
+| `line-height: 1.5;`           | `leading-relaxed` |
+| `letter-spacing: 2px;`        | `tracking-wider`  |
+| `text-transform: uppercase;`  | `uppercase`       |
+| `text-transform: lowercase;`  | `lowercase`       |
+| `text-transform: capitalize;` | `capitalize`      |
 
 ---
 
 ## 2. Layout / Display
 
-| CSS Property                     | Tailwind Classes                  |
-|----------------------------------|----------------------------------|
-| `display: block;`                | `block`                           |
-| `display: inline-block;`         | `inline-block`                    |
-| `display: inline;`               | `inline`                          |
-| `display: flex;`                 | `flex`                            |
-| `flex-direction: row;`           | `flex-row`                        |
-| `flex-direction: column;`        | `flex-col`                        |
-| `justify-content: start;`        | `justify-start`                   |
-| `justify-content: center;`       | `justify-center`                  |
-| `justify-content: end;`          | `justify-end`                     |
-| `justify-content: space-between;`| `justify-between`                 |
-| `justify-content: space-around;` | `justify-around`                  |
-| `align-items: start;`            | `items-start`                     |
-| `align-items: center;`           | `items-center`                    |
-| `align-items: end;`              | `items-end`                       |
-| `flex-wrap: wrap;`               | `flex-wrap`                       |
-| `flex-wrap: nowrap;`             | `flex-nowrap`                     |
-| `gap: 4px;`                      | `gap-1`                            |
-| `gap: 8px;`                      | `gap-2`                            |
+| CSS Property                      | Tailwind Classes  |
+| --------------------------------- | ----------------- |
+| `display: block;`                 | `block`           |
+| `display: inline-block;`          | `inline-block`    |
+| `display: inline;`                | `inline`          |
+| `display: flex;`                  | `flex`            |
+| `flex-direction: row;`            | `flex-row`        |
+| `flex-direction: column;`         | `flex-col`        |
+| `justify-content: start;`         | `justify-start`   |
+| `justify-content: center;`        | `justify-center`  |
+| `justify-content: end;`           | `justify-end`     |
+| `justify-content: space-between;` | `justify-between` |
+| `justify-content: space-around;`  | `justify-around`  |
+| `align-items: start;`             | `items-start`     |
+| `align-items: center;`            | `items-center`    |
+| `align-items: end;`               | `items-end`       |
+| `flex-wrap: wrap;`                | `flex-wrap`       |
+| `flex-wrap: nowrap;`              | `flex-nowrap`     |
+| `gap: 4px;`                       | `gap-1`           |
+| `gap: 8px;`                       | `gap-2`           |
 
 ---
 
 ## 3. Spacing (Margin & Padding)
 
-| CSS Property          | Tailwind Classes       |
-|-----------------------|----------------------|
-| `margin: 0;`          | `m-0`                |
-| `margin: 4px;`        | `m-1`                |
-| `margin: 8px;`        | `m-2`                |
-| `margin-top: 8px;`    | `mt-2`               |
-| `margin-bottom: 16px;`| `mb-4`               |
-| `padding: 0;`         | `p-0`                |
-| `padding: 4px;`       | `p-1`                |
-| `padding: 8px;`       | `p-2`                |
-| `padding-top: 16px;`  | `pt-4`               |
-| `padding-bottom: 16px;`| `pb-4`              |
+| CSS Property            | Tailwind Classes |
+| ----------------------- | ---------------- |
+| `margin: 0;`            | `m-0`            |
+| `margin: 4px;`          | `m-1`            |
+| `margin: 8px;`          | `m-2`            |
+| `margin-top: 8px;`      | `mt-2`           |
+| `margin-bottom: 16px;`  | `mb-4`           |
+| `padding: 0;`           | `p-0`            |
+| `padding: 4px;`         | `p-1`            |
+| `padding: 8px;`         | `p-2`            |
+| `padding-top: 16px;`    | `pt-4`           |
+| `padding-bottom: 16px;` | `pb-4`           |
 
 ---
 
 ## 4. Background & Borders
 
-| CSS Property                  | Tailwind Classes        |
-|--------------------------------|-----------------------|
-| `background-color: red;`       | `bg-red-500`          |
-| `background-color: blue;`      | `bg-blue-500`         |
-| `background-color: green;`     | `bg-green-500`        |
-| `border: 1px solid black;`     | `border border-black` |
-| `border-radius: 4px;`          | `rounded`             |
-| `border-radius: 9999px;`       | `rounded-full`        |
-| `border-top: 2px;`             | `border-t-2`          |
-| `border-bottom: 2px;`          | `border-b-2`          |
+| CSS Property               | Tailwind Classes      |
+| -------------------------- | --------------------- |
+| `background-color: red;`   | `bg-red-500`          |
+| `background-color: blue;`  | `bg-blue-500`         |
+| `background-color: green;` | `bg-green-500`        |
+| `border: 1px solid black;` | `border border-black` |
+| `border-radius: 4px;`      | `rounded`             |
+| `border-radius: 9999px;`   | `rounded-full`        |
+| `border-top: 2px;`         | `border-t-2`          |
+| `border-bottom: 2px;`      | `border-b-2`          |
 
 ---
 
 ## 5. Width & Height
 
-| CSS Property       | Tailwind Classes    |
-|-------------------|-------------------|
-| `width: 100%;`     | `w-full`           |
-| `width: 50%;`      | `w-1/2`            |
-| `height: 100%;`    | `h-full`           |
-| `height: 50%;`     | `h-1/2`            |
-| `min-width: 100px;`| `min-w-[100px]`    |
-| `max-width: 500px;`| `max-w-[500px]`    |
+| CSS Property        | Tailwind Classes |
+| ------------------- | ---------------- |
+| `width: 100%;`      | `w-full`         |
+| `width: 50%;`       | `w-1/2`          |
+| `height: 100%;`     | `h-full`         |
+| `height: 50%;`      | `h-1/2`          |
+| `min-width: 100px;` | `min-w-[100px]`  |
+| `max-width: 500px;` | `max-w-[500px]`  |
 
 ---
 
 ## 6. Positioning
 
-| CSS Property                  | Tailwind Classes        |
-|--------------------------------|-----------------------|
-| `position: relative;`          | `relative`            |
-| `position: absolute;`          | `absolute`            |
-| `position: fixed;`             | `fixed`               |
-| `top: 0;`                      | `top-0`               |
-| `right: 0;`                    | `right-0`             |
-| `bottom: 0;`                   | `bottom-0`            |
-| `left: 0;`                     | `left-0`              |
-| `z-index: 10;`                 | `z-10`                |
+| CSS Property          | Tailwind Classes |
+| --------------------- | ---------------- |
+| `position: relative;` | `relative`       |
+| `position: absolute;` | `absolute`       |
+| `position: fixed;`    | `fixed`          |
+| `top: 0;`             | `top-0`          |
+| `right: 0;`           | `right-0`        |
+| `bottom: 0;`          | `bottom-0`       |
+| `left: 0;`            | `left-0`         |
+| `z-index: 10;`        | `z-10`           |
 
 ---
 
-> Run the code inside **Client** folder 
+> Run the code inside **Client** folder
+>
 > ```jsx
 > npm install tailwindcss @tailwindcss/vite
 > ```
@@ -187,29 +200,36 @@ This README is for learning only. Reproduction or redistribution without giving 
 #### Setting up Tailwindcss
 
 > go to `vite.config.js` folder  
-> add this line 
->```jsx
->import tailwindcss from '@tailwindcss/vite' 
->```  
+> add this line
+>
+> ```jsx
+> import tailwindcss from "@tailwindcss/vite";
+> ```
+>
 > with other imports.  
-> `tailwindcss() ` with other plugins.  
->  ```jsx
->  plugins: [react(), tailwindcss()],
->```
->something like this.
+> `tailwindcss() ` with other plugins.
+>
+> ```jsx
+> plugins: [react(), tailwindcss()],
+> ```
+>
+> something like this.
 
 > Inside `index.css`  
->  delete everything and paste 
->```jsx
->@import "tailwindcss";
->```  
+>  delete everything and paste
+>
+> ```jsx
+> @import "tailwindcss";
+> ```
 
 ---
+
 ---
 
 [TOP](#react)
 
 ---
+
 ---
 
 # index dot html
@@ -221,7 +241,9 @@ This README is for learning only. Reproduction or redistribution without giving 
 > index.css inside src, just the css code
 
     structure ` import './name.css' `
+
 ---
+
 # src
 
 > The main folder where we actually create files and write codes.
@@ -229,8 +251,8 @@ This README is for learning only. Reproduction or redistribution without giving 
 > **main.jsx** is the entry script to other scripts, this renders our app, auto imports libraries, we can add more when needed.
 
 ```jsx
-    import React from 'react' 
-    import { createRoot } from 'react-dom/client' 
+import React from "react";
+import { createRoot } from "react-dom/client";
 ```
 
 > **StrictMode** a safety wrapper, warns about open APIs, double renders to catch any side effect, it is safe to remove in production, but better to keep it. And this gets stripped automatically in builds. Third-party libraries can act weird when in strictmode.
@@ -238,18 +260,24 @@ This README is for learning only. Reproduction or redistribution without giving 
 > **createRoot** finds the div id=root from index.html. We see that App is wrapped in basically everything. So, App is the main place where we start coding, editing our webpage.
 
 > **Important** to load every page that we want to edit in a file, first we load the code, then the code runs when we call it.
+
 ```jsx
- import App_name from './App_name.type' 
+import App_name from "./App_name.type";
 ```
 
 > **NOTE**  
-> we use import App_name because we use 
->```jsx
-> export default App_name 
->``` 
->at end of every jsx files.
+> we use import App_name because we use
+>
+> ```jsx
+> export default App_name;
+> ```
+>
+> at end of every jsx files.
+
 ---
+
 ---
+
 # File Structure
 
 > JSX, or JavaScript XML, is a syntax extension for JavaScript primarily used with React to create UI components by writing HTML-like code directly inside JavaScript files. So we use function to make a static web page, or javascript.
@@ -271,19 +299,17 @@ function AppName(){
 
 ```jsx
 const AppName = () => {
-	return (
-    <div>
-     you can use div, but everything has to be inside one.
-     </div>
-	)
-}
+  return <div>you can use div, but everything has to be inside one.</div>;
+};
 export default AppName;
 ```
 
 const is the modern way.
 
 ---
+
 ---
+
 # public
 
 > Use this folder to add pdfs for a clean structure, and just call them in the jsx files.
@@ -299,6 +325,7 @@ const is the modern way.
 > we dont need to use `../` to go back or `/pages` href in react automatically goes inside public and looks for pdfs or images.
 
 ---
+
 ---
 
 # node_modulus
@@ -324,22 +351,26 @@ const is the modern way.
 - > word-wrap : in npm, too break words by characters, can be used to display in broswer.
 
 - > natural-compare : uses human friendly sorting method.
+
 ---
+
 # libraries
 
 - `npm install react-wrap-balancer` to auto balance titles or divs
 - `npm install mathjs` better to install for any kind of math stuffs
 - `npm install react-router-dom` navigation between pages
-- `npm install tailwind-scrollbar-hide` hides scrollbar  
-- `npm install --save-dev vite-plugin-image-optimizer sharp svgo`  auto-compress JPEGs and generate WebP/AVIF during builds—even for `/public` folder.
+- `npm install tailwind-scrollbar-hide` hides scrollbar
+- `npm install --save-dev vite-plugin-image-optimizer sharp svgo` auto-compress JPEGs and generate WebP/AVIF during builds—even for `/public` folder.
 - `npm install --save-dev rollup-plugin-visualizer` see build files/file-sizes, visual diagram of step by step program run.
 
 ---
+
 ---
 
 [TOP](#react)
 
 ---
+
 ---
 
 # React-Routing
@@ -356,15 +387,15 @@ const is the modern way.
 
 > import The library in main.jsx
 >
->```jsx
->    import {BrowserRouter} from 'react-router-dom'
+> ```jsx
+> import { BrowserRouter } from "react-router-dom";
 >
->	createRoot(document.getElementById('root')).render(
->	  <BrowserRouter>
->	    <App />
->	  </BrowserRouter>
->	)
->```
+> createRoot(document.getElementById("root")).render(
+>   <BrowserRouter>
+>     <App />
+>   </BrowserRouter>,
+> );
+> ```
 
 > BrowserRouter is a component of the react-router-dom library.
 >
@@ -373,22 +404,22 @@ const is the modern way.
 
 > Add the routings in App.jsx:
 >
->```jsx
->	import {Routes, Route} from 'react-router-dom';
+> ```jsx
+> 	import {Routes, Route} from 'react-router-dom';
 >
->	function App(){
->	  return(
->	    <>
->	      <div>
->	      <Routes>
->		<Route path='/' element={ } />
->		<Route path=' ' element={ } />
->	      </Routes>
->	      </div>
->	    </>
->	  );
->	}
->```
+> 	function App(){
+> 	  return(
+> 	    <>
+> 	      <div>
+> 	      <Routes>
+> 		<Route path='/' element={ } />
+> 		<Route path=' ' element={ } />
+> 	      </Routes>
+> 	      </div>
+> 	    </>
+> 	  );
+> 	}
+> ```
 
 > Routes and Route are also components.
 >
@@ -409,134 +440,137 @@ const is the modern way.
 
 ### `Link`
 
->```jsx 
-> import { Link } from 'react-router-dom' 
->```
+> ```jsx
+> import { Link } from "react-router-dom";
+> ```
 >
 > Link is how we make links that connects to different pages.
 >
 > - As HomePage is now the entry page, we will use links inside homepage,
 
 ---
----  
+
+---
+
 [TOP](#react)
 
 ---
+
 ---
 
 # Complex Routing
 
 > Routing for bigger projects, better to learn this. **RouterProvider**
 
-> **main.jsx**  
+> **main.jsx**
 >
->```jsx
+> ```jsx
+> import { createRoot } from "react-dom/client";
+> import "./index.css";
+> import App from "./App.jsx";
 >
->import { createRoot } from "react-dom/client";
->import "./index.css";
->import App from "./App.jsx";
->
->createRoot(document.getElementById("root")).render(<App />);
->```
+> createRoot(document.getElementById("root")).render(<App />);
+> ```
 
 > **App.jsx**
->```jsx
->import { RouterProvider } from "react-router-dom";
->import router from "./router/router";
 >
->const App = () => {
->  return <RouterProvider router={router} />;
->};
+> ```jsx
+> import { RouterProvider } from "react-router-dom";
+> import router from "./router/router";
 >
->export default App;
->```
+> const App = () => {
+>   return <RouterProvider router={router} />;
+> };
+>
+> export default App;
+> ```
 
 > Make a new folder in **src**, name it `router`, inside `router.jsx`
 >
->```jsx
->import { createBrowserRouter } from "react-router-dom";
+> ```jsx
+> import { createBrowserRouter } from "react-router-dom";
 >
->import Home from "../MainPages/Home";
->import S12 from "../MainPages/S12";
->import Calendar from "../S12/Calendar/Calendar"
->import Wad from "../S12/Wad/index";
->import Opde from "../S12/Opde/index";
->import Discrete from "../S12/Discrete/index";
->import Oop from "../S12/Oop/index";
->import Eee from "../S12/Eee/index";
->import Ed from "../S12/Ed/index";
->import Bs from "../S12/Bs/index";
->import EeeLab from "../S12/Eee/EeeLab/EeeLab";
->import OopMid from "../S12/Oop/OopMid";
->import JavaCodes from "../S12/Oop/JavaCodes";
->import BsTimeLine from "../S12/Bs/BsHistory/BsTimeLine";
->import HtmlCodes  from "../S12/Wad/HtmlCodes";
+> import Home from "../MainPages/Home";
+> import S12 from "../MainPages/S12";
+> import Calendar from "../S12/Calendar/Calendar";
+> import Wad from "../S12/Wad/index";
+> import Opde from "../S12/Opde/index";
+> import Discrete from "../S12/Discrete/index";
+> import Oop from "../S12/Oop/index";
+> import Eee from "../S12/Eee/index";
+> import Ed from "../S12/Ed/index";
+> import Bs from "../S12/Bs/index";
+> import EeeLab from "../S12/Eee/EeeLab/EeeLab";
+> import OopMid from "../S12/Oop/OopMid";
+> import JavaCodes from "../S12/Oop/JavaCodes";
+> import BsTimeLine from "../S12/Bs/BsHistory/BsTimeLine";
+> import HtmlCodes from "../S12/Wad/HtmlCodes";
 >
->const router = createBrowserRouter([
->  {
->    path: "/",
->    element: <Home />,
->  },
->  {
->    path: "/S12",
->    element: <S12 />,
->  },
->  {
->    path: "/S12/Calendar",
->    element: <Calendar />,
->  },
->  {
->    path: "/S12/Discrete",
->    element: <Discrete />,
->  },
->  {
->    path: "/S12/Wad",
->    element: <Wad />,
->  },
->  {
->    path: "/S12/Wad/HtmlCodes",
->    element: <HtmlCodes />,
->  },
->  {
->    path: "/S12/Oop",
->    element: <Oop />,
->  },
->  {
->    path: "/S12/Oop/JavaCodes",
->    element: <JavaCodes />,
->  },
->  {
->    path: "/S12/Oop/OopMid",
->    element: <OopMid/>,
->  },
->  {
->    path: "/S12/Opde",
->    element: <Opde />,
->  },
->  {
->    path: "/S12/Eee",
->    element: <Eee />,
->  },
->  {
->    path: "/S12/Eee/EeeLab",
->    element: <EeeLab />,
->  },
->  {
->    path: "/S12/Ed",
->    element: <Ed />,
->  },
->  {
->    path: "/S12/Bs",
->    element: <Bs />,
->  },
->  {
->    path: "/S12/Bs/BsHistory/BsTimeLine",
->    element: <BsTimeLine />,
->  },
->]);
+> const router = createBrowserRouter([
+>   {
+>     path: "/",
+>     element: <Home />,
+>   },
+>   {
+>     path: "/S12",
+>     element: <S12 />,
+>   },
+>   {
+>     path: "/S12/Calendar",
+>     element: <Calendar />,
+>   },
+>   {
+>     path: "/S12/Discrete",
+>     element: <Discrete />,
+>   },
+>   {
+>     path: "/S12/Wad",
+>     element: <Wad />,
+>   },
+>   {
+>     path: "/S12/Wad/HtmlCodes",
+>     element: <HtmlCodes />,
+>   },
+>   {
+>     path: "/S12/Oop",
+>     element: <Oop />,
+>   },
+>   {
+>     path: "/S12/Oop/JavaCodes",
+>     element: <JavaCodes />,
+>   },
+>   {
+>     path: "/S12/Oop/OopMid",
+>     element: <OopMid />,
+>   },
+>   {
+>     path: "/S12/Opde",
+>     element: <Opde />,
+>   },
+>   {
+>     path: "/S12/Eee",
+>     element: <Eee />,
+>   },
+>   {
+>     path: "/S12/Eee/EeeLab",
+>     element: <EeeLab />,
+>   },
+>   {
+>     path: "/S12/Ed",
+>     element: <Ed />,
+>   },
+>   {
+>     path: "/S12/Bs",
+>     element: <Bs />,
+>   },
+>   {
+>     path: "/S12/Bs/BsHistory/BsTimeLine",
+>     element: <BsTimeLine />,
+>   },
+> ]);
 >
->export default router;
->```
+> export default router;
+> ```
 >
 > A sample Structure, **path names can never be same**, even when in same folder, for example for Eee and EeeLab, Opde and OpdeMid, they are in same folder, but path has something extra, name of that folder, to make it unique
 
@@ -544,13 +578,14 @@ const is the modern way.
 
 > Parent and children, to open a block on the same page, shows contents of the children, in parent page.
 > Better way, use open, setOpen, when a block is clicked it opens and reclick hides it.
->```jsx
->import React, { useState } from "react";
->import { Link } from "react-router-dom";
->import OpdeMid from "./OpdeMid";
->import OpdeFinal from "./OpdeFinal";
 >
->const Index = () => {
+> ```jsx
+> import React, { useState } from "react";
+> import { Link } from "react-router-dom";
+> import OpdeMid from "./OpdeMid";
+> import OpdeFinal from "./OpdeFinal";
+>
+> const Index = () => {
 >  const [open, setOpen] = useState(null);
 >
 >  const toggle = (section) => {
@@ -562,24 +597,27 @@ const is the modern way.
 >  };
 >
 >  return(
->		<button onClick={() => toggle("OpdeMid")}>Mid Syllabus</button>
+> 		<button onClick={() => toggle("OpdeMid")}>Mid Syllabus</button>
 >      {open === "OpdeMid" && <OpdeMid />}
 >
 >    <button onClick={() => toggle("OpdeFinal")}>Final Syllabus</button>
 >      {open === "OpdeFinal" && <OpdeFinal />}
->	)
->}
+> 	)
+> }
 >
->export default Index;
->```
+> export default Index;
+> ```
+>
 > AI it, play with it, learn it, your way.
-  
+
 ---
+
 ---
 
 [TOP](#react)
 
 ---
+
 ---
 
 # Hosting
@@ -594,98 +632,113 @@ const is the modern way.
 >   "rewrites": [
 >    { "source": "/(.*)", "destination": "/index.html" }
 >  ]
->}
->```
+> }
+> ```
 >
 > - React Router uses client-side routing.
-> - Pasting that code makes React Router takes over client-side and renders the correct page.  
-    
+> - Pasting that code makes React Router takes over client-side and renders the correct page.
+
 ---
+
 ---
 
 [TOP](#react)
 
 ---
+
 ---
 
 # Optimization
 
 ### Optimize File Size & Formats (Vite Plugin)
 
-> Install this library in Client folder. 
->```jsx
->npm install --save-dev vite-plugin-image-optimizer
->```
->Auto-compress JPEGs and generate WebP/AVIF during builds—even for `/public` folder.
-
->Update `vite.config.js` The ImageOptimizer is inside `plugins[]`
-> ```jsx
->import { defineConfig } from 'vite';
->import react from '@vitejs/plugin-react';
->import { ViteImageOptimizer } from 'vite-plugin-image-optimizer';
+> Install this library in Client folder.
 >
->export default defineConfig({
->  plugins: [
->    react(),
->    ViteImageOptimizer({
->      includePublic: ['/S12/Calendar/*'],  // Target your folder with images
->      png: { quality: 80 },
->      jpeg: { quality: 85 },
->      webp: { lossless: false, quality: 90 },
->      avif: { speed: 6, quality: 75 },
->    }),
->  ],
->});
->```
+> ```jsx
+> npm install --save-dev vite-plugin-image-optimizer
+> ```
+>
+> Auto-compress JPEGs and generate WebP/AVIF during builds—even for `/public` folder.
+
+> Update `vite.config.js` The ImageOptimizer is inside `plugins[]`
+>
+> ```jsx
+> import { defineConfig } from "vite";
+> import react from "@vitejs/plugin-react";
+> import { ViteImageOptimizer } from "vite-plugin-image-optimizer";
+>
+> export default defineConfig({
+>   plugins: [
+>     react(),
+>     ViteImageOptimizer({
+>       includePublic: ["/S12/Calendar/*"], // Target your folder with images
+>       png: { quality: 80 },
+>       jpeg: { quality: 85 },
+>       webp: { lossless: false, quality: 90 },
+>       avif: { speed: 6, quality: 75 },
+>     }),
+>   ],
+> });
+> ```
+
 ---
+
 ### Native Lazy Loading:
->loading="lazy" (browser-native, no JS needed) and fixed dimensions to prevent layout shifts.
->```jsx
-><img 
->  src="/S12/Calendar/calendar.jpeg" 
->  alt="2A University Calendar" 
->  loading="lazy" 
->  width="800" 
->  height="600" 
->/>
->```
+
+> loading="lazy" (browser-native, no JS needed) and fixed dimensions to prevent layout shifts.
+>
+> ```jsx
+> <img
+>   src="/S12/Calendar/calendar.jpeg"
+>   alt="2A University Calendar"
+>   loading="lazy"
+>   width="800"
+>   height="600"
+> />
+> ```
 
 > ```jsx
->npm install --save-dev rollup-plugin-visualizer
->```
+> npm install --save-dev rollup-plugin-visualizer
+> ```
 >
->vite.config.js
->```jsx
->import { defineConfig } from 'vite'
->import { visualizer } from 'rollup-plugin-visualizer'
+> vite.config.js
 >
->export default defineConfig({
->  plugins: [visualizer({ open: true })]
->})
->```
->npm run build, and watch what happens.
+> ```jsx
+> import { defineConfig } from "vite";
+> import { visualizer } from "rollup-plugin-visualizer";
+>
+> export default defineConfig({
+>   plugins: [visualizer({ open: true })],
+> });
+> ```
+>
+> npm run build, and watch what happens.
 
->DONT just copy paste! **Learn!**
+> DONT just copy paste! **Learn!**
 
 ---
+
 ---
 
 # Build Tools
 
 > `npm run dev` runs file locally, usually at port 5173
+>
 > - Hot reload
 > - Fast debugging
-> This is only for development, not for real performance testing.
+>   This is only for development, not for real performance testing.
 
 > `npm run build` production version of the site.
+>
 > - Combines and optimizes files
 > - Minifies JS and CSS
 > - Removes development tools
-> - `dist` folder is created. 
-> Distribution, contains the final optimized version of your website that is ready to be deployed to a server.
-> Combines files, Minifies code, Removes development tools, Optimizes assets, Then it puts the final result in `dist/`
+> - `dist` folder is created.
+>   Distribution, contains the final optimized version of your website that is ready to be deployed to a server.
+>   Combines files, Minifies code, Removes development tools, Optimizes assets, Then it puts the final result in `dist/`
 
 > `npm run preview` Runs a local server for the built site, usually at port 4173.
+>
 > - It lets you test the production build locally.
 > - Always do build before preview.
 
@@ -696,14 +749,56 @@ const is the modern way.
 
 ## Lighthouse
 
->Open Build Tools, look for lighthouse, run it, see the score, learn more about lighthouse. AI, Google.
+> Open Build Tools, look for lighthouse, run it, see the score, learn more about lighthouse. AI, Google.
 
 ---
+
+---
+
+[TOP](#react)
+
+# SEO, CRAWLERS, AI
+
+> React way of making a table.
+> ```html
+> <table className="tailwindcss">
+>   <caption className="sr-only">
+>     Topics this table is about
+>   </caption>
+>   <thead className="tailwindcss">
+>     <tr>
+>       <th></th>
+>       <th></th>
+>     </tr>
+> <tbody>
+>            {[
+>              ["row1column1", "r1c2"],
+>              ["r2c1", "r2c2"],
+>              ["r3c1", "r3c2"],
+>            ].map((row, idx) => (
+>              <tr key={idx} className={rowClass(idx)}>
+>                {row.map((cell, cIdx) => (
+>                  <td key={cIdx} className="px-4 py-2">
+>                    {cell}
+>                  </td>
+>                ))}
+>              </tr>
+>            ))}
+>   </thead>
+> </table>
+> ```
+>`caption` the tag crawlers, google, AI, etc looks for in a table for SEO purpose. `"sr-only"`. Screen-Read only, so the user cant see this, only the bots can.
+
+> Adding meta tags in head of html files. Google types of meta tags, how to use them, what they do.
+
+---
+
 ---
 
 [TOP](#react)
 
 ---
+
 ---
-  
+
 <sub>© 2026 RabbitJahir. All rights reserved.</sub>
