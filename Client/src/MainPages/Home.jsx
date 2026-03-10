@@ -2,12 +2,13 @@ import { Link } from "react-router-dom";
 import Logosrc from "../components/Logosrc";
 import Footer from "../components/Footer";
 import HomeHeader from "./HomeHeader";
+import BodyThemeToggle from "../components/BodyThemeToggle";
 
 const Home = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <HomeHeader/>
-      
+      <BodyThemeToggle/>
       <main className="flex-grow flex flex-col items-center gap-6 w-full px-4">
         {/* 3 main links */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl">

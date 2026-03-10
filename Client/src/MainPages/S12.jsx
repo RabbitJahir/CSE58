@@ -2,9 +2,8 @@ import React from "react";
 import { Link, Outlet } from "react-router-dom";
 import "./S12.css";
 import Footer from "../components/Footer";
-import Logosrc from "../components/Logosrc";
-import SubjectButton from "../components/Buttons";
 import Header from "../components/Header";
+import BodyThemeToggle from "../components/BodyThemeToggle";
 
 const links = [
   { to: "/", label: "Home Page", className: "HeaderButton" },
@@ -15,6 +14,7 @@ const S12 = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header links={links}/>
+      <BodyThemeToggle/>
       {/*--------------------------------------MAIN----------------------------------------------------*/}
       <main className="flex-grow flex flex-col items-center gap-6 overflow-y-scroll scrollbar-hide">
         <h1 className="text-3xl font-bold text-center text-white">

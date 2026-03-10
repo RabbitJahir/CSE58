@@ -3,6 +3,7 @@ import { oopCodes } from "./OopCodes";
 import Footer from "../../components/Footer";
 import { Link } from "react-router-dom";
 import Header from "../../components/Header";
+import BodyThemeToggle from "../../components/BodyThemeToggle";
 
 const JavaCodes = () => {
   const [open, setOpen] = useState(null);
@@ -27,6 +28,7 @@ const JavaCodes = () => {
     <div className="min-h-screen flex flex-col">
       
       <Header links={links} />
+      <BodyThemeToggle/>
       {/*------------------------------MAIN----------------------------------------------- */}
       <main className="flex-grow p-4 flex flex-col gap-4 w-full max-w-4xl mx-auto">
         <h1 className="text-3xl font-bold text-center mb-6 text-white">

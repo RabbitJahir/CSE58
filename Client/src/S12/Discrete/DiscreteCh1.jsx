@@ -3,6 +3,7 @@ import Header from "../../components/Header";
 import { discretech1solve } from "./DiscreteCh1Solve";
 import Footer from "../../components/Footer";
 import BackToTop from "../../components/BackToTop";
+import BodyThemeToggle from "../../components/BodyThemeToggle";
 
 const links = [
   { to: "/", label: "Home Page", className: "HeaderButton" },
@@ -25,11 +26,25 @@ const DiscreteCh1 = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header links={links} />
+      <BackToTop />
+      <br />
+      <br />
+      <BodyThemeToggle />
 
-      <BackToTop/>
       <main className="flex-grow p-4 flex flex-col gap-4 w-full max-w-4xl mx-auto">
         <h2 className="text-2xl font-bold">Discrete Chapter 1 Page</h2>
-        <div className="SubButton">Exercise: 1.1, Id: 1-54 <br/>Exercise: 1.2, Id: 55-101 <br/>Exercise: 1.3, Id: 101-173<br/>Exercise: 1.4, Id: 174-237 <br/>Exercise: 1.5, Id: 238-289 <br/>Exercise: 1.6, Id: 290-324<br/>Exercise: 1.7, Id: 325-368 <br/> Exercise: 1.8, Id: 369-420 <br/> !UNDER CONSTRUCTION!</div>
+        <div className="SubButton">
+          Exercise: 1.1, Id: 1-54 <br />
+          Exercise: 1.2, Id: 55-101 <br />
+          Exercise: 1.3, Id: 101-173
+          <br />
+          Exercise: 1.4, Id: 174-237 <br />
+          Exercise: 1.5, Id: 238-289 <br />
+          Exercise: 1.6, Id: 290-324
+          <br />
+          Exercise: 1.7, Id: 325-368 <br /> Exercise: 1.8, Id: 369-420 <br />{" "}
+          !UNDER CONSTRUCTION!
+        </div>
         <input
           type="number"
           placeholder="Search by ID"

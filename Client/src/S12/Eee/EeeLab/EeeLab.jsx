@@ -6,6 +6,7 @@ import EeeLabEx2 from "./EeeLabEx2";
 import EeeLabEx3 from "./EeeLabEx3";
 import { Link } from "react-router-dom";
 import Header from "../../../components/Header";
+import BodyThemeToggle from "../../../components/BodyThemeToggle";
 
 const EeeLab = () => {
   const [open, setOpen] = useState(null);
@@ -25,6 +26,7 @@ const EeeLab = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header links={links} />
+      <BodyThemeToggle/>
       {/*------------------------------MAIN----------------------------------------------- */}
       <main className="flex-grow p-4 text-white flex flex-col items-center gap-4">
         <h2 className="text-2xl font-bold">Eee Lab Page</h2>

@@ -4,6 +4,7 @@ import OpdeMid from "./OpdeMid";
 import OpdeFinal from "./OpdeFinal";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import BodyThemeToggle from "../../components/BodyThemeToggle";
 
 const Index = () => {
   const [open, setOpen] = useState(null);
@@ -22,6 +23,7 @@ const Index = () => {
   return (
     <div className="min-h-screen flex flex-col">
         <Header links={links}/>
+        <BodyThemeToggle/>
       {/*------------------------------MAIN----------------------------------------------- */}
       <main className="flex-grow p-4 text-white flex flex-col items-center gap-4">
         <h2 className="text-2xl font-bold">

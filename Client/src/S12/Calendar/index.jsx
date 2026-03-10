@@ -3,6 +3,7 @@ import Logosrc from "../../components/Logosrc";
 import { Link } from "react-router-dom";
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
+import BodyThemeToggle from "../../components/BodyThemeToggle";
 const links = [
   { to: "/", label: "Home Page", className: "HeaderButton" },
   { to: "/S12", label: "S 12 Page", className: "HeaderButton" },
@@ -11,6 +12,7 @@ const index = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header links={links}/>
+      <BodyThemeToggle/>
       {/*------------------------------MAIN----------------------------------------------- */}
       <main className="flex-grow p-4 text-white flex flex-col items-center gap-4">
         <img
