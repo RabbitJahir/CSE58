@@ -30,7 +30,7 @@ e) The moon is made of green cheese.
 f ) 2n ≥ 100.`,
     code: `a) Not a proposition
 b) Not a proposition
-c) Not a proposition
+c) False
 d) Not a proposition
 e) False
 f) Not a proposition`,
@@ -3535,6 +3535,6 @@ Output: ((¬p ∨ ¬r) ∧ ¬q) ∨ (¬p ∧ (q ∨ r))`,
     description: "Under construction",
     code: "",
   },
-  
+
   /* */
 ];
