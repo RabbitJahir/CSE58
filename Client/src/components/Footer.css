@@ -3,7 +3,7 @@ body.dark-mode .rabbit-glow {
 }
 
 body.light-mode .rabbit-glow {
-  color: black;
+  color: rgb(0, 0, 0);
 }
 
 

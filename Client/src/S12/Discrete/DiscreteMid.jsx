@@ -8,9 +8,9 @@ const DiscreteMid = () => {
       <Link to="/S12/Discrete/DiscreteCh1" className="SubButton">
         Chapter 1
       </Link>
-      <a href="/Discrete/chapter_2_144-222.pdf" className="SubButton">
-        Chapter 2 <sub>-Download</sub>
-      </a>
+      <Link to="/S12/Discrete/DiscreteCh2" className="SubButton">
+        Chapter 2
+      </Link>
 
       <a href="/Discrete/chapter_3_224-272.pdf" className="SubButton">
         Chapter 3 <sub>-Download</sub>

@@ -16,7 +16,8 @@ import OopMid from "../S12/Oop/OopMid";
 import JavaCodes from "../S12/Oop/JavaCodes";
 import BsTimeLine from "../S12/Bs/BsHistory/BsTimeLine";
 import HtmlCodes from "../S12/Wad/HtmlCodes";
-import DiscreteCh1 from "../S12/Discrete/DiscreteCh1"; 
+import DiscreteCh1 from "../S12/Discrete/DiscreteCh1";
+import DiscreteCh2 from "../S12/Discrete/DiscreteCh2";
 
 const router = createBrowserRouter([
   {
@@ -30,6 +31,11 @@ const router = createBrowserRouter([
   {
     path: "/S12/Discrete/DiscreteCh1",
     element: <DiscreteCh1 />,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: "/S12/Discrete/DiscreteCh2",
+    element: <DiscreteCh2 />,
     errorElement: <ErrorPage />,
   },
   { path: "/S12/Wad", element: <Wad />, errorElement: <ErrorPage /> },

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Header from "../../components/Header";
-import { discretech1solve } from "./DiscreteCh1Solve";
+import { discretech2solve } from "./DiscreteCh2Solve";
 import Footer from "../../components/Footer";
 
 const links = [
@@ -9,7 +9,7 @@ const links = [
   { to: "/S12/Discrete", label: "Discrete Page", className: "HeaderButton" },
 ];
 
-const DiscreteCh1 = () => {
+const DiscreteCh2 = () => {
   const [open, setOpen] = useState(null);
 
   const toggle = (id) => setOpen(open === id ? null : id);
@@ -26,8 +26,8 @@ const DiscreteCh1 = () => {
       <Header links={links} />
 
       <main className="flex-grow p-4 flex flex-col gap-4 w-full max-w-4xl mx-auto">
-        <h2 className="text-2xl font-bold">Discrete Chapter 1 Page</h2>
-        <div className="SubButton">Exercise: 1.1, Id: 1-54 <br/>Exercise: 1.2, Id: 55-101 <br/>Exercise: 1.3, Id: 101-173<br/>Exercise: 1.4, Id: 174-237 <br/>Exercise: 1.5, Id: 238-289 <br/>Exercise: 1.6, Id: 290-324<br/>Exercise: 1.7, Id: 325-368 <br/> Exercise: 1.8, Id: 369-420 <br/> !UNDER CONSTRUCTION!</div>
+        <h2 className="text-2xl font-bold">Discrete Chapter 2 Page</h2>
+        <div className="SubButton">!UNDER CONSTRUCTION!<br/> </div>
         <input
           type="number"
           placeholder="Search by ID"
@@ -36,7 +36,7 @@ const DiscreteCh1 = () => {
           onChange={(e) => setSearch(e.target.value)}
         />
 
-        {discretech1solve
+        {discretech2solve
           .filter((snippet) =>
             search === "" ? true : snippet.id === Number(search),
           )
@@ -88,4 +88,4 @@ const DiscreteCh1 = () => {
   );
 };
 
-export default DiscreteCh1;
+export default DiscreteCh2;
