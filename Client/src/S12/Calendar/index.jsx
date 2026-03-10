@@ -34,7 +34,7 @@ const index = () => {
           height="600"
         ></img>
         <a className="SubButton" href="/S12/Calendar/ramadan.jpeg">
-          2A Calendar<sub> -Download</sub>
+          2026 Ramadan Calendar<sub> -Download</sub>
         </a>
       </main>
       <Footer />

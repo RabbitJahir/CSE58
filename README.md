@@ -26,12 +26,11 @@ This README is for learning only. Reproduction or redistribution without giving 
 2. [Css, Tailwind](#css-framework-tailwind)
 3. [Project structure & Folders](#index-dot-html)
 4. [Libraries](#libraries)
-5. [React Routing](#react-routing)
-6. [React Routing Complex](#complex-routing)
-7. [Hosting](#hosting)
-8. [File Optimization](#optimization)
-9. [Build Tools & Performance Testing](#build-tools)
-10. [SEO](#seo-crawlers-ai)
+5. [React Routing library](#react-router-dom)
+6. [Hosting](#hosting)
+7. [File Optimization](#optimization)
+8. [Build Tools & Performance Testing](#build-tools)
+9. [SEO](#seo-crawlers-ai)
 
 ---
 
@@ -373,7 +372,7 @@ const is the modern way.
 
 ---
 
-# React-Routing
+# React-Router-Dom
 
 > Any file you make, it must be PascalCase.
 
@@ -452,13 +451,7 @@ const is the modern way.
 
 ---
 
-[TOP](#react)
-
----
-
----
-
-# Complex Routing
+## Complex Routing
 
 > Routing for bigger projects, better to learn this. **RouterProvider**
 
@@ -607,7 +600,20 @@ const is the modern way.
 >
 > export default Index;
 > ```
+
+### a, Link, NavLink
+
+>Never use buttons!
+
+>```jsx
+> <a href="/something.pdf">only for downloading pdfs from public folder</a>
 >
+> <Link to="/src/Home">For paths inside pages or links to other websites</Link>
+>
+> <NavLink to="/src/About">Similar to Link but with unique css properties: activeClassName and activeStyle, best for navbars <NavLink>
+>```
+
+
 > AI it, play with it, learn it, your way.
 
 ---
