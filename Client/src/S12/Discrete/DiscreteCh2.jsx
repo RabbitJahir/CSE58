@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import Header from "../../components/Header";
 import { discretech2solve } from "./DiscreteCh2Solve";
 import Footer from "../../components/Footer";
+import BackToTop from "../../components/BackToTop";
 
 const links = [
   { to: "/", label: "Home Page", className: "HeaderButton" },
@@ -24,7 +25,7 @@ const DiscreteCh2 = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header links={links} />
-
+<BackToTop/>
       <main className="flex-grow p-4 flex flex-col gap-4 w-full max-w-4xl mx-auto">
         <h2 className="text-2xl font-bold">Discrete Chapter 2 Page</h2>
         <div className="SubButton">!UNDER CONSTRUCTION!<br/> </div>
