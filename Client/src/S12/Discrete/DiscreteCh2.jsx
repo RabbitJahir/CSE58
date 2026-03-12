@@ -30,7 +30,7 @@ const DiscreteCh2 = () => {
 <BodyThemeToggle/>
       <main className="flex-grow p-4 flex flex-col gap-4 w-full max-w-4xl mx-auto">
         <h2 className="text-2xl font-bold">Discrete Chapter 2 Page</h2>
-        <div className="SubButton">!UNDER CONSTRUCTION!<br/> </div>
+        <div className="SubButton">Exercise: 2.1, ID: 1-51<br/>Exercise: 2.2, ID: 52- 126</div>
         <input
           type="number"
           placeholder="Search by ID"

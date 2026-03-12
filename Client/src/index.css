@@ -1,12 +1,16 @@
 @import "tailwindcss";
 @import "tailwind-scrollbar-hide/v4";
 
-
 body {
   margin: 0;
   background: linear-gradient(135deg, #4f32b6 0%, #1a1a1a 50%, #4f32b6 100%);
   color: #ffffff;
   min-height: 100vh;
+}
+
+html::-webkit-scrollbar,
+body::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
 }
 
 a.active {
@@ -29,23 +33,17 @@ a.active {
   }
 }
 
-
 /*-------------------------------------------ALL-BUTTON----------------------------------------------------------------*/
-
 
 /* Parent container styling */
 .mid-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 1rem; 
+  gap: 1rem;
   margin-top: 1.5rem;
   padding: 1.5rem;
-  background: linear-gradient(
-    135deg,
-    #3b3b8f,
-    #646cff
-  ); 
+  background: linear-gradient(135deg, #3b3b8f, #646cff);
   border-radius: 1rem;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
@@ -72,7 +70,7 @@ a.active {
   background: linear-gradient(135deg, #3a3a3a, #4a4a4a);
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
-  border: 2px solid #646cff; 
+  border: 2px solid #646cff;
 }
 
 /* Active / glowing when section is open */
@@ -126,7 +124,8 @@ a.active {
 }
 /*------------------------------------------------------------------------------------------------------------------*/
 
-html, body, #root {
+html,
+body,
+#root {
   overflow-x: hidden;
 }
-

@@ -27,8 +27,8 @@ export default defineConfig({
   ],
 
   server: {
-    host: true, // allows external access
-    port: 5173, // dev server port
+    host: true,
+    port: 5173,
     strictPort: true,
     allowedHosts: ["elaine-warded-tamisha.ngrok-free.dev"], // your ngrok URL
   },
