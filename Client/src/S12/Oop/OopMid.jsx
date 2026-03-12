@@ -15,9 +15,7 @@ const OopMid = () => {
         Java_Constructor<sub> Download</sub>
       </a>
 
-      <a href="/S12/Oop/Java_Access_Modifiers.pdf" className="SubButton ">
-        Java_Access_Modifiers<sub> Download</sub>
-      </a>
+      
     </div>
   );
 };
