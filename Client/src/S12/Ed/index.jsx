@@ -27,10 +27,10 @@ const Index = () => {
       <main className="flex-grow p-4 text-white flex flex-col items-center gap-4">
         <h2 className="text-2xl font-bold">Engineering Drawing Page</h2>
 
-        <Link onClick={() => toggle("EdMid")}>Mid Syllabus</Link>
+        <Link className="SubButton" onClick={() => toggle("EdMid")}>Mid Syllabus</Link>
         {open === "EdMid" && <EdMid />}
 
-        <Link onClick={() => toggle("EdFinal")}>Final Syllabus</Link>
+        <Link className="SubButton" onClick={() => toggle("EdFinal")}>Final Syllabus</Link>
         {open === "EdFinal" && <EdFinal />}
       </main>
       <Footer />
