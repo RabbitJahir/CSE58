@@ -52,6 +52,8 @@ const Index = () => {
           Final Syllabus
         </Link>
         {open === "BsFinal" && <BsFinal />}
+
+        <a href="/S12/Bs/amar_dekha_rajnitir_50_bochor.pdf" className="SubButton">amar dekha rajnitir 50 bochor<sub> download book</sub></a>
       </main>
       <Footer />
     </div>
