@@ -32,6 +32,23 @@ const index = () => {
         </a>
 
         <picture>
+          <source srcSet="/S12/Calendar/academic_calendar_2026.avif" type="image/avif" />
+          <source srcSet="/S12/Calendar/academic_calendar_2026.webp" type="image/webp" />
+          <img
+            src="/S12/Calendar/academic_calendar_2026.jpg"
+            alt="uni_calendar"
+            loading="lazy"
+            width="800"
+            height="600"
+          />
+        </picture>
+
+        <a className="SubButton" href="/S12/Calendar/academic_calendar_2026.jpg" download>
+          Academic Calendar 2026<sub> -Download</sub>
+        </a>
+
+
+        <picture>
           <source srcSet="/S12/Calendar/ramadan.avif" type="image/avif" />
           <source srcSet="/S12/Calendar/ramadan.webp" type="image/webp" />
           <img
