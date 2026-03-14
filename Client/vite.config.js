@@ -12,15 +12,35 @@ export default defineConfig({
     tailwindcss(),
     visualizer({ open: true }),
     ViteImageOptimizer({
-      includePublic: ["/S12/Calendar/*"], // folder with pictures, in public
-      png: { quality: 80 },
-      jpeg: { quality: 85 },
-      webp: { lossless: false, quality: 90 },
-      avif: { speed: 6, quality: 75 },
+      include: ["**/*.{png,jpg,jpeg,webp,avif,svg}"],
+      includePublic: ["**/*.{png,jpg,jpeg,webp,avif,svg}"],
+
+      png: {
+        quality: 70,
+        compressionLevel: 9,
+      },
+
+      jpeg: {
+        quality: 75,
+        progressive: true,
+      },
+
+      webp: {
+        quality: 80,
+      },
+
+      avif: {
+        quality: 55,
+        speed: 4,
+      },
+
+      svg: {
+        multipass: true,
+      },
     }),
     ViteOptimizeVideos({
       outputPath: "dist/S12",
-      compression: "medium", 
+      compression: "medium",
       formats: ["mp4", "webm"],
       removeAudio: true,
     }),
