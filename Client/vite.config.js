@@ -53,7 +53,34 @@ export default defineConfig({
         ],
       },
       workbox: {
-        globPatterns: ["**/*.{js,css,html,ico,png,svg,woff2,avif,webp,pdf}"],
+        skipWaiting: true,
+        clientsClaim: true,
+        navigateFallback: "index.html",
+        navigateFallbackDenylist: [/^\/api/],
+
+        // ✅ Only precache small assets
+        globPatterns: ["**/*.{js,css,html,ico,png,svg,woff2,avif,webp}"],
+
+        // ✅ Exclude PDFs from precache entirely
+        globIgnores: ["**/*.pdf"],
+
+        // ✅ Cache PDFs on-demand when user accesses them
+        runtimeCaching: [
+          {
+            urlPattern: /\.pdf$/,
+            handler: "CacheFirst",
+            options: {
+              cacheName: "pdf-cache",
+              expiration: {
+                maxEntries: 50,
+                maxAgeSeconds: 60 * 60 * 24 * 30, // 30 days
+              },
+              cacheableResponse: {
+                statuses: [200],
+              },
+            },
+          },
+        ],
       },
     }),
   ],
