@@ -28,3 +28,5 @@ const BsMid = () => {
     </div>
   );
 };
+
+export default BsMid;

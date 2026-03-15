@@ -9,6 +9,7 @@ const HomeHeader = () => {
       <h1 className="flex-1 text-3xl font-bold text-center text-black dark:text-white transition-colors duration-300">
         Welcome to CSE 58 Batch Website
       </h1>
+      <h6>New Web App! Use add to home screen, load pdfs once, it gets stored in cache, will stay there till you delete cache!</h6>
       
     </header>
   );
