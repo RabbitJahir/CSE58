@@ -13,7 +13,7 @@ const DiscreteMid = () => {
       </Link>
 
       <a
-        href="/Discrete/chapter_3_224-272.pdf"
+        href="/S12/Discrete/chapter_3_224-272.pdf"
         className="SubButton"
         target="_blank"
         rel="noopener noreferrer"
