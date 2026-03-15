@@ -56,7 +56,7 @@ export default defineConfig({
         skipWaiting: true,
         clientsClaim: true,
         navigateFallback: "index.html",
-        navigateFallbackDenylist: [/^\/api/],
+        navigateFallbackDenylist: [/^\/api/, /\.pdf$/],
 
         // ✅ Only precache small assets
         globPatterns: ["**/*.{js,css,html,ico,png,svg,woff2,avif,webp}"],
