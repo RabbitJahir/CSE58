@@ -5,7 +5,6 @@ const OopMid = () => {
     <div className="mid-container">
       <a
         href="/S12/Oop/Variables_and_Types_Summary.pdf"
-        download="Variables_and_Types_Summary.pdf"
         className="SubButton "
       >
         Variables_&_Types_Summary<sub> Download</sub>
@@ -13,7 +12,6 @@ const OopMid = () => {
 
       <a
         href="/S12/Oop/Java_Control_Statements.pdf"
-        download="Java_Control_Statements.pdf"
         className="SubButton "
       >
         Java_Control_Statements<sub> Download</sub>
@@ -21,7 +19,6 @@ const OopMid = () => {
 
       <a
         href="/S12/Oop/Java_Constructor.pdf"
-        download="Java_Constructor.pdf"
         className="SubButton "
       >
         Java_Constructor<sub> Download</sub>
