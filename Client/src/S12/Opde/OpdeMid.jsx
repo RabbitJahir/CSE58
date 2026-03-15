@@ -4,7 +4,7 @@ const OpdeMid = () => {
   return (
     <div className="mid-container">
       <a href="/S12/Opde/OpdeSeparation.pdf">
-        <button className="SubButton ">Separation Method <sub>-Download</sub></button>
+        <button className="SubButton " >Separation Method <sub>-Download</sub></button>
       </a>
 
       <a href="/S12/Opde/OpdeOrthogonal.pdf">
