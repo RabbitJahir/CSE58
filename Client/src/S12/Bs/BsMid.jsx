@@ -10,12 +10,12 @@ const BsMid = () => {
         Janapada <sub>-Download</sub>
       </a>
       <a
-        href="/S12/Bs/bs_about-bd.pdf"
+        href="/S12/Bs/bs_geo_features.pdf"
         className="SubButton"
         target="_blank"
         rel="noopener noreferrer"
       >
-        About Bangladesh <sub>-Download</sub>
+        Geographical features of Bangladesh <sub>-Download</sub>
       </a>
       <a
         href="/S12/Bs/shashanka_full_notes.pdf"
