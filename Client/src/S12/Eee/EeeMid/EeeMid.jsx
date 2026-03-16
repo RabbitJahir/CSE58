@@ -47,6 +47,11 @@ const EeeMid = () => {
               Notes <sub>-Download</sub>
             </button>
           </a>
+          <a href="/S12/Eee/y-del.pdf" className="w-full">
+            <button className="SubButton w-full">
+              Y-Del <sub>-Download</sub>
+            </button>
+          </a>
           <a href="/S12/Eee/EeeCh2Ques.pdf" className="w-full">
             <button className="SubButton w-full">
               Questions <sub>-Download</sub>
