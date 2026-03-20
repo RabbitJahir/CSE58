@@ -17,4 +17,4 @@ This README is for learning only. Reproduction or redistribution without giving 
 > Link to Website: https://cse58.vercel.app/
 ---
 
-> If you want to get started with react or see my progress and knowledge about react, please visit this repo: https://github.com/RabbitJahir/Experience
+> See my progress and knowledge about react, please visit this repo: https://github.com/RabbitJahir/Experience

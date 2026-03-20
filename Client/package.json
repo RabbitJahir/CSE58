@@ -1,41 +1,27 @@
 {
-  "name": "client",
+  "name": "next2",
+  "version": "0.1.0",
   "private": true,
-  "version": "0.0.0",
-  "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "dev": "next dev --turbopack",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
   },
   "dependencies": {
-    "@tailwindcss/vite": "^4.2.1",
-    "lucide-react": "^0.577.0",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
-    "react-router-dom": "^7.13.1",
-    "tailwind-scrollbar-hide": "^4.0.0"
+    "next": "^16.2.0",
+    "next-pwa": "^5.6.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
   },
   "devDependencies": {
-    "@eslint/js": "^9.39.1",
-    "@tailwindcss/postcss": "^4.2.1",
-    "@types/react": "^19.2.7",
-    "@types/react-dom": "^19.2.3",
-    "@vitejs/plugin-react": "^5.1.1",
-    "autoprefixer": "^10.4.27",
-    "eslint": "^9.39.1",
-    "eslint-plugin-react-hooks": "^7.0.1",
-    "eslint-plugin-react-refresh": "^0.4.24",
-    "globals": "^16.5.0",
-    "postcss": "^8.5.8",
-    "rollup-plugin-visualizer": "^7.0.1",
-    "sharp": "^0.34.5",
-    "svgo": "^4.0.1",
-    "tailwindcss": "^4.2.1",
-    "vite": "^7.3.1",
-    "vite-plugin-image-optimizer": "^2.0.3",
-    "vite-plugin-optimize-videos": "^1.1.1",
-    "vite-plugin-pwa": "^1.2.0"
+    "@tailwindcss/postcss": "^4",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.1.7",
+    "tailwindcss": "^4",
+    "typescript": "^5"
   }
 }

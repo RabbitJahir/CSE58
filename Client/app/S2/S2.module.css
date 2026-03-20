@@ -1,0 +1,382 @@
+/* Base styles for all buttons */
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.links a {
+  font-size: 20px;
+  font-weight: 900;
+  display: block;
+  padding: 20px 60px;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.links a:hover {
+  transform: translateY(-3px);
+}
+
+/*------------------------------------- calendar--------------------------- */
+.links a.calendar {
+  position: relative;
+  padding-left: 52px; /* space for left calendar */
+  padding-right: 52px; /* space for right calendar */
+  background-color: rgb(179, 179, 207);
+}
+
+/* Base calendar icon */
+.links a.calendar::before,
+.links a.calendar::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  width: 22px;
+  height: 22px;
+  transform: translateY(-50%);
+  background: #fff;
+  border: 2px solid #333;
+  border-radius: 4px;
+}
+
+/* Left calendar */
+.links a.calendar::before {
+  left: 14px;
+}
+
+/* Right calendar */
+.links a.calendar::after {
+  right: 14px;
+}
+
+/* Calendar header bar */
+.links a.calendar::before,
+.links a.calendar::after {
+  box-shadow: inset 0 6px 0 #e74c3c; /* top strip */
+}
+
+/* Hover for calendar */
+@media (hover: hover) {
+  .links a.calendar:hover {
+    box-shadow: 0 0 0 2px #facc15;
+  }
+}
+
+/*----------------------------------------------Discrete---------------------------------*/
+.links a.discrete {
+  position: relative;
+  background: #f8fafc;
+  color: #111827;
+  border: 2px dashed #64748b;
+  font-weight: 700;
+}
+
+/* Logic nodes */
+.links a.discrete::before {
+  content: "+ ●   ●   ● +";
+  position: absolute;
+  left: 16px;
+  top: 40px;
+  color: #64748b;
+  letter-spacing: 3px;
+  opacity: 0.6;
+}
+
+/* Hover for discrete */
+@media (hover: hover) {
+  .links a.discrete:hover {
+    box-shadow: 0 0 0 2px #facc15;
+  }
+}
+
+/*---------------------------------------OOP---------------------------------------*/
+.links a.oop {
+  position: relative;
+  background: #0f172a;
+  color: #e5e7eb;
+  font-family: monospace;
+  font-weight: 600;
+}
+
+/* Code braces */
+.links a.oop::before {
+  content: "{";
+  position: absolute;
+  left: 14px;
+  font-size: 20px;
+  opacity: 0.5;
+}
+
+.links a.oop::after {
+  content: "}";
+  position: absolute;
+  right: 14px;
+  top: 20px;
+  font-size: 20px;
+  opacity: 0.5;
+}
+
+/* Hover for oop */
+@media (hover: hover) {
+  .links a.oop:hover {
+    box-shadow: 0 0 0 2px #facc15;
+  }
+}
+
+/*------------------------------------------_Web_App_desing---------------------------------------*/
+.links a.web {
+  position: relative;
+  background: #e0f2fe;
+  color: #075985;
+  border-radius: 10px;
+  font-weight: 700;
+  padding: 20px 40px; /* adjusted for uniformity */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+}
+
+/* Browser top bar background */
+.links a.web::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 22px;
+  background: linear-gradient(135deg, #f3f4f6, #e5e7eb);
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  z-index: 0;
+}
+
+/* Close, Minimize, Max buttons */
+.links a.web::after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 8px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #ef4444; /* close */
+  box-shadow:
+    18px 0 #facc15,
+    36px 0 #22c55e; /* min, max */
+  z-index: 1;
+}
+
+/* Tabs: HTML → CSS → JS */
+.links a.web span::before {
+  content: "HTML CSS  JS";
+  position: absolute;
+  top: -25px;
+  left: 10px; /* space after buttons */
+  font-size: 12px;
+  font-weight: 600;
+  color: #134c9c;
+  letter-spacing: 0.05em;
+}
+
+/* Text inside box */
+.links a.web span {
+  position: relative;
+  z-index: 2;
+  display: block;
+  margin-top: 36px; /* adjusted */
+  position: relative;
+}
+
+@media (hover: hover) {
+  .links a.web:hover {
+    box-shadow: 0 0 0 2px #facc15;
+  }
+}
+
+/* ---------------------------------------------Electrical Engineering------------------------------------------*/
+.links a.electrical {
+  position: relative;
+  background: linear-gradient(135deg, #1f2933, #111827);
+  color: #e5e7eb;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  border-radius: 10px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.35);
+  overflow: hidden;
+  padding: 20px 40px; /* adjusted */
+}
+
+/* Wires: yellow, blue, red */
+.links a.electrical::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      transparent 25%,
+      #facc15 25%,
+      #facc15 27%,
+      transparent 27%
+    ),
+    /* yellow */
+    linear-gradient(
+        90deg,
+        transparent 45%,
+        #60a5fa 45%,
+        #60a5fa 47%,
+        transparent 47%
+      ),
+    /* blue */
+    linear-gradient(
+        90deg,
+        transparent 65%,
+        #ef4444 65%,
+        #ef4444 67%,
+        transparent 67%
+      ); /* red */
+  opacity: 0.35;
+  z-index: 0;
+}
+
+/* Four bolts using pseudo-elements */
+.links a.electrical::after,
+.links a.electrical .bolt1,
+.links a.electrical .bolt2,
+.links a.electrical .bolt3 {
+  content: "";
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background: #9ca3af;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+/* Top-left bolt */
+.links a.electrical::after {
+  top: 6px;
+  left: 6px;
+}
+
+/* Top-right bolt */
+.links a.electrical .bolt1 {
+  top: 6px;
+  right: 6px;
+}
+
+/* Bottom-left bolt */
+.links a.electrical .bolt2 {
+  bottom: 6px;
+  left: 6px;
+}
+
+/* Bottom-right bolt */
+.links a.electrical .bolt3 {
+  bottom: 6px;
+  right: 6px;
+}
+
+
+
+/* Text span on top */
+.links a.electrical span {
+  position: relative;
+  z-index: 2;
+  display: block;
+}
+
+@media (hover: hover) {
+  .links a.electrical:hover {
+    box-shadow: 0 0 0 2px #facc15;
+  }
+}
+
+/*------------------------------------opde---------------------------------------------*/
+
+.links a.opde{
+  background-color: rgb(83, 83, 26);
+}
+
+/*------------------------------------BS---------------------------------------------*/
+.links a.bd {
+  position: relative;
+  background: #006a4f;
+  color: #ffffff;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 20px 40px; /* adjusted */
+}
+
+/* Red circle (proportional) */
+.links a.bd::before {
+  content: "";
+  position: absolute;
+  top: 50%; /* vertically center */
+  left: 30px; /* adjusted */
+  transform: translateY(-50%); /* vertical centering */
+  width: 40px; /* fixed size */
+  height: 40px; /* fixed size */
+  background: #f42a41; /* red circle */
+  border-radius: 50%;
+}
+
+@media (hover: hover) {
+  .links a.bd:hover {
+    box-shadow: 0 0 0 2px #facc15;
+  }
+}
+
+
+/* ---------------------------------------------engineering drawing ---------------------------*/
+.links a.ed {
+  position: relative;
+  background: linear-gradient(135deg, #ffcc80, #ffb74d);
+  color: #3a2a00;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  border-radius: 14px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.18);
+  padding: 20px 40px; /* adjusted for icon */
+}
+
+/* Roof icon (CSS only) */
+.links a.ed::before {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 50%;
+  width: 18px;
+  height: 18px;
+  background: #3a2a00;
+  transform: translateX(-50%) rotate(45deg);
+  border-radius: 2px;
+}
+
+/* House body */
+.links a.ed::after {
+  content: "";
+  position: absolute;
+  top: 16px;
+  left: 50%;
+  width: 14px;
+  height: 10px;
+  background: #3a2a00;
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+@media (hover: hover) {
+  .links a.ed:hover {
+    box-shadow: 0 0 0 2px #facc15;
+  }
+}
+
+@media (hover: hover) {
+  .links a.opde:hover {
+    box-shadow: 0 0 0 2px #facc15;
+  }
+}

@@ -1,0 +1,52 @@
+.s12header {
+  display: flex;
+  flex-direction: column; /* flex-col */
+  align-items: center; /* items-center */
+  justify-content: space-between; /* justify-between */
+
+  padding: 16px; /* p-4 */
+  gap: 8px; /* gap-2 */
+
+  color: white; /* text-white */
+  background: rgba(0, 0, 0, 0.2); /* bg-black/20 */
+}
+
+/* sm breakpoint = 640px and up */
+@media (min-width: 640px) {
+  .s12header {
+    flex-direction: row; /* sm:flex-row */
+    gap: 16px; /* sm:gap-4 */
+  }
+}
+
+.HeaderButton {
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 0.8em 1.6em;
+  font-size: 1em;
+  font-weight: 600;
+  font-family: inherit;
+
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+
+  color: #ffffff;
+  cursor: pointer;
+
+  transition: all 0.25s ease;
+
+  box-shadow:
+    0 4px 20px rgba(0, 0, 0, 0.5),
+    inset 0 1px 1px rgba(255, 255, 255, 0.05);
+}
+
+.HeaderButton:hover {
+  border-color: #646cff;
+
+  box-shadow:
+    0 0 10px #646cff,
+    0 0 20px #646cff55,
+    0 6px 25px rgba(0, 0, 0, 0.6);
+
+  transform: translateY(-2px);
+}
