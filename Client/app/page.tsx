@@ -7,7 +7,7 @@ export default function Home() {
   return (
     <div>
       <header className="homeheader flex items-center justify-center gap-4 p-4 bg-white dark:bg-black/30 backdrop-blur-sm relative">
-        <div className="absolute left-4 top-1/2 -translate-y-1/2">
+        <div className="left-4 top-1/2 -translate-y-1/2">
           <Image src="/favicon.ico" alt="logo" width={32} height={32} />
         </div>
 

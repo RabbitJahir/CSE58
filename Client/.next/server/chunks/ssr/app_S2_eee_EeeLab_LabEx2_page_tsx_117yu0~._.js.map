@@ -1,0 +1,1 @@
+{"version":3,"sources":["../../../../app/S2/eee/EeeLab/LabEx2/page.tsx"],"sourcesContent":["export default function Page() {\n  return (\n    <div >\n      <main className=\"mid-container\"></main>\n    </div>\n  );\n}"],"names":["Page","className"],"mappings":"wEAAe,SAASA,EACtB,MACE,CAAA,EAAA,EAAA,GAAA,EAAC,MAAA,UACC,CAAA,EAAA,EAAA,GAAA,EAAC,OAAA,CAAKC,UAAU,mBAGtB"}

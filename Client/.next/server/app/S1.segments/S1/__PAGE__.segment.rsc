@@ -1,0 +1,7 @@
+1:"$Sreact.fragment"
+2:I[5500,["/_next/static/chunks/01xlw8hd842-c.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0_kx99w~yla9d.js"],"Image"]
+3:I[22016,["/_next/static/chunks/01xlw8hd842-c.js","/_next/static/chunks/0d3shmwh5_nmn.js","/_next/static/chunks/0_kx99w~yla9d.js"],""]
+4:I[97367,["/_next/static/chunks/01xlw8hd842-c.js","/_next/static/chunks/0d3shmwh5_nmn.js"],"OutletBoundary"]
+5:"$Sreact.suspense"
+0:{"rsc":["$","$1","c",{"children":[["$","div",null,{"children":[["$","header",null,{"className":"s12header flex justify-between items-center p-4 bg-gray-900 text-white","children":[["$","div",null,{"className":"flex items-center","children":["$","$L2",null,{"src":"/favicon.ico","alt":"logo","width":32,"height":32}]}],["$","div",null,{"className":"flex flex-wrap gap-2","children":[["$","$L3","0",{"href":"/","className":"HeaderButton","children":"Home"}]]}]]}],["$","main",null,{"className":"main-box","children":["$","h1",null,{"className":"page-header","children":"1st Semester"}]}]]}],[["$","script","script-0",{"src":"/_next/static/chunks/0_kx99w~yla9d.js","async":true}]],["$","$L4",null,{"children":["$","$5",null,{"name":"Next.MetadataOutlet","children":"$@6"}]}]]}],"isPartial":false,"staleTime":300,"varyParams":null,"buildId":"8h3g7n7QspXJPauc-GNoP"}
+6:null

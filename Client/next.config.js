@@ -32,6 +32,10 @@ const withPWA = require("next-pwa")({
   ],
 });
 
-module.exports = withPWA({
+const nextConfig = {
   reactStrictMode: true,
-});
+  // Step 2 fix: Turbopack safe
+  turbopack: {},
+};
+
+module.exports = withPWA(nextConfig);
