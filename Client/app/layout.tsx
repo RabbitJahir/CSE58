@@ -2,6 +2,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import styles from "./components/footer.module.css";
+import NewVersionPrompt from "./components/NewServerPromt";
 
 // Fonts
 const geistSans = Geist({
@@ -14,14 +15,14 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// Metadata (no themeColor here, handled in generateViewport & manifest)
+// Metadata
 export const metadata = {
   title: "UITS CSE 58",
   description: "Kazi Rabit Jahir's, batch 58 journal, Next.js",
   manifest: "/manifest.json",
 };
 
-// Theme color + viewport for Next.js 16+
+// Viewport + theme color
 export const generateViewport = () => ({
   viewport: {
     width: "device-width",
@@ -32,6 +33,7 @@ export const generateViewport = () => ({
   },
   themeColor: "#000000",
 });
+
 export default function RootLayout({
   children,
 }: {
@@ -40,11 +42,11 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* PWA / Manifest */}
+        {/* PWA Manifest */}
         <link rel="manifest" href="/manifest.json" />
         <meta name="theme-color" content="#000000" />
 
-        {/* Apple PWA support */}
+        {/* Apple PWA */}
         <link
           rel="apple-touch-icon"
           sizes="180x180"
@@ -75,6 +77,9 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}
       >
+        {/* New version update prompt */}
+        <NewVersionPrompt />
+
         {/* Main content */}
         <main className="flex-grow">{children}</main>
 
@@ -91,7 +96,6 @@ export default function RootLayout({
               GitHub
             </a>
           </p>
-
           <p>
             <span
               className="
