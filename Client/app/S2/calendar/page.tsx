@@ -4,8 +4,8 @@ import Link from "next/link";
 import Header from "../../components/Header/Index";
 
 const links = [
-  { href: "/", label: "Home" },
-  { href: "/S2", label: "S2 Page" },
+  { href: "/", label: "Home", className:"HeaderButton" },
+  { href: "/S2", label: "S2 Page", className:"HeaderButton" },
 ];
 
 export default function calendar() {

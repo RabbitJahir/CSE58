@@ -7,8 +7,8 @@ import OopMid from "./OopMid/page";
 import OopFinal from "./OopFinal/page";
 
 const links = [
-  { href: "/", label: "Home" },
-  { href: "/S2", label: "S2 Page" },
+  { href: "/", label: "Home", className: "HeaderButton" },
+  { href: "/S2", label: "S2 Page", className: "HeaderButton" },
 ];
 
 export default function oop() {

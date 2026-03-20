@@ -1,8 +1,23 @@
-// app/layout.tsx
+"use client";
+import { useEffect } from "react";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import styles from "./components/footer.module.css";
 import NewVersionPrompt from "./components/NewServerPromt";
+
+
+export default function RootLayout({ children }: { children: React.ReactNode }) {
+  useEffect(() => {
+    // Cleanup old React/Vite caches and service workers
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.getRegistrations().then((regs) =>
+        regs.forEach((reg) => reg.unregister())
+      );
+    }
+    window.caches.keys().then((names) =>
+      names.forEach((name) => caches.delete(name))
+    );
+  }, []);
 
 // Fonts
 const geistSans = Geist({
