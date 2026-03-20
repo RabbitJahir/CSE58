@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 
 export default function NewVersionPrompt() {
   const [updateAvailable, setUpdateAvailable] = useState(false);
+  const [fadeIn, setFadeIn] = useState(false);
 
   // Detect new service worker
   useEffect(() => {
@@ -22,6 +23,8 @@ export default function NewVersionPrompt() {
               navigator.serviceWorker.controller
             ) {
               setUpdateAvailable(true);
+              // trigger fade-in animation
+              setTimeout(() => setFadeIn(true), 50);
             }
           });
         });
@@ -34,11 +37,11 @@ export default function NewVersionPrompt() {
     if ("serviceWorker" in navigator) {
       navigator.serviceWorker.getRegistrations().then((registrations) => {
         Promise.all(registrations.map((reg) => reg.unregister())).then(() => {
-          window.location.reload(true); // Hard reload
+          window.location.reload(); // Hard reload
         });
       });
     } else {
-      window.location.reload(true);
+      window.location.reload();
     }
   };
 
@@ -46,14 +49,16 @@ export default function NewVersionPrompt() {
 
   return (
     <div
-      className="
-        fixed bottom-4 left-1/2 transform -translate-x-1/2
-        bg-blue-600 text-white p-4 rounded-lg shadow-lg z-50
-        cursor-pointer animate-pulse hover:bg-blue-700
-        transition-colors duration-300
-      "
       onClick={refreshPage}
       role="alert"
+      className={`
+        fixed bottom-6 left-1/2 transform -translate-x-1/2
+        bg-blue-600 text-white px-6 py-3 rounded-lg shadow-lg
+        cursor-pointer
+        transition-all duration-500
+        ${fadeIn ? "opacity-100 translate-y-0" : "opacity-0 translate-y-6"}
+        hover:bg-blue-700
+      `}
     >
       ⚡ New version available! Click to refresh.
     </div>
