@@ -124,5 +124,39 @@ body::-webkit-scrollbar {
   transform: translateY(-2px);
 }
 
-/*------------------------------------------------------------------------------------------------*/
 
+/*--------------------------------HOME-BOX-CODE--------------------------------------------------------*/
+.homebox {
+  display: block;
+  width: 100%;
+  background: #2563eb;
+  color: white;
+
+  padding: 20px;
+  border-radius: 12px;
+
+  font-weight: 800;
+  font-size: 18px;
+
+  text-decoration: none;
+
+  transition: all 0.25s ease;
+}
+
+.homebox h2 {
+  color: #ffe066;
+  font-size: 24px;
+  text-decoration: underline;
+  margin-bottom: 8px;
+}
+
+.homebox:hover {
+  background: linear-gradient(135deg, #3b3b8f, #646cff);
+
+  box-shadow:
+    0 0 20px #646cff,
+    0 0 35px #646cff77;
+
+  transform: translateY(-1px);
+}
+/*------------------------------------------------------------------------------------------------------------------*/
