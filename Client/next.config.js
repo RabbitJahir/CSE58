@@ -4,6 +4,7 @@ const withPWA = require("next-pwa")({
   skipWaiting: true,
   clientsClaim: true,
   disable: process.env.NODE_ENV === "development",
+
   runtimeCaching: [
     {
       // JS & CSS
@@ -18,7 +19,7 @@ const withPWA = require("next-pwa")({
       urlPattern: /^\/S2\/.*\.pdf$/,
       handler: "CacheFirst",
       options: {
-        cacheName: "pdf-cache-v1",// always update after updates/ huge updates, v2, v3 so on
+        cacheName: "pdf-cache-v1",
         expiration: {
           maxEntries: 100,
           maxAgeSeconds: 365 * 24 * 60 * 60,
@@ -30,7 +31,7 @@ const withPWA = require("next-pwa")({
       urlPattern: /^\/S2\/.*\.(png|jpg|jpeg|webp|avif|svg)$/,
       handler: "CacheFirst",
       options: {
-        cacheName: "image-cache-v1", // always update after updates/ huge updates, v2, v3 so on
+        cacheName: "image-cache-v1",
         expiration: {
           maxEntries: 200,
           maxAgeSeconds: 365 * 24 * 60 * 60,
@@ -38,12 +39,12 @@ const withPWA = require("next-pwa")({
       },
     },
     {
-      // Pages
-      urlPattern: /^https?.*/,
+      // Pages (offline support)
+      urlPattern: ({ request }) => request.mode === "navigate",
       handler: "NetworkFirst",
       options: {
-        cacheName: "page-cache-v1",// always update after updates/ huge updates, v2, v3 so on
-        networkTimeoutSeconds: 3,
+        cacheName: "page-cache-v1",
+        networkTimeoutSeconds: 5,
         expiration: {
           maxEntries: 50,
         },
