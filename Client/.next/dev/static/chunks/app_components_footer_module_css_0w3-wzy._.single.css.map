@@ -1,6 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 1, "column": 0}, "map": {"version":3,"sources":["turbopack:///[project]/app/components/footer.module.css"],"sourcesContent":[".rabbitGlow {\n  background: linear-gradient(\n    90deg,\n    white 0%,\n    white 40%,\n    #ef4444 50%,\n    white 60%,\n    white 100%\n  );\n\n  background-size: 200% 100%;\n  -webkit-background-clip: text;\n  background-clip: text;\n  -webkit-text-fill-color: transparent;\n\n  animation: rabbit-glow 2.5s linear infinite;\n}\n\n@keyframes rabbit-glow {\n  0% {\n    background-position: -100% center;\n  }\n  100% {\n    background-position: 100% center;\n  }\n}"],"names":[],"mappings":"AAAA;;;;;;;;AAkBA"}}]
-}

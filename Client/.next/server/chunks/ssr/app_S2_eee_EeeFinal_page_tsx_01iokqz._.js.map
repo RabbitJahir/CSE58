@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../../../app/S2/eee/EeeFinal/page.tsx"],"sourcesContent":["export default function Page() {\n  return (\n    <div><main className=\"main-box\"></main></div>\n  );\n}"],"names":["Page","className"],"mappings":"wEAAe,SAASA,EACtB,MACE,CAAA,EAAA,EAAA,GAAA,EAAC,MAAA,UAAI,CAAA,EAAA,EAAA,GAAA,EAAC,OAAA,CAAKC,UAAU,cAEzB"}

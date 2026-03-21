@@ -1,1 +1,0 @@
-{"version":3,"sources":["../../../../app/S2/eee/EeeLab/LabEx3/page.tsx"],"sourcesContent":["export default function Page() {\n  return (\n    <div>\n      3\n    </div>\n  );\n}"],"names":["Page"],"mappings":"wEAAe,SAASA,EACtB,MACE,CAAA,EAAA,EAAA,GAAA,EAAC,MAAA,UAAI,KAIT"}
