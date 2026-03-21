@@ -6,10 +6,8 @@ const links = [{ href: "/", label: "Home", className: "HeaderButton" }];
 export default function Home() {
   return (
     <div>
-      <header className="homeheader flex items-center justify-center gap-4 p-4 bg-white dark:bg-black/30 backdrop-blur-sm relative">
-        <div className="absolute left-4 top-1/2 -translate-y-1/2">
-          <Image src="/favicon.ico" alt="logo" width={32} height={32} />
-        </div>
+      <header className="flex items-center justify-center gap-4 p-4 bg-white dark:bg-black/30 backdrop-blur-sm relative">
+        <Image src="/favicon.ico" alt="logo" width={32} height={32} />
 
         <div className="text-center">
           <h1 className="text-3xl font-bold text-black dark:text-white transition-colors duration-300">
@@ -34,7 +32,9 @@ export default function Home() {
             <h2>OU1TS</h2>
             <p>
               Create an account and start exploring! <br />
-               The beginning of an amazing journey! Discover handy resources and tools! For everyone!<br/>
+              The beginning of an amazing journey! Discover handy resources and
+              tools! For everyone!
+              <br />
               <i>TIP</i> : go to tools, b1t scheduler.
             </p>
           </Link>
@@ -60,7 +60,7 @@ export default function Home() {
             <p>Journal of the academic journey of CSE Batch 58.</p>
           </Link>
         </div>
-{/*-------------------------------semesters--------------------------------------------------------- */}
+        {/*-------------------------------semesters--------------------------------------------------------- */}
         <Link className="SubButton" href="/S1">
           Semester 1
         </Link>
