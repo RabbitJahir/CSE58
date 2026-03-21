@@ -7,7 +7,6 @@ import NewVersionPrompt from "./components/NewServerPromt";
 export const metadata = {
   title: "UITS CSE 58",
   description: "Kazi Rabit Jahir's, batch 58 journal, Next.js",
-  manifest: "/manifest.json",
 };
 
 // Viewport + theme color
@@ -30,9 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        {/* PWA Manifest */}
-        <link rel="manifest" href="/manifest.json" />
-        <meta name="theme-color" content="#000000" />
+      
 
         {/* Apple PWA */}
         <link
@@ -55,7 +52,7 @@ export default function RootLayout({
           sizes="76x76"
           href="/icons/apple-touch-icon-76x76.png"
         />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="mobile-web-app-capable" content="yes" />
         <meta
           name="apple-mobile-web-app-status-bar-style"
           content="black-translucent"

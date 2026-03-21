@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import academic_calendar_2026 from "@/public/S2/Calendar/academic_calendar_2026.jpg"
 
 import Header from "../../components/Header/Index";
 
@@ -15,19 +16,20 @@ export default function calendar() {
       <main className="main-box">
         <h1 className="page-header">Calendar</h1>
         <Image
-          src="/S2/Calendar/academic_calendar_2026.jpg"
-          alt="uni_calendar"
+          src={academic_calendar_2026}
+          alt="academic_calendar_2026"
           width={800}
           height={600}
-          className="rounded-lg"
           priority={false}
+          className="rounded-lg"  
+          placeholder="blur"
+          blurDataURL=""
         />
 
         <Link
           href="/S2/Calendar/academic_calendar_2026.jpg"
           className="SubButton"
-          target="_blank"
-          rel="noopener noreferrer"
+          download
         >
           Academic Calendar 2026<sub> -Download</sub>
         </Link>
