@@ -1,31 +1,51 @@
-// next.config.js
 const withPWA = require("next-pwa")({
   dest: "public",
   register: true,
   skipWaiting: true,
+  clientsClaim: true,
   disable: process.env.NODE_ENV === "development",
   runtimeCaching: [
     {
-      // Cache all PDFs
+      // JS & CSS
+      urlPattern: /\.(?:js|css)$/,
+      handler: "StaleWhileRevalidate",
+      options: {
+        cacheName: "static-resources-v1",
+      },
+    },
+    {
+      // PDFs
       urlPattern: /^\/S2\/.*\.pdf$/,
       handler: "CacheFirst",
       options: {
-        cacheName: "pdf-cache",
+        cacheName: "pdf-cache-v1",// always update after updates/ huge updates, v2, v3 so on
         expiration: {
           maxEntries: 100,
-          maxAgeSeconds: 365 * 24 * 60 * 60, // 1 year
+          maxAgeSeconds: 365 * 24 * 60 * 60,
         },
       },
     },
     {
-      // Cache all images
+      // Images
       urlPattern: /^\/S2\/.*\.(png|jpg|jpeg|webp|avif|svg)$/,
       handler: "CacheFirst",
       options: {
-        cacheName: "image-cache",
+        cacheName: "image-cache-v1", // always update after updates/ huge updates, v2, v3 so on
         expiration: {
           maxEntries: 200,
-          maxAgeSeconds: 365 * 24 * 60 * 60, // 1 year
+          maxAgeSeconds: 365 * 24 * 60 * 60,
+        },
+      },
+    },
+    {
+      // Pages
+      urlPattern: /^https?.*/,
+      handler: "NetworkFirst",
+      options: {
+        cacheName: "page-cache-v1",// always update after updates/ huge updates, v2, v3 so on
+        networkTimeoutSeconds: 3,
+        expiration: {
+          maxEntries: 50,
         },
       },
     },
@@ -34,7 +54,6 @@ const withPWA = require("next-pwa")({
 
 const nextConfig = {
   reactStrictMode: true,
-  // Step 2 fix: Turbopack safe
   turbopack: {},
 };
 

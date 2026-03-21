@@ -7,7 +7,7 @@ export default function Page() {
   return (
     <div>
       <main className="mid-container">
-        <div className="w-full max-w-4xl">
+        <div className="w-full max-w-4xl overflow-x-auto">
           <h2 className="text-center text-2xl font-bold mb-4">Table 1</h2>
           <table className="marks-table border-collapse w-full text-center shadow-lg rounded-lg overflow-hidden">
             <thead className="bg-blue-600 text-white">
