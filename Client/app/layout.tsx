@@ -7,6 +7,7 @@ import NewVersionPrompt from "./components/NewServerPromt";
 export const metadata = {
   title: "UITS CSE 58",
   description: "Kazi Rabit Jahir's, batch 58 journal, Next.js",
+  manifest: "/manifest.webmanifest",
 };
 
 // Viewport + theme color
