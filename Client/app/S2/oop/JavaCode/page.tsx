@@ -42,7 +42,7 @@ export default function Page() {
           .map((snippet: Snippet) => (
             <div
               key={snippet.id}
-              className="bg-black/20 p-4 rounded-lg text-white backdrop-blur-sm"
+              className="bg-black/20 p-4 rounded-lg text-white backdrop-blur-sm w-full"
             >
               <h3 className="text-lg font-semibold">{snippet.title}</h3>
 

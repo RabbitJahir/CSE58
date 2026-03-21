@@ -16,9 +16,8 @@ export default function Header({ links = [] }: HeaderProps) {
   return (
     <header className="homeheader flex items-center justify-center gap-4 p-4 bg-white dark:bg-black/30 backdrop-blur-sm relative">
       {/* Logo */}
-      <div className="flex items-center">
-        <Image src="/favicon.ico" alt="logo" width={32} height={32} />
-      </div>
+
+      <Image src="/favicon.ico" alt="logo" width={32} height={32} />
 
       {/* Navigation Links */}
       <div className="flex flex-wrap gap-2">

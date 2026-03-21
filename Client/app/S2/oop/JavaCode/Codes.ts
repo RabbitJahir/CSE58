@@ -8,7 +8,7 @@ export type Snippet = {
 export const Codes: Snippet[] = [
   {
     id: 1,
-    title: "Basic understanding",
+    title: "1) Basic understanding",
     description: "understanding the entry line of java",
     code: `
 public class basic1 {
@@ -31,7 +31,7 @@ public class basic1 {
   },
   {
     id: 2,
-    title: "Input",
+    title: "2) Input",
     description: "Basic Input",
     code: `
 import java.util.Scanner;
@@ -62,7 +62,7 @@ public class basic_input {
   },
   {
     id: 3,
-    title: "Copy constructor",
+    title: "3) Copy constructor",
     description: "one constructor being called in another",
     code: `
 class copy_main{
@@ -95,7 +95,7 @@ class copy_main{
   },
   {
     id: 4,
-    title: "Constructor Overloading",
+    title: "4) Constructor Overloading",
     description: "same constructor different parameter list",
     code: `
 //overloading is using one class to print different methods, through different arguements or parameters
@@ -133,7 +133,7 @@ public class overloading_1 {
   },
   {
     id: 5,
-    title: "private",
+    title: "5) private",
     description:
       "showing how to call private method, simple if and switch functions",
     code: `
