@@ -12,7 +12,33 @@ body::-webkit-scrollbar {
   display: none; /* Chrome/Safari */
 }
 
+/*---------------------------------------rabbitGlow-------------------------------------------------*/
+.rabbitGlow {
+  background: linear-gradient(
+    90deg,
+    white 0%,
+    white 40%,
+    #ef4444 50%,
+    white 60%,
+    white 100%
+  );
 
+  background-size: 200% 100%;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: rabbit-glow 2.5s linear infinite;
+}
+
+@keyframes rabbit-glow {
+  0% {
+    background-position: -100% center;
+  }
+  100% {
+    background-position: 100% center;
+  }
+}
 /*------------------------------------------------------------------------------------------------*/
 
 /* SubButtons styling */
