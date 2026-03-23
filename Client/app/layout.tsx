@@ -1,6 +1,4 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import styles from "./components/Header/Index";
 import NewVersionPrompt from "./components/NewServerPromt";
 
 // Metadata
