@@ -6,6 +6,10 @@ const withPWA = require("next-pwa")({
   disable: process.env.NODE_ENV === "development",
 
   additionalManifestEntries: [
+    { url: "/apple-touch-icon.png", revision: null },
+    { url: "/pwa-192x192.png", revision: null },
+    { url: "/pwa-512x512.png", revision: null },
+    { url: "/favicon.ico", revision: null },
     { url: "/", revision: null },
     { url: "/S1", revision: null },
     { url: "/S2", revision: null },

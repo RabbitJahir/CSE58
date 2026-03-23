@@ -20,8 +20,7 @@ export default function Home() {
             Welcome to CSE 58 Batch Website
           </h1>
           <h6 className="text-sm mt-1 text-gray-600 dark:text-gray-300">
-            New Web App! Use add to home screen, load PDFs once, it gets stored
-            in cache, will stay there till you delete cache!
+            New Web App! Use add to home screen. Necessary pdfs and images, in my opinion, will be auto added! 
           </h6>
         </div>
       </header>
