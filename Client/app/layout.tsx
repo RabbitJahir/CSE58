@@ -1,5 +1,6 @@
 import "./globals.css";
 import NewVersionPrompt from "./components/NewServerPromt";
+import type { Viewport } from "next";
 
 // Metadata
 export const metadata = {
@@ -9,16 +10,14 @@ export const metadata = {
 };
 
 // Viewport + theme color
-export const generateViewport = () => ({
-  viewport: {
-    width: "device-width",
-    initialScale: 1,
-    minimumScale: 1,
-    maximumScale: 5,
-    userScalable: true,
-  },
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1,
+  minimumScale: 1,
+  maximumScale: 5,
+  userScalable: true,
   themeColor: "#000000",
-});
+};
 
 export default function RootLayout({
   children,
