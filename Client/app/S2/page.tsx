@@ -2,20 +2,17 @@ import Link from "next/link";
 import styles from "./S2.module.css";
 import Header from "../components/Header/Index";
 
-const links = [
-  { href: "/", label: "Home", className:"HeaderButton" },
-];
+const links = [{ href: "/", label: "Home", className: "HeaderButton" }];
 
 export default function S2_Home() {
+ 
+
   return (
-    <div >
-      
+    <div>
       <Header links={links} />
 
       <main className="main-box">
-        <h1 className="page-header">
-          2nd Semester
-        </h1>
+        <h1 className="page-header">2nd Semester</h1>
 
         <div className={styles.links}>
           <Link className={styles.calendar} href="/S2/calendar">

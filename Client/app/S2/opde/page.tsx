@@ -35,7 +35,7 @@ export default function opde() {
           className={`SubButton ${open === "OpdeFinal" ? "active" : ""}`}
           onClick={() => toggle("OpdeFinal")}
         >
-          Mid Syllabus
+          Final Syllabus
         </button>
         {open === "OpdeFinal" && <OpdeFinal />}
 
