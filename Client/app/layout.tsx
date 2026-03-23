@@ -1,12 +1,12 @@
 import "./globals.css";
 import NewVersionPrompt from "./components/NewServerPromt";
 import type { Viewport } from "next";
+import SWRegister from "./components/SWRegister";
 
 // Metadata
 export const metadata = {
   title: "UITS CSE 58",
   description: "Kazi Rabit Jahir's, batch 58 journal, Next.js",
-  manifest: "/manifest.webmanifest",
 };
 
 // Viewport + theme color
@@ -27,8 +27,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-      
-
         {/* Apple PWA */}
         <link
           rel="apple-touch-icon"
@@ -57,8 +55,9 @@ export default function RootLayout({
         />
       </head>
 
-      <body className="min-h-screen flex flex-col"> 
+      <body className="min-h-screen flex flex-col">
         {/* New version update prompt */}
+        <SWRegister />
         <NewVersionPrompt />
 
         {/* Main content */}
