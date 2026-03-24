@@ -52,7 +52,7 @@ const withPWA = require("next-pwa")({
       urlPattern: /\.(?:js|css)$/,
       handler: "StaleWhileRevalidate",
       options: {
-        cacheName: "static-resources-v1",
+        cacheName: "static-resources-v2",
       },
     },
     {
@@ -72,7 +72,7 @@ const withPWA = require("next-pwa")({
       urlPattern: /^\/S2\/.*\.(png|jpg|jpeg|webp|avif|svg)$/i,
       handler: "CacheFirst",
       options: {
-        cacheName: "image-cache-v1",
+        cacheName: "image-cache-v2",
         expiration: {
           maxEntries: 200,
           maxAgeSeconds: 365 * 24 * 60 * 60,
@@ -84,7 +84,7 @@ const withPWA = require("next-pwa")({
       urlPattern: ({ request }) => request.mode === "navigate",
       handler: "NetworkFirst",
       options: {
-        cacheName: "page-cache-v1",
+        cacheName: "page-cache-v2",
         networkTimeoutSeconds: 3,
         expiration: {
           maxEntries: 50,
