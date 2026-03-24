@@ -6,24 +6,24 @@ export type Snippet = {
 };
 
 export const discretech1solve: Snippet[] = [
-  {
-    id: 1,
-    title: "Exercise: 1.1 , 1",
-    description: `Which of these sentences are propositions? What are the truth values of those that are propositions?
+    {
+      id: 1,
+      title: "Exercise: 1.1 , 1",
+      description: `Which of these sentences are propositions? What are the truth values of those that are propositions?
 
-a) Boston is the capital of Massachusetts
-b) Miami is the capital of Florida.
-c) 2 + 3 = 5.
-d) 5 + 7 = 10.
-e) x + 2 = 11.
-f) Answer this question.`,
-    code: `a) True
-b) False
-c) T
-d) False
-e) Not a proposition
-f) Not a poroposition`,
-  },
+  a) Boston is the capital of Massachusetts
+  b) Miami is the capital of Florida.
+  c) 2 + 3 = 5.
+  d) 5 + 7 = 10.
+  e) x + 2 = 11.
+  f) Answer this question.`,
+      code: `a) True
+  b) False
+  c) T
+  d) False
+  e) Not a proposition
+  f) Not a poroposition`,
+    },
   {
     id: 2,
     title: "Exercise: 1.1, 2",

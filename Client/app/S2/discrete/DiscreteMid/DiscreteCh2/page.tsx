@@ -2,6 +2,7 @@
 import { useState } from "react";
 
 import Header from "@/app/components/Header/Index";
+import BackToTop from "../../../../components/BackToTop";
 import { discretech2solve, Snippet } from "./discretech2solve";
 
 const links = [
@@ -22,10 +23,11 @@ export default function DiscreteCh2() {
   };
 
   return (
-    <div >
+    <div>
       <Header links={links} />
       <main className="main-box">
         <h1 className="page-header">Discrete Chapter 1 Page</h1>
+        <BackToTop />
 
         <div className="SubButton">
           Exercise: 2.1, ID: 1-51
@@ -50,7 +52,7 @@ export default function DiscreteCh2() {
           .map((snippet: Snippet) => (
             <div
               key={snippet.id}
-              className="bg-black/20 p-4 rounded-lg text-white backdrop-blur-sm"
+              className="bg-black/20 p-4 rounded-lg text-white backdrop-blur-sm w-full"
             >
               <h3 className="text-lg font-semibold">{snippet.title}</h3>
 

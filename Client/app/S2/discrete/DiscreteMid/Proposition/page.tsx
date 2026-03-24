@@ -3,7 +3,7 @@ import { useState } from "react";
 
 import Header from "@/app/components/Header/Index";
 import BackToTop from "../../../../components/BackToTop";
-import { discretech1solve, Snippet } from "./discretech1solve";
+import { proposition, Snippet } from "./proposition";
 
 const links = [
   { href: "/", label: "Home", className: "HeaderButton" },
@@ -11,7 +11,7 @@ const links = [
   { href: "/S2/discrete", label: "Discrete Page", className: "HeaderButton" },
 ];
 
-export default function DiscreteCh1() {
+export default function Proposition() {
   const [open, setOpen] = useState<number | null>(null);
   const [search, setSearch] = useState<string>("");
 
@@ -26,36 +26,25 @@ export default function DiscreteCh1() {
     <div>
       <Header links={links} />
       <main className="main-box">
-        <h1 className="page-header">Discrete Chapter 1 Page</h1>
-
-        <div className="SubButton">
-          Exercise: 1.1, Id: 1-54 <br />
-          Exercise: 1.2, Id: 55-101 <br />
-          Exercise: 1.3, Id: 101-173 <br />
-          Exercise: 1.4, Id: 174-237 <br />
-          Exercise: 1.5, Id: 238-289 <br />
-          Exercise: 1.6, Id: 290-324 <br />
-          Exercise: 1.7, Id: 325-368 <br />
-          Exercise: 1.8, Id: 369-420 <br /> !UNDER CONSTRUCTION!
-        </div>
+        <h1 className="page-header">Proposition Page</h1>
         <BackToTop />
 
         <input
           type="number"
           placeholder="Search by ID"
-          className="w-full p-2 rounded border border-gray-400 mb-4 text-black w-full"
+          className="w-full p-2 rounded border border-gray-400 mb-4 text-black"
           value={search}
           onChange={(e) => setSearch(e.target.value)}
         />
 
-        {discretech1solve
+        {proposition
           .filter((snippet) =>
             search === "" ? true : snippet.id === Number(search),
           )
           .map((snippet: Snippet) => (
             <div
               key={snippet.id}
-              className="bg-black/20 p-4 rounded-lg text-white backdrop-blur-sm"
+              className="bg-black/20 p-4 rounded-lg text-white backdrop-blur-sm w-full"
             >
               <h3 className="text-lg font-semibold">{snippet.title}</h3>
 
