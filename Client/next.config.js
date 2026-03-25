@@ -40,10 +40,10 @@ const withPWA = require("next-pwa")({
     { url: "/S2/bs/BsMid", revision: null },
     { url: "/S2/bs/BsFinal", revision: null },
     { url: "/S2/bs/BsHistory", revision: null },
-  //  { url: "/S2/wad", revision: null },
-  //  { url: "/S2/wad/WadCode", revision: null },
+    { url: "/S2/wad", revision: null },
+    { url: "/S2/wad/WadCode", revision: null },
     { url: "/S2/ed", revision: null },
-   // { url: "/S2/calendar", revision: null },
+    { url: "/S2/calendar", revision: null },
   ],
 
   runtimeCaching: [

@@ -7,8 +7,8 @@ import OpdeMid from "./OpdeMid/page";
 import OpdeFinal from "./OpdeFInal/page";
 
 const links = [
-  { href: "/", label: "Home" },
-  { href: "/S2", label: "S2 Page" },
+  { href: "/", label: "Home", className:"HomeHeader" },
+  { href: "/S2", label: "S2 Page", className:"HomeHeader" },
 ];
 
 export default function opde() {

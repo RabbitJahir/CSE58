@@ -1,8 +1,8 @@
 import Header from "../../components/Header/Index";
 
 const links = [
-  { href: "/", label: "Home" },
-  { href: "/S2", label: "S2 Page" },
+  { href: "/", label: "Home", className:"HomeHeader" },
+  { href: "/S2", label: "S2 Page", className:"HomeHeader" },
 ];
 
 export default function ed() {
