@@ -6,7 +6,7 @@ import SWRegister from "./components/SWRegister";
 // Metadata
 export const metadata = {
   title: "UITS CSE 58",
-  description: "Kazi Rabit Jahir's, batch 58 journal, Next.js",
+  description: "Batch 58 from notunbazar",
 };
 
 // Viewport + theme color
@@ -48,11 +48,14 @@ export default function RootLayout({
           sizes="76x76"
           href="/icons/apple-touch-icon-76x76.png"
         />
+
         <meta name="mobile-web-app-capable" content="yes" />
         <meta
           name="apple-mobile-web-app-status-bar-style"
           content="black-translucent"
         />
+
+        <meta name="apple-mobile-web-app-title" content="CSE58" />
       </head>
 
       <body className="min-h-screen flex flex-col">

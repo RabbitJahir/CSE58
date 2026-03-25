@@ -40,10 +40,10 @@ const withPWA = require("next-pwa")({
     { url: "/S2/bs/BsMid", revision: null },
     { url: "/S2/bs/BsFinal", revision: null },
     { url: "/S2/bs/BsHistory", revision: null },
-    { url: "/S2/wad", revision: null },
-    { url: "/S2/wad/WadCode", revision: null },
+  //  { url: "/S2/wad", revision: null },
+  //  { url: "/S2/wad/WadCode", revision: null },
     { url: "/S2/ed", revision: null },
-    { url: "/S2/calendar", revision: null },
+   // { url: "/S2/calendar", revision: null },
   ],
 
   runtimeCaching: [
@@ -52,7 +52,7 @@ const withPWA = require("next-pwa")({
       urlPattern: /\.(?:js|css)$/,
       handler: "StaleWhileRevalidate",
       options: {
-        cacheName: "static-resources-v2",
+        cacheName: "static-resources-v1",
       },
     },
     {
@@ -72,7 +72,7 @@ const withPWA = require("next-pwa")({
       urlPattern: /^\/S2\/.*\.(png|jpg|jpeg|webp|avif|svg)$/i,
       handler: "CacheFirst",
       options: {
-        cacheName: "image-cache-v2",
+        cacheName: "image-cache-v1",
         expiration: {
           maxEntries: 200,
           maxAgeSeconds: 365 * 24 * 60 * 60,
@@ -84,7 +84,7 @@ const withPWA = require("next-pwa")({
       urlPattern: ({ request }) => request.mode === "navigate",
       handler: "NetworkFirst",
       options: {
-        cacheName: "page-cache-v2",
+        cacheName: "page-cache-v1",
         networkTimeoutSeconds: 3,
         expiration: {
           maxEntries: 50,
