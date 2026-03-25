@@ -12,7 +12,7 @@ export default function Home() {
 
   return (
     <div>
-      <header className="flex items-center justify-center gap-4 p-4 bg-white dark:bg-black/30 backdrop-blur-sm relative">
+      <header className="flex items-center justify-center gap-4 p-4 bg-white dark:bg-black/30 backdrop-blur-sm relative border-b-2 border-white">
         <Image src="/favicon.ico" alt="logo" width={32} height={32} />
 
         <div className="text-center">
