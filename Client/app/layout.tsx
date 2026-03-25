@@ -61,7 +61,9 @@ export default function RootLayout({
       <body className="min-h-screen flex flex-col">
         {/* New version update prompt */}
         <SWRegister />
-        <NewVersionPrompt />
+        <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50">
+          <NewVersionPrompt />
+        </div>
 
         {/* Main content */}
         <main className="flex-grow">{children}</main>

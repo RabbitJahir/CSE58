@@ -197,6 +197,6 @@ body::-webkit-scrollbar {
 }
 
 .animate-pulse {
-  animation: pulseCustom 1.5s ease-in-out infinite;
+  animation: pulseCustom 0.5s ease-in-out infinite;
 }
 /*------------------------------------------------------------------------------------------*/

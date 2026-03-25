@@ -14,7 +14,7 @@ type HeaderProps = {
 
 export default function Header({ links = [] }: HeaderProps) {
   return (
-    <header className="homeheader flex items-center justify-center gap-4 p-4 dark:bg-black/30 backdrop-blur-sm relative">
+    <header className="flex items-center justify-center gap-4 p-4 dark:bg-black/30 backdrop-blur-sm relative">
       {/* Logo */}
 
       <Image src="/favicon.ico" alt="logo" width={32} height={32} />
