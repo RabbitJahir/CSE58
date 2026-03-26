@@ -32,7 +32,7 @@ const withPWA = require("next-pwa")({
     { url: "/S2/oop", revision: "v1.0.0" },
     { url: "/S2/oop/OopMid", revision: "v1.0.0" },
     { url: "/S2/oop/OopFinal", revision: "v1.0.0" },
-    { url: "/S2/oop/JavaCode", revision: "v1.0.0" },
+    { url: "/S2/oop/JavaCode", revision: "v1.0.1" },
     { url: "/S2/opde", revision: "v1.0.0" },
     { url: "/S2/opde/OpdeMid", revision: "v1.0.0" },
     { url: "/S2/opde/OpdeFInal", revision: "v1.0.0" },
