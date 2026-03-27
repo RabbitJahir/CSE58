@@ -24,7 +24,7 @@ const withPWA = require("next-pwa")({
     { url: "/S2/Eee/EeeCh1Answers.pdf", revision: "v1.0.0" },
     { url: "/S2/Eee/EeeCh1Notes.pdf", revision: "v1.0.0" },
     { url: "/S2/Eee/EeeCh2Notes.pdf", revision: "v1.0.0" },
-    { url: "/S2/Eee/y-del.pdf", revision: "v1.0.0" },
+    { url: "/S2/Eee/y-del.pdf", revision: "v1.0.1" },
     { url: "/S2/Eee/EeeCh2Ques.pdf", revision: "v1.0.0" },
     { url: "/S2/eee/EeeMid", revision: "v1.0.0" },
     { url: "/S2/eee/EeeFinal", revision: "v1.0.0" },
