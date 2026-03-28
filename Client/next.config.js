@@ -15,7 +15,7 @@ const withPWA = require("next-pwa")({
     { url: "/S2", revision: "v1.0.0" },
     { url: "/S2/calendar", revision: "v1.0.0" },
     { url: "/S2/Calendar/academic_calendar_2026.jpg", revision: "v1.0.1" },
-    { url: "/S2/Calendar/routine2ndsem.png", revision: "v1.0.0" },
+    { url: "/S2/Calendar/routine2ndsem.png", revision: "v1.0.1" },
     { url: "/S2/discrete", revision: "v1.0.0" },
     { url: "/S2/discrete/DiscreteMid", revision: "v1.0.0" },
     { url: "/S2/discrete/DiscreteMid/DiscreteCh1", revision: "v1.0.0" },
