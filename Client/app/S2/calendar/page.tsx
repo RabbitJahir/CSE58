@@ -1,31 +1,49 @@
 import Image from "next/image";
 import Link from "next/link";
-import academic_calendar_2026 from "@/public/S2/Calendar/academic_calendar_2026.jpg"
+import academic_calendar_2026 from "@/public/S2/Calendar/academic_calendar_2026.jpg";
+import routine2ndsem from "@/public/S2/Calendar/routine2ndsem.jpg";
 
 import Header from "../../components/Header/Index";
 
 const links = [
-  { href: "/", label: "Home", className:"HeaderButton" },
-  { href: "/S2", label: "S2 Page", className:"HeaderButton" },
+  { href: "/", label: "Home", className: "HeaderButton" },
+  { href: "/S2", label: "S2 Page", className: "HeaderButton" },
 ];
 
 export default function calendar() {
   return (
-    <div >
+    <div>
       <Header links={links} />
       <main className="main-box">
         <h1 className="page-header">Calendar</h1>
+        <Image
+          src={routine2ndsem}
+          alt="academic_calendar_2026"
+          width={800}
+          height={600}
+          priority={false}
+          className="rounded-lg"
+          placeholder="blur"
+          blurDataURL=""
+        />
+        <Link
+          href="/S2/Calendar/routine2ndsem.jpg"
+          className="SubButton"
+          download
+        >
+          2nd Sem Routine<sub> -Download</sub>
+        </Link>
+
         <Image
           src={academic_calendar_2026}
           alt="academic_calendar_2026"
           width={800}
           height={600}
           priority={false}
-          className="rounded-lg"  
+          className="rounded-lg"
           placeholder="blur"
           blurDataURL=""
         />
-
         <Link
           href="/S2/Calendar/academic_calendar_2026.jpg"
           className="SubButton"
