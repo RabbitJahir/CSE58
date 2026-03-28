@@ -105,7 +105,7 @@ class Room {
 
   Room(float x, float y){ 
     length = x;
-    breadth = x;
+    breadth = y;
   }
 
   Room(float x){
