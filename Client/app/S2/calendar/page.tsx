@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import academic_calendar_2026 from "@/public/S2/Calendar/academic_calendar_2026.jpg";
-import routine2ndsem from "@/public/S2/Calendar/routine2ndsem.jpg";
+import routine2ndsem from "@/public/S2/Calendar/routine2ndsem.png";
 
 import Header from "../../components/Header/Index";
 
