@@ -132,7 +132,7 @@ e) Smartphone A has more RAM than Smartphone B if and only if Smartphone B has m
 b) True
 c) False
 d) False
-e) True`,
+e) False`,
   },
   {
     id: 9,
