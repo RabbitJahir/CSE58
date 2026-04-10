@@ -2,8 +2,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { usePWAUpdate } from "./hook/usePWAUpdate";
-import { useAppVersion } from "./hook/useAppVersion";
 
 const links = [{ href: "/", label: "Home", className: "HeaderButton" }];
 
@@ -12,8 +10,7 @@ export default function Home() {
   const [show2, setShow2] = useState(false);
   const [show3, setShow3] = useState(false);
 
-  const { updateAvailable, updateApp } = usePWAUpdate();
-  const { outdated, syncVersion } = useAppVersion();
+
   return (
     <div>
       <header className="flex items-center justify-center gap-4 p-4 bg-white dark:bg-black/30 backdrop-blur-sm relative border-b-2 border-white">
@@ -23,28 +20,9 @@ export default function Home() {
           <h1 className="text-3xl font-bold text-black dark:text-white transition-colors duration-300">
             Welcome to CSE 58 Batch Website
           </h1>
-          <h6 className="text-sm mt-1 text-gray-600 dark:text-gray-300">
-            New Web App! Use add to home screen. Necessary pdfs and images, in
-            my opinion, will be auto added!
-          </h6>
+         
         </div>
       </header>
-      {/* pwa */}
-      {(updateAvailable || outdated) && (
-        <div className="fixed bottom-4 left-1/2 -translate-x-1/2 bg-black text-white px-4 py-3 rounded-xl shadow-lg flex gap-3 z-50">
-          <span>New version available</span>
-
-          <button
-            onClick={async () => {
-              await updateApp();
-              syncVersion();
-            }}
-            className="text-blue-400 font-semibold"
-          >
-            Update
-          </button>
-        </div>
-      )}
 
       <main className="main-box flex flex-col items-center gap-4 mt-6">
         {/* 3 main links */}

@@ -1,3 +1,14 @@
+{
+  /*temp */
+}
+
+("use client");
+
+import { useEffect } from "react";
+{
+  /*temp */
+}
+
 import "./globals.css";
 import NewVersionPrompt from "./components/NewServerPromt";
 import type { Viewport } from "next";
@@ -24,6 +35,24 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  {
+    /*temp */
+  }
+  useEffect(() => {
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.getRegistrations().then((regs) => {
+        regs.forEach((r) => r.unregister());
+      });
+
+      caches.keys().then((keys) => {
+        keys.forEach((k) => caches.delete(k));
+      });
+    }
+  }, []);
+  {
+    /*temp */
+  }
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
