@@ -7,6 +7,8 @@ import Resistor from "./Resistor";
 import LabEx1 from "./LabEx1/page";
 import LabEx2 from "./LabEx2/page";
 import LabEx3 from "./LabEx3/page";
+import LabEx5 from "./LabEx5/page";
+
 
 const links = [
   { href: "/", label: "Home", className: "HeaderButton" },
@@ -81,6 +83,16 @@ export default function Page() {
           Experiment 3
         </button>
         {open === "LabEx3" && <LabEx3 />}
+
+        <button
+          className={`SubButton ${open === "LabEx5" ? "active" : ""}`}
+          onClick={() => toggle("LabEx5")}
+        >
+          Experiment 5
+        </button>
+        {open === "LabEx5" && <LabEx5 />}
+
+
       </main>
     </div>
   );
