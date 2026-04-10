@@ -1,6 +1,6 @@
 export default function Page() {
   return (
-    <div className="min-h-screen bg-gray-100 dark:bg-black text-gray-800 dark:text-gray-200 flex justify-center px-4 py-10">
+    <div className="min-h-screen bg-gray-100 dark:bg-black text-gray-800 dark:text-gray-200 flex justify-center px-4 py-10 overflow-x-hidden">
       <main className="w-full max-w-5xl bg-white dark:bg-zinc-900 shadow-xl rounded-2xl p-8 space-y-10">
 
         {/* Title */}
