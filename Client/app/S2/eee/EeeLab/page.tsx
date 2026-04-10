@@ -4,7 +4,10 @@ import Link from "next/link";
 
 import Header from "../../../components/Header/Index";
 import Resistor from "./Resistor";
-import LabEx1 from "./LabEx1/page"
+import LabEx1 from "./LabEx1/page";
+import LabEx2 from "./LabEx2/page";
+import LabEx3 from "./LabEx3/page";
+
 const links = [
   { href: "/", label: "Home", className: "HeaderButton" },
   { href: "/S2", label: "S2 Page", className: "HeaderButton" },
@@ -45,13 +48,39 @@ export default function Page() {
 
         <Resistor />
 
+        <div className="flex justify-center">
+          <p className="bg-blue-400 px-6 py-3 rounded-xl text-lg tracking-wide">
+            <span className="italic">Error</span> (%) =
+            <span className="font-mono">
+              {" "}
+              (|Measured − True| / True) × 100{" "}
+            </span>
+          </p>
+        </div>
+
         <button
-                  className={`SubButton ${open === "LabEx1" ? "active" : ""}`}
-                  onClick={() => toggle("LabEx1")}
-                >
-                  Experiment 1
-                </button>
-                {open === "LabEx1" && <LabEx1 />}
+          className={`SubButton ${open === "LabEx1" ? "active" : ""}`}
+          onClick={() => toggle("LabEx1")}
+        >
+          Experiment 1
+        </button>
+        {open === "LabEx1" && <LabEx1 />}
+
+        <button
+          className={`SubButton ${open === "LabEx2" ? "active" : ""}`}
+          onClick={() => toggle("LabEx2")}
+        >
+          Experiment 2
+        </button>
+        {open === "LabEx2" && <LabEx2 />}
+
+        <button
+          className={`SubButton ${open === "LabEx3" ? "active" : ""}`}
+          onClick={() => toggle("LabEx3")}
+        >
+          Experiment 3
+        </button>
+        {open === "LabEx3" && <LabEx3 />}
       </main>
     </div>
   );
