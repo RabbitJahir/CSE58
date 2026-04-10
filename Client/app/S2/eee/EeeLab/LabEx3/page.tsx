@@ -18,8 +18,8 @@ export default function Page() {
 
         <section className="space-y-2">
           <h2 className="text-xl font-semibold text-blue-600">Theory</h2>
-          <p className="leading-relaxed italic text-gray-500">
-            Theory lekha nijer moton
+          <p >
+            Circuit given, find resistance, voltage and current of each resistor.
           </p>
         </section>
 
