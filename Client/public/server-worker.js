@@ -1,4 +1,4 @@
-const CACHE_NAME = "cse58-v3"; // 🔁 change every deploy
+const CACHE_NAME = "cse58-v4"; // change every deploy
 
 // 🧱 Install → prepare new SW
 self.addEventListener("install", (event) => {
@@ -34,11 +34,4 @@ self.addEventListener("fetch", (event) => {
       })
       .catch(() => caches.match(event.request))
   );
-});
-
-// 🔥 LISTEN FOR SKIP WAITING MESSAGE (important)
-self.addEventListener("message", (event) => {
-  if (event.data === "SKIP_WAITING") {
-    self.skipWaiting();
-  }
 });

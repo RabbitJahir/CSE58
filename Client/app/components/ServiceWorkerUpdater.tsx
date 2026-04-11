@@ -8,27 +8,30 @@ export default function ServiceWorkerUpdater() {
   const [showUpdate, setShowUpdate] = useState(false);
 
   useEffect(() => {
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker.register("/service-worker.js").then((reg) => {
+    if (!("serviceWorker" in navigator)) return;
 
-        reg.onupdatefound = () => {
-          const worker = reg.installing;
-          if (!worker) return;
+    // 🔄 When new SW takes control → reload to get fresh content
+    navigator.serviceWorker.addEventListener("controllerchange", () => {
+      window.location.reload();
+    });
 
-          worker.onstatechange = () => {
-            if (worker.state === "installed") {
-              if (navigator.serviceWorker.controller) {
-                console.log("🔥 New version available");
+    navigator.serviceWorker.register("/service-worker.js").then((reg) => {
+      reg.onupdatefound = () => {
+        const worker = reg.installing;
+        if (!worker) return;
 
-                setNewWorker(worker);
-                setShowUpdate(true);
-              }
-            }
-          };
+        worker.onstatechange = () => {
+          if (
+            worker.state === "installed" &&
+            navigator.serviceWorker.controller
+          ) {
+            console.log("🔥 New version available");
+            setNewWorker(worker);
+            setShowUpdate(true);
+          }
         };
-
-      });
-    }
+      };
+    });
   }, []);
 
   if (!showUpdate || !newWorker) return null;
