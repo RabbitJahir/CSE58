@@ -38,7 +38,6 @@ export default function RootLayout({
 
       <body className="min-h-screen flex flex-col">
 
-        {/* 🔥 Service worker + update system */}
         <ServiceWorkerUpdater />
 
         {/* Main content */}
@@ -46,7 +45,6 @@ export default function RootLayout({
           {children}
         </main>
 
-        {/* 🔥 YOUR ORIGINAL FOOTER (restored) */}
         <footer className="p-4 bg-white/20 backdrop-blur-sm text-center">
           <p>
             &copy; CSE | <span className="rabbitGlow">Mr_Rabbit</span> |{" "}
