@@ -10,22 +10,24 @@ export default function ServiceWorkerUpdater() {
   useEffect(() => {
     if (!("serviceWorker" in navigator)) return;
 
-    // 🔄 When new SW takes control → reload to get fresh content
     navigator.serviceWorker.addEventListener("controllerchange", () => {
       window.location.reload();
     });
 
     navigator.serviceWorker.register("/service-worker.js").then((reg) => {
+
+      // ✅ Already waiting (missed the event) → show prompt immediately
+      if (reg.waiting && navigator.serviceWorker.controller) {
+        setNewWorker(reg.waiting);
+        setShowUpdate(true);
+      }
+
       reg.onupdatefound = () => {
         const worker = reg.installing;
         if (!worker) return;
 
         worker.onstatechange = () => {
-          if (
-            worker.state === "installed" &&
-            navigator.serviceWorker.controller
-          ) {
-            console.log("🔥 New version available");
+          if (worker.state === "installed" && navigator.serviceWorker.controller) {
             setNewWorker(worker);
             setShowUpdate(true);
           }
