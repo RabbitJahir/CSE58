@@ -1,4 +1,4 @@
-const CACHE_NAME = "cse58-v4"; // change every deploy
+const CACHE_NAME = "cse58-v5"; // change every deploy
 
 // 🧱 Install → prepare new SW
 self.addEventListener("install", (event) => {

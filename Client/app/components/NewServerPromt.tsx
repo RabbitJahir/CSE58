@@ -9,7 +9,7 @@ export default function NewVersionPrompt({ newWorker }: { newWorker: ServiceWork
 
   return (
     <div className="bg-black text-white px-4 py-3 rounded-xl shadow-lg border border-white/20 backdrop-blur-md">
-      <p className="text-sm mb-2">Update yo</p>
+      <p className="text-sm mb-2">🚀 New version available</p>
       <button
         onClick={handleUpdate}
         className="bg-white text-black px-3 py-1 rounded-md text-sm hover:bg-gray-200"

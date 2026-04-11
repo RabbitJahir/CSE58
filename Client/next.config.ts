@@ -2,13 +2,8 @@ import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
   reactStrictMode: true,
-
-  // ensures consistent builds
   poweredByHeader: false,
 
- 
-
-  // safer image handling (optional but recommended)
   images: {
     remotePatterns: [
       {
@@ -18,9 +13,17 @@ const nextConfig: NextConfig = {
     ],
   },
 
-  // prevents aggressive caching issues in some deployments
   async headers() {
     return [
+      {
+        source: "/service-worker.js",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=0, must-revalidate",
+          },
+        ],
+      },
       {
         source: "/(.*)",
         headers: [
