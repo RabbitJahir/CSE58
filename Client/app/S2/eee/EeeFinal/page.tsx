@@ -9,7 +9,7 @@ export default function Page() {
 
   return (
     <div>
-      <main className="main-box">
+      <main className="mid-container">
         {/* CHapter 3 */}
         <button onClick={() => toggle("EeeCh3")} className="SubButton">
           Ch 3
@@ -23,7 +23,17 @@ export default function Page() {
               rel="noopener noreferrer"
             >
               <button className="SubButton w-full">
-                Book <sub>-Download</sub>
+                Ch 3 Book <sub>-Download</sub>
+              </button>
+            </a>
+            <a
+              href="/S2/Eee/EeeCh3Ques.pdf"
+              className="SubButton"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="SubButton w-full">
+                Ch 3 Ques <sub>-Download</sub>
               </button>
             </a>
           
@@ -43,10 +53,19 @@ export default function Page() {
               rel="noopener noreferrer"
             >
               <button className="SubButton w-full">
-                Book <sub>-Download</sub>
+                Ch 4 Book <sub>-Download</sub>
               </button>
             </a>
-          
+          <a
+              href="/S2/Eee/EeeCh4Ques.pdf"
+              className="SubButton"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="SubButton w-full">
+                Ch 4 Ques <sub>-Download</sub>
+              </button>
+            </a>
           </div>
         )}
 
@@ -63,7 +82,17 @@ export default function Page() {
               rel="noopener noreferrer"
             >
               <button className="SubButton w-full">
-                Book <sub>-Download</sub>
+               Ch 9 Book <sub>-Download</sub>
+              </button>
+            </a>
+            <a
+              href="/S2/Eee/EeeCh9Ques.pdf"
+              className="SubButton"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="SubButton w-full">
+                Ch 9 Ques <sub>-Download</sub>
               </button>
             </a>
           
