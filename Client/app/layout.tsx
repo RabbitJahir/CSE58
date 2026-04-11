@@ -1,17 +1,13 @@
-"use client";
-import { useEffect } from "react";
-
 import "./globals.css";
 import NewVersionPrompt from "./components/NewServerPromt";
+import ServiceWorkerUpdater from "./components/ServiceWorkerUpdate";
 import type { Viewport } from "next";
 
-// Metadata
 export const metadata = {
   title: "UITS CSE 58",
   description: "Batch 58 from notunbazar",
 };
 
-// Viewport + theme color
 export const viewport: Viewport = {
   width: "device-width",
   initialScale: 1,
@@ -26,89 +22,29 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-
-  // ✅ REGISTER SERVICE WORKER HERE
-  useEffect(() => {
-    if ("serviceWorker" in navigator) {
-      navigator.serviceWorker
-        .register("/service-worker.js")
-        .then(() => console.log("✅ Service Worker registered"))
-        .catch((err) => console.log("❌ SW error:", err));
-    }
-  }, []);
-
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
         {/* Apple PWA */}
-        <link
-          rel="apple-touch-icon"
-          sizes="180x180"
-          href="/icons/apple-touch-icon.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="152x152"
-          href="/icons/apple-touch-icon-152x152.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="120x120"
-          href="/icons/apple-touch-icon-120x120.png"
-        />
-        <link
-          rel="apple-touch-icon"
-          sizes="76x76"
-          href="/icons/apple-touch-icon-76x76.png"
-        />
-
+        <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
         <meta name="mobile-web-app-capable" content="yes" />
-        <meta
-          name="apple-mobile-web-app-status-bar-style"
-          content="black-translucent"
-        />
-
+        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <meta name="apple-mobile-web-app-title" content="CSE58" />
       </head>
 
       <body className="min-h-screen flex flex-col">
-      
-        <div className="fixed top-4 left-1/2 transform -translate-x-1/2 z-50">
-          <NewVersionPrompt />
-        </div>
 
-        {/* Main content */}
+        {/* 🔥 THIS HANDLES SW LOGIC */}
+        <ServiceWorkerUpdater />
+
         <main className="flex-grow border-b-2 border-white">{children}</main>
 
-        {/* Footer */}
         <footer className="p-4 bg-white/20 backdrop-blur-sm text-center">
           <p>
             &copy; CSE | <span className="rabbitGlow">Mr_Rabbit</span> |{" "}
-            <a
-              href="https://github.com/RabbitJahir"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline"
-            >
+            <a href="https://github.com/RabbitJahir" target="_blank" rel="noopener noreferrer" className="underline">
               GitHub
             </a>
-          </p>
-          <p>
-            <span
-              className="
-                relative
-                bg-gradient-to-r 
-                from-white via-[#FFD700] via-[#FFEC7D] via-[#FFD700] to-white
-                bg-[length:220%_100%] 
-                bg-clip-text 
-                text-transparent 
-                animate-[shine_2s_linear_infinite]
-                drop-shadow-[0_0_5px_#FFD700]
-              "
-            >
-              inspirators: BitRanger, Zirconium001, greyscale021, LulzSec6824,
-              HelloTeam
-            </span>
           </p>
         </footer>
       </body>
