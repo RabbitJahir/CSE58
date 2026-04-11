@@ -20,7 +20,8 @@ export default function Home() {
           <h1 className="text-3xl font-bold text-black dark:text-white transition-colors duration-300">
             Welcome to CSE 58 Batch Website
           </h1>
-         
+            <sup className="text-white">testing</sup>
+
         </div>
       </header>
 

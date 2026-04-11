@@ -1,12 +1,14 @@
-const CACHE_NAME = "cse58-v10"; // bump this every deploy
+const CACHE_NAME = "cse58-v11";
 
 self.addEventListener("install", () => self.skipWaiting());
 
 self.addEventListener("activate", (event) => {
   event.waitUntil(
     caches.keys()
-      .then((keys) => Promise.all(keys.map((key) => caches.delete(key)))) // delete ALL caches
+      .then((keys) => Promise.all(keys.map((key) => caches.delete(key))))
       .then(() => self.clients.claim())
+      .then(() => self.clients.matchAll())
+      .then((clients) => clients.forEach((client) => client.postMessage("RELOAD")))
   );
 });
 
