@@ -1,3 +1,5 @@
+"use client";
+import { useEffect } from "react";
 
 import "./globals.css";
 import NewVersionPrompt from "./components/NewServerPromt";
@@ -24,7 +26,16 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
-  
+
+  // ✅ REGISTER SERVICE WORKER HERE
+  useEffect(() => {
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker
+        .register("/service-worker.js")
+        .then(() => console.log("✅ Service Worker registered"))
+        .catch((err) => console.log("❌ SW error:", err));
+    }
+  }, []);
 
   return (
     <html lang="en" suppressHydrationWarning>
