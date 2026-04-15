@@ -36,7 +36,7 @@ export default function Page() {
         <section className="space-y-2">
           <h2 className="text-xl font-semibold text-blue-600">Circuits</h2>
           <div className="bg-gray-50 dark:bg-zinc-800 p-4 rounded-lg space-y-2 text-sm">
-            <p>Step 1: Given circuit er end node er voltage ber kora </p>
+            <p>Step 1: A point, before the last resistor that connects to ground. Holding Multimeter on that new point and last resistor's end. Finding Main V, the voltage we should get at the end of the experiment. </p>
             <p>
               Step 2: Given circuit er end node er resistance ber kora, voltage
               off kore{" "}

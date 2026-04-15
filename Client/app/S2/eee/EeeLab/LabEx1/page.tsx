@@ -31,9 +31,9 @@ export default function Page() {
           </h2>
 
           <div className="overflow-x-auto rounded-xl shadow">
-            <p>Resistor</p>
-            <p>Color Code</p>
-            <p>Multimeter value</p>
+            <p>-&gt; Resistor</p>
+            <p>-&gt; Color Code</p>
+            <p>-&gt; Multimeter value</p>
           </div>
         </section>
 
@@ -44,14 +44,14 @@ export default function Page() {
           </h2>
 
           <div className="overflow-x-auto rounded-xl shadow">
-            <p className="px-4 py-3">Meter 1</p>
-            <p className="px-4 py-3">Meter 2</p>
+            <p className="px-4 py-3">-&gt; Meter 1</p>
+            <p className="px-4 py-3">-&gt; Meter 2</p>
             <p className="px-4 py-3">
-              Meter 3 (3 ta voltage, trainer board er disco button er sathe
+             -&gt; Meter 3 (3 ta voltage, trainer board er disco button er sathe
               multimeter er reading match kora )
             </p>
             <p className="px-4 py-3">
-              DMV Reading (Disco button of trainer board)
+             -&gt; DMV Reading (Disco button of trainer board)
             </p>
             <p className="px-4 py-3">Average (of all four)</p>
           </div>
@@ -62,13 +62,13 @@ export default function Page() {
           <h2 className="text-2xl font-semibold text-center text-blue-600">
             Table 3
           </h2>
-          <p>Applied Voltage</p>
-          <p>
+          <p>-&gt; Applied Voltage: 5, 10, 15</p>
+          <p>-&gt; 
             Measured Values (if no resistors between parallel, voltage is same,
             otherwise use voltage divider rule = V source x same/(ulta + same))
           </p>
 
-          <p>Multimeter Values</p>
+          <p>-&gt; Multimeter Values</p>
 
           <div className="overflow-x-auto rounded-xl shadow"></div>
         </section>

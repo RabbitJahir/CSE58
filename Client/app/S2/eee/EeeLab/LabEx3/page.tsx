@@ -18,8 +18,9 @@ export default function Page() {
 
         <section className="space-y-2">
           <h2 className="text-xl font-semibold text-blue-600">Theory</h2>
-          <p >
-            Circuit given, find resistance, voltage and current of each resistor.
+          <p>
+            Circuit given, find resistance, voltage and current of each
+            resistor.
           </p>
         </section>
 
@@ -38,12 +39,15 @@ export default function Page() {
         <section className="space-y-2">
           <h2 className="text-xl font-semibold text-blue-600">Circuits</h2>
           <div className="bg-gray-50 dark:bg-zinc-800 p-4 rounded-lg space-y-2 text-sm">
-            <p className="font-mono">V = I × R</p>
-            <p>Series: Current same, voltage different</p>
-            <p>Parallel: Voltage same, current different</p>
-            <p className="text-red-500">
-              Parallel e current divide hoy, current mapar time, sob resistor
-              soray divide
+            <p>
+              -&gt; R, resistance, writing down all reistance values using a
+              multimeter
+            </p>
+            <p>-&gt; Voltage, measuring each resistor's voltage</p>
+            <p>
+              -&gt; Current, for each resistor after removing the resistors, and
+              holding pins on those points. if in parallel, find the current and
+              divide by the number of resistors taken out.
             </p>
           </div>
         </section>
