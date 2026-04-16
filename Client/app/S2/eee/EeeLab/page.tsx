@@ -7,6 +7,7 @@ import Resistor from "./Resistor";
 import LabEx1 from "./LabEx1/page";
 import LabEx2 from "./LabEx2/page";
 import LabEx3 from "./LabEx3/page";
+import LabEx4 from "./LabEx4/page";
 import LabEx5 from "./LabEx5/page";
 
 
@@ -83,6 +84,14 @@ export default function Page() {
           Experiment 3
         </button>
         {open === "LabEx3" && <LabEx3 />}
+
+        <button
+          className={`SubButton ${open === "LabEx4" ? "active" : ""}`}
+          onClick={() => toggle("LabEx4")}
+        >
+          Experiment 4
+        </button>
+        {open === "LabEx4" && <LabEx4 />}
 
         <button
           className={`SubButton ${open === "LabEx5" ? "active" : ""}`}
