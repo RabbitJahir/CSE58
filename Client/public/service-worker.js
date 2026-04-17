@@ -1,4 +1,4 @@
-const VERSION = "1.0.0";
+const VERSION = "1.0.1";
 const CACHE_NAME = `app-cache-${VERSION}`;
 
 self.addEventListener("install", (event) => {
@@ -11,7 +11,7 @@ self.addEventListener("activate", (event) => {
       Promise.all(
         keys.map((key) => {
           if (key !== CACHE_NAME) {
-            return caches.delete(key); // 🧹 remove old cache
+            return caches.delete(key); // remove old cache!!!!!!!!
           }
         })
       )

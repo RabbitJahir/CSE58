@@ -1,8 +1,5 @@
-"use client";
-import { useState } from "react";
-
-import Link from "next/link";
 import Header from "../../components/Header/Index";
+import ToggleButton from "../../components/ToggleButton";
 
 import SuccessiveDifferentiation from "./successive/page";
 import PartialDerivative from "./partial-derivative/page";
@@ -20,113 +17,64 @@ const links = [
 ];
 
 export default function Page() {
-  const [open, setOpen] = useState<string | null>(null);
-
-  const toggle = (section: string) => {
-    setOpen((prev) => (prev === section ? null : section));
-  };
+  const sections = [
+    {
+      id: "successive",
+      title: "Successive Differentiation",
+      content: <SuccessiveDifferentiation />,
+    },
+    {
+      id: "partial-derivative",
+      title: "Partial Derivative",
+      content: <PartialDerivative />,
+    },
+    {
+      id: "multiple-integration",
+      title: "Multiple Integration",
+      content: <MultipleIntegration />,
+    },
+    {
+      id: "integration",
+      title: "Integration",
+      content: <Integration />,
+    },
+    {
+      id: "area-finding",
+      title: "Area Finding",
+      content: <AreaFinding />,
+    },
+    {
+      id: "rolls_mean",
+      title: "Rolles and Mean Theorem",
+      content: <RollsMean />,
+    },
+    {
+      id: "beta_gama",
+      title: "Beta and Gamma Function",
+      content: <BetaGama />,
+    },
+    {
+      id: "dmc",
+      title: "Differentiation, Monotonicity, Concavity",
+      content: <Dmc />,
+    },
+    {
+      id: "max_mim",
+      title: "Absolute Maxima and Minima",
+      content: <MaxMim />,
+    },
+  ];
 
   return (
     <div>
       <Header links={links} />
+
       <main className="main-box">
-        <h1 className="page-header">Differential & Integral Calculus</h1>
-        <Link
-          href="/S1/math/co.pdf"
-          className="SubButton"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Course Outline
-        </Link>
-        <Link
-          href="/S1/math/questions.pdf"
-          className="SubButton"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Final Questions
-        </Link>
-        <Link
-          href="/S1/math/answers.pdf"
-          className="SubButton"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Final Answers to the above Questions
-        </Link>
+        <h1 className="page-header">
+          Differential & Integral Calculus
+        </h1>
 
-        <button
-          className={`SubButton ${open === "successive" ? "active" : ""}`}
-          onClick={() => toggle("successive")}
-        >
-          Successive Differentiation
-        </button>
-        {open === "successive" && <SuccessiveDifferentiation />}
-
-        <button
-          className={`SubButton ${open === "partial-derivative" ? "active" : ""}`}
-          onClick={() => toggle("partial-derivative")}
-        >
-          Partial Derivative
-        </button>
-        {open === "partial-derivative" && <PartialDerivative />}
-
-        <button
-          className={`SubButton ${open === "multiple-integration" ? "active" : ""}`}
-          onClick={() => toggle("multiple-integration")}
-        >
-          Multiple Integration
-        </button>
-        {open === "multiple-integration" && <MultipleIntegration />}
-
-        <button
-          className={`SubButton ${open === "integration" ? "active" : ""}`}
-          onClick={() => toggle("integration")}
-        >
-          Integration
-        </button>
-        {open === "integration" && <Integration />}
-
-        <button
-          className={`SubButton ${open === "area-finding" ? "active" : ""}`}
-          onClick={() => toggle("area-finding")}
-        >
-          Area Finding
-        </button>
-        {open === "area-finding" && <AreaFinding />}
-
-        <button
-          className={`SubButton ${open === "rolls_mean" ? "active" : ""}`}
-          onClick={() => toggle("rolls_mean")}
-        >
-          Rolles and Mean Theorem
-        </button>
-        {open === "rolls_mean" && <RollsMean />}
-
-        <button
-          className={`SubButton ${open === "beta_gama" ? "active" : ""}`}
-          onClick={() => toggle("beta_gama")}
-        >
-          Beta and Gamma Function
-        </button>
-        {open === "beta_gama" && <BetaGama />}
-
-        <button
-          className={`SubButton ${open === "dmc" ? "active" : ""}`}
-          onClick={() => toggle("dmc")}
-        >
-          Differentiation, Monotonicity, Concavity
-        </button>
-        {open === "dmc" && <Dmc />}
-
-        <button
-          className={`SubButton ${open === "max_mim" ? "active" : ""}`}
-          onClick={() => toggle("max_mim")}
-        >
-          Absolute Maxima and Minima
-        </button>
-        {open === "max_mim" && <MaxMim />}
+        <ToggleButton sections={sections} />
       </main>
     </div>
   );

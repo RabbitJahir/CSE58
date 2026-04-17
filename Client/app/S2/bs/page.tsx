@@ -1,21 +1,28 @@
-"use client"; // required for useState
-import { useState } from "react";
 import Link from "next/link";
-import BsMid from "./BsMid/page"
-import BsFinal from "./BsFinal/page";
 import Header from "../../components/Header/Index";
+import ToggleButton from "../../components/ToggleButton";
+
+import BsMid from "./BsMid/page";
+import BsFinal from "./BsFinal/page";
 
 const links = [
-  { href: "/", label: "Home Page", className:"HeaderButton" },
-  { href: "/S2", label: "S2 Page", className:"HeaderButton" },
+  { href: "/", label: "Home Page", className: "HeaderButton" },
+  { href: "/S2", label: "S2 Page", className: "HeaderButton" },
 ];
 
 export default function BangladeshStudiesPage() {
- const [open, setOpen] = useState<string | null>(null);
-
-  const toggle = (section: string) => {
-    setOpen((prev) => (prev === section ? null : section));
-  };
+  const sections = [
+    {
+      id: "mid",
+      title: "Mid Syllabus",
+      content: <BsMid />,
+    },
+    {
+      id: "final",
+      title: "Final Syllabus",
+      content: <BsFinal />,
+    },
+  ];
 
   return (
     <div>
@@ -26,6 +33,7 @@ export default function BangladeshStudiesPage() {
       <main className="flex-grow p-4 text-white flex flex-col items-center gap-4">
         <h2 className="page-header">Bangladesh Studies Page</h2>
 
+        {/* Static links */}
         <Link href="/S2/Bs/BsCO.pdf" className="SubButton">
           BS Course Outline <sub>-Download</sub>
         </Link>
@@ -43,23 +51,10 @@ export default function BangladeshStudiesPage() {
           Bangladesh TimeLine
         </Link>
 
-        {/* Toggle buttons with active class */}
-        <button
-          className={`SubButton ${open === "BsMid" ? "active" : ""}`}
-          onClick={() => toggle("BsMid")}
-        >
-          Mid Syllabus
-        </button>
-        {open === "BsMid" && <BsMid />}
+        {/* Reusable toggle */}
+        <ToggleButton sections={sections} />
 
-        <button
-          className={`SubButton ${open === "BsFinal" ? "active" : ""}`}
-          onClick={() => toggle("BsFinal")}
-        >
-          Final Syllabus
-        </button>
-        {open === "BsFinal" && <BsFinal />}
-
+        {/* Extra file */}
         <Link
           href="/S2/Bs/amar_dekha_rajnitir_50_bochor.pdf"
           className="SubButton"

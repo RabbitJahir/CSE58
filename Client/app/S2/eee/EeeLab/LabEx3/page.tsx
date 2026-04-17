@@ -37,7 +37,7 @@ export default function Page() {
         </section>
 
         <section className="space-y-2">
-          <h2 className="text-xl font-semibold text-blue-600">Circuits</h2>
+          <h2 className="text-xl font-semibold text-blue-600">Circuit 1</h2>
           <div className="bg-gray-50 dark:bg-zinc-800 p-4 rounded-lg space-y-2 text-sm">
             <p>
               -&gt; R, resistance, writing down all reistance values using a
@@ -48,6 +48,16 @@ export default function Page() {
               -&gt; Current, for each resistor after removing the resistors, and
               holding pins on those points. if in parallel, find the current and
               divide by the number of resistors taken out.
+            </p>
+          </div>
+          <h2 className="text-xl font-semibold text-blue-600">Circuit 2</h2>
+          <div className="bg-gray-50 dark:bg-zinc-800 p-4 rounded-lg space-y-2 text-sm">
+            <p>
+              -&gt; Supply Voltage, given
+            </p>
+            <p>-&gt; Total current, find out.</p>
+            <p>
+              -&gt; Req, Equivalent Resistance, Supply Voltage / Total Current
             </p>
           </div>
         </section>

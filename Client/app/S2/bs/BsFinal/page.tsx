@@ -6,6 +6,7 @@ export default function bsfinal() {
   return (
     <div >
       <main className="mid-container">bsfinal</main>
+      
     </div>
   );
 }

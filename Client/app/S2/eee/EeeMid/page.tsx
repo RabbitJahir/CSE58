@@ -1,103 +1,27 @@
-"use client";
-import { useState } from "react";
+import TogglePdf from "../../../components/TogglePdf";
 
 export default function Page() {
-  const [open, setOpen] = useState<string | null>(null);
-  const toggle = (section: string) => {
-    setOpen((prev) => (prev === section ? null : section));
-  };
+  const chapters = [
+    {
+      id: "ch1",
+      title: "Ch 1",
+      files: [
+        { label: "Book", href: "/S2/Eee/EeeCh1Book.pdf" },
+        { label: "Notes", href: "/S2/Eee/EeeCh1Notes.pdf" },
+        { label: "Answers", href: "/S2/Eee/EeeCh1Answers.pdf" },
+      ],
+    },
+    {
+      id: "ch2",
+      title: "Ch 2",
+      files: [
+        { label: "Book", href: "/S2/Eee/EeeCh2Book.pdf" },
+        { label: "Notes", href: "/S2/Eee/EeeCh2Notes.pdf" },
+        { label: "Y-Del", href: "/S2/Eee/y-del.pdf" },
+        { label: "Questions", href: "/S2/Eee/EeeCh2Ques.pdf" },
+      ],
+    },
+  ];
 
-  return (
-    <div >
-      <main className="mid-container">
-        {/* Chapter 1 */}
-        <button onClick={() => toggle("EeeCh1")} className="SubButton">
-          Ch 1
-        </button>
-        {open === "EeeCh1" && (
-          <div className="flex flex-col gap-2 w-full">
-            <a
-              href="/S2/Eee/EeeCh1Book.pdf"
-              className="SubButton"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button className="SubButton w-full">
-                Book <sub>-Download</sub>
-              </button>
-            </a>
-            <a
-              href="/S2/Eee/EeeCh1Notes.pdf"
-              className="SubButton"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button className="SubButton w-full">
-                Notes <sub>-Download</sub>
-              </button>
-            </a>
-            <a
-              href="/S2/Eee/EeeCh1Answers.pdf"
-              className="SubButton"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button className="SubButton w-full">
-                Answers <sub>-Download</sub>
-              </button>
-            </a>
-          </div>
-        )}
-
-        {/* Chapter 2 */}
-        <button onClick={() => toggle("EeeCh2")} className="SubButton">
-          Ch 2
-        </button>
-        {open === "EeeCh2" && (
-          <div className="flex flex-col gap-2 w-full">
-            <a
-              href="/S2/Eee/EeeCh2Book.pdf"
-              className="SubButton"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button className="SubButton w-full">
-                Book <sub>-Download</sub>
-              </button>
-            </a>
-            <a
-              href="/S2/Eee/EeeCh2Notes.pdf"
-              className="SubButton"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button className="SubButton w-full">
-                Notes <sub>-Download</sub>
-              </button>
-            </a>
-            <a
-              href="/S2/Eee/y-del.pdf"
-              className="SubButton"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button className="SubButton w-full">
-                Y-Del <sub>-Download</sub>
-              </button>
-            </a>
-            <a
-              href="/S2/Eee/EeeCh2Ques.pdf"
-              className="SubButton"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button className="SubButton w-full">
-                Questions <sub>-Download</sub>
-              </button>
-            </a>
-          </div>
-        )}
-      </main>
-    </div>
-  );
+  return <TogglePdf chapters={chapters} />;
 }

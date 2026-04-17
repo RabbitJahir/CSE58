@@ -1,8 +1,7 @@
-"use client";
-import { useState } from "react";
 import Link from "next/link";
-
 import Header from "../../components/Header/Index";
+import ToggleButton from "../../components/ToggleButton";
+
 import OopMid from "./OopMid/page";
 import OopFinal from "./OopFinal/page";
 
@@ -11,18 +10,28 @@ const links = [
   { href: "/S2", label: "S2 Page", className: "HeaderButton" },
 ];
 
-export default function oop() {
-  const [open, setOpen] = useState<string | null>(null);
-  const toggle = (section: string) => {
-    setOpen((prev) => (prev === section ? null : section));
-  };
+export default function Oop() {
+  const sections = [
+    {
+      id: "mid",
+      title: "Mid Syllabus",
+      content: <OopMid />,
+    },
+    {
+      id: "final",
+      title: "Final Syllabus",
+      content: <OopFinal />,
+    },
+  ];
 
   return (
     <div>
       <Header links={links} />
-      <main className="main-box">
-        <h1 className="page-header">OOP </h1>
 
+      <main className="main-box">
+        <h1 className="page-header">OOP</h1>
+
+        {/* Static links */}
         <Link className="SubButton" href="/S2/oop/JavaCode">
           Java Codes
         </Link>
@@ -36,21 +45,8 @@ export default function oop() {
           More Java Codes<sub> - Kamrul Islam</sub>
         </Link>
 
-        <button
-          className={`SubButton ${open === "OopMid" ? "active" : ""}`}
-          onClick={() => toggle("OopMid")}
-        >
-          Mid Syllabus
-        </button>
-        {open === "OopMid" && <OopMid />}
-
-        <button
-          className={`SubButton ${open === "OopFinal" ? "active" : ""}`}
-          onClick={() => toggle("OopFinal")}
-        >
-          Final Syllabus
-        </button>
-        {open === "OopFinal" && <OopFinal />}
+        {/* Reusable toggle */}
+        <ToggleButton sections={sections} />
       </main>
     </div>
   );
