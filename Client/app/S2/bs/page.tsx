@@ -57,7 +57,7 @@ export default function BangladeshStudiesPage() {
         {/* Extra file */}
         <Link
           href="/S2/Bs/amar_dekha_rajnitir_50_bochor.pdf"
-          className="SubButton"
+          className="SubButton text-red-600"
         >
           Amar Dekha Rajnitir 50 Bochor <sub>-download</sub>
         </Link>
