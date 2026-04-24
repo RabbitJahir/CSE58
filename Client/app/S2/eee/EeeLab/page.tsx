@@ -1,6 +1,7 @@
 import Header from "../../../components/Header/Index";
 import ToggleButton from "../../../components/ToggleButton";
 import Link from "next/link";
+import { Metadata } from "next";
 
 import Resistor from "./Resistor";
 import LabEx1 from "./LabEx1/page";
@@ -8,6 +9,10 @@ import LabEx2 from "./LabEx2/page";
 import LabEx3 from "./LabEx3/page";
 import LabEx4 from "./LabEx4/page";
 import LabEx5 from "./LabEx5/page";
+
+export const metadata: Metadata = {
+  title: "EEE Lab page",
+};
 
 const links = [
   { href: "/", label: "Home", className: "HeaderButton" },
@@ -24,11 +29,45 @@ export default function Page() {
     { id: "lab5", title: "Experiment 5", content: <LabEx5 /> },
   ];
 
+  const table = `p-1 bg-gray-700 border-2 border-white`;
+
   return (
     <div>
       <Header links={links} />
 
       <main className="main-box">
+        <h1 className="page-header">EEE Lab</h1>
+
+        <div>
+          <table className="table-auto  bg-gray-700">
+            <tr>
+              <th colSpan={2} className="p-3">
+                Mark Distribution
+              </th>
+            </tr>
+            <tr>
+              <td className={table}>Attendance</td>
+              <td className={table}>10</td>
+            </tr>
+            <tr>
+              <td className={table}>Class Test</td>
+              <td className={table}>10</td>
+            </tr>
+            <tr>
+              <td className={table}>Assignment & performance</td>
+              <td className={table}>10</td>
+            </tr>
+            <tr>
+              <td className={table}>Mid</td>
+              <td className={table}>20</td>
+            </tr>
+            <tr>
+              <td className={table}>Final</td>
+              <td className={table}>50</td>
+            </tr>
+          </table>
+        </div>
+
         {/* Static Links */}
         <Link
           href="/S2/Eee/EeeLab/EeeLabCO.pdf"
