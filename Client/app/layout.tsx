@@ -17,8 +17,6 @@ export const viewport: Viewport = {
   themeColor: "#000000",
 };
 
-
-
 export default function RootLayout({
   children,
 }: {
@@ -28,26 +26,64 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         {/* Apple PWA */}
-        <link rel="apple-touch-icon" sizes="180x180" href="/icons/apple-touch-icon.png" />
-        <link rel="apple-touch-icon" sizes="152x152" href="/icons/apple-touch-icon-152x152.png" />
-        <link rel="apple-touch-icon" sizes="120x120" href="/icons/apple-touch-icon-120x120.png" />
-        <link rel="apple-touch-icon" sizes="76x76" href="/icons/apple-touch-icon-76x76.png" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/icons/apple-touch-icon.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="152x152"
+          href="/icons/apple-touch-icon-152x152.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="120x120"
+          href="/icons/apple-touch-icon-120x120.png"
+        />
+        <link
+          rel="apple-touch-icon"
+          sizes="76x76"
+          href="/icons/apple-touch-icon-76x76.png"
+        />
 
         <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        <meta
+          name="apple-mobile-web-app-status-bar-style"
+          content="black-translucent"
+        />
         <meta name="apple-mobile-web-app-title" content="CSE58" />
+
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+        (function () {
+          if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.getRegistrations().then(function(registrations) {
+              for (var i = 0; i < registrations.length; i++) {
+                registrations[i].unregister();
+              }
+            });
+          }
+
+          if ('caches' in window) {
+            caches.keys().then(function(names) {
+              for (var i = 0; i < names.length; i++) {
+                caches.delete(names[i]);
+              }
+            });
+          }
+        })();
+      `,
+          }}
+        />
       </head>
 
       <body className="min-h-screen flex flex-col">
-
         <ServiceWorkerUpdater />
 
         {/* Main content */}
-        <main className="flex-grow border-b-2 border-white">
-          {children}
-
-          
-        </main>
+        <main className="flex-grow border-b-2 border-white">{children}</main>
 
         <footer className="p-4 bg-white/20 backdrop-blur-sm text-center">
           <p>
@@ -80,7 +116,6 @@ export default function RootLayout({
             </span>
           </p>
         </footer>
-
       </body>
     </html>
   );
