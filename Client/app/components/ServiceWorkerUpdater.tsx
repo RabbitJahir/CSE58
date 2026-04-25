@@ -1,35 +1,23 @@
 "use client";
+
 import { useEffect } from "react";
 
 export default function ServiceWorkerUpdater() {
   useEffect(() => {
-    if (!("serviceWorker" in navigator)) return;
+    if ("serviceWorker" in navigator) {
+      navigator.serviceWorker.getRegistrations().then((registrations) => {
+        for (const reg of registrations) {
+          reg.unregister();
+        }
+      });
 
-    const registerSW = async () => {
-      const registration = await navigator.serviceWorker.register("/service-worker.js");
-
-      registration.update();
-
-      registration.onupdatefound = () => {
-        const newWorker = registration.installing;
-
-        if (!newWorker) return;
-
-        newWorker.onstatechange = () => {
-          if (newWorker.state === "installed") {
-            if (navigator.serviceWorker.controller) {
-              newWorker.postMessage({ type: "SKIP_WAITING" });
-            }
-          }
-        };
-      };
-    };
-
-    registerSW();
-
-    navigator.serviceWorker.addEventListener("controllerchange", () => {
-      window.location.reload();
-    });
+      // Optional: clear caches too (VERY important)
+      if ("caches" in window) {
+        caches.keys().then((names) => {
+          names.forEach((name) => caches.delete(name));
+        });
+      }
+    }
   }, []);
 
   return null;

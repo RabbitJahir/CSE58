@@ -17,6 +17,8 @@ export const viewport: Viewport = {
   themeColor: "#000000",
 };
 
+
+
 export default function RootLayout({
   children,
 }: {
@@ -43,6 +45,8 @@ export default function RootLayout({
         {/* Main content */}
         <main className="flex-grow border-b-2 border-white">
           {children}
+
+          
         </main>
 
         <footer className="p-4 bg-white/20 backdrop-blur-sm text-center">
