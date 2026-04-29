@@ -20,6 +20,14 @@ export default function bsfinal() {
         >
           Language movement
         </Link>
+        <Link
+          href="https://en.banglapedia.org/index.php/Twenty_One_Point_Programme"
+          className="SubButton"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          21 Dofa <sub>- Link</sub>
+        </Link>
       </main>
     </div>
   );
