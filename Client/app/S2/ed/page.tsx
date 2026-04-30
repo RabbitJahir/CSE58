@@ -16,12 +16,12 @@ export default function ed() {
         <h1 className="page-header">ED</h1>
 
         <div>
-          <table className="table-auto  bg-gray-700">
-            <tr>
-              <th colSpan={2} className="p-3">
+          <table className=" bg-gray-700">
+            <thead>
+              <td colSpan={2} className="p-3">
                 Mark Distribution
-              </th>
-            </tr>
+              </td>
+            </thead>
             <tr>
               <td className={table}>Attendance</td>
               <td className={table}>10</td>
