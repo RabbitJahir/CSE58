@@ -28,6 +28,14 @@ export default function bsfinal() {
         >
           21 Dofa <sub>- Link</sub>
         </Link>
+        <Link
+          href="/S2/Bs/Bs_culture.pdf"
+          className="SubButton"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Culture <sub>- download</sub>
+        </Link>
       </main>
     </div>
   );
