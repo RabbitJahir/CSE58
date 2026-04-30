@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Header from "../../components/Header/Index";
 
 const links = [
@@ -43,6 +44,17 @@ export default function ed() {
             </tr>
           </table>
         </div>
+
+        <Link
+          href="/S2/Ed/EdIsometric.pdf"
+          className="SubButton"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Isometric drawings, <sub>- download, apologies for blurriness</sub>
+        </Link>
+
+
       </main>
     </div>
   );
