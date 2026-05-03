@@ -12,6 +12,22 @@ export default function Page() {
         >
           Java_Access_Modifiers<sub> Download</sub>
         </Link>
+        <Link
+          href="/S2/Oop/inheritance&interface.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="SubButton "
+        >
+          Inheritance & Interface<sub> Download</sub>
+        </Link>
+        <Link
+          href="/S2/Oop/abstract&adapter.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="SubButton "
+        >
+          Abstract & Adapter<sub> Download</sub>
+        </Link>
       </main>
     </div>
   );

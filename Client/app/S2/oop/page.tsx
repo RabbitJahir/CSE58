@@ -34,7 +34,7 @@ export default function Oop() {
         <h1 className="page-header">OOP</h1>
 
         <div>
-          <table className="table-auto  bg-gray-700">
+          <table className="  bg-gray-700">
             <tr>
               <th colSpan={2} className="p-3">
                 Mark Distribution
