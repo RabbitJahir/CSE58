@@ -1,8 +1,8 @@
-import {Metadata} from "next";
+import { Metadata } from "next";
 import Link from "next/link";
 import Header from "../../components/Header/Index";
 
-  export const metadata: Metadata = {
+export const metadata: Metadata = {
   title: "Wad page",
 };
 
@@ -15,12 +15,12 @@ const table = `p-1 bg-gray-700 border-2 border-white`;
 
 export default function wad() {
   return (
-    <div >
+    <div>
       <Header links={links} />
       <main className="main-box">
         <h1 className="page-header">WAD</h1>
 
-         <div>
+        <div>
           <table className="table-auto  bg-gray-700">
             <tr>
               <th colSpan={2} className="p-3">
@@ -61,6 +61,24 @@ export default function wad() {
 
         <Link href="/S2/wad/WadCode" className="SubButton">
           Html Codes
+        </Link>
+
+        <Link
+          href="/S2/Wad/js.zip"
+          className="SubButton"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          javascript beginning<sub> - Download zip</sub>
+        </Link>
+
+        <Link
+          href="https://github.com/RabbitJahir/Languages/tree/master/js"
+          className="SubButton"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Github link to js
         </Link>
       </main>
     </div>
