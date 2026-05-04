@@ -38,7 +38,7 @@ export default function eee() {
         <h1 className="page-header">EEE</h1>
         
         <div>
-          <table className="table-auto  bg-gray-700">
+          <table className=" bg-gray-700">
             <tr>
               <th colSpan={2} className="p-3">
                 Mark Distribution

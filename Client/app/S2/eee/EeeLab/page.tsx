@@ -9,6 +9,7 @@ import LabEx2 from "./LabEx2/page";
 import LabEx3 from "./LabEx3/page";
 import LabEx4 from "./LabEx4/page";
 import LabEx5 from "./LabEx5/page";
+import LabEx6 from "./LabEx6/page";
 
 export const metadata: Metadata = {
   title: "EEE Lab page",
@@ -27,6 +28,7 @@ export default function Page() {
     { id: "lab3", title: "Experiment 3", content: <LabEx3 /> },
     { id: "lab4", title: "Experiment 4", content: <LabEx4 /> },
     { id: "lab5", title: "Experiment 5", content: <LabEx5 /> },
+    { id: "lab6", title: "Experiment 6", content: <LabEx6 /> },
   ];
 
   const table = `p-1 bg-gray-700 border-2 border-white`;
@@ -39,7 +41,7 @@ export default function Page() {
         <h1 className="page-header">EEE Lab</h1>
 
         <div>
-          <table className="table-auto  bg-gray-700">
+          <table className="  bg-gray-700">
             <tr>
               <th colSpan={2} className="p-3">
                 Mark Distribution
@@ -50,20 +52,24 @@ export default function Page() {
               <td className={table}>10</td>
             </tr>
             <tr>
-              <td className={table}>Class Test</td>
+              <td className={table}>Class performance</td>
               <td className={table}>10</td>
             </tr>
             <tr>
-              <td className={table}>Assignment & performance</td>
-              <td className={table}>10</td>
-            </tr>
-            <tr>
-              <td className={table}>Mid</td>
+              <td className={table}>Quiz</td>
               <td className={table}>20</td>
             </tr>
             <tr>
-              <td className={table}>Final</td>
-              <td className={table}>50</td>
+              <td className={table}>Report</td>
+              <td className={table}>10</td>
+            </tr>
+            <tr>
+              <td className={table}>Lab Test</td>
+              <td className={table}>30</td>
+            </tr>
+            <tr>
+              <td className={table}>Viva</td>
+              <td className={table}>20</td>
             </tr>
           </table>
         </div>

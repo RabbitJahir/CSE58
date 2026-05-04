@@ -17,6 +17,11 @@ export default function Page() {
       files: [
         { label: "Ch 4 Book", href: "/S2/Eee/EeeCh4Book.pdf" },
         { label: "Ch 4 Ques", href: "/S2/Eee/EeeCh4Ques.pdf" },
+        {label: "Superposition", href: "/S2/Eee/ch4-superposition.pdf"},
+        {label: "Source Transfer", href: "/S2/Eee/ch4-sourcetransform.pdf"},
+        {label: "Thevenin's theorem", href: "/S2/Eee/ch4-thevenins.pdf"},
+        {label: "Norton", href: "/S2/Eee/ch4-norton.pdf"},
+        {label: "Maximum Power ", href: "/S2/Eee/ch4-maxPower.pdf"},
       ],
     },
     {

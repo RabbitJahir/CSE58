@@ -4,21 +4,20 @@ export default function Page() {
       <main className="w-full max-w-3xl bg-white dark:bg-zinc-900 shadow-xl rounded-2xl p-8 space-y-8">
         {/* Title */}
         <h1 className="text-3xl font-bold text-center border-b pb-4">
-          Study of Thevenin&apos;s Theorem
+          Study of maximum power transfer theorem
         </h1>
 
         {/* Section */}
         <section className="space-y-2">
           <h2 className="text-xl font-semibold text-blue-600">Objective</h2>
           <p className="leading-relaxed">
-            Boro circuit choto kora, V<sub>Th</sub> and R<sub>Th</sub> diye, and
-            Load resistance and Load current pore ber kora.
+            Showing that maximum power occurs when the value of resistor R<sub>th</sub> is equal to R<sub>load</sub>
           </p>
         </section>
 
         <section className="space-y-2">
           <h2 className="text-xl font-semibold text-blue-600">Theory</h2>
-          <p>Circuit given, Circuit er end e akta Load Resistor boshabo,</p>
+          <p>Circuit found with Thevenins theorem, have a V<sub>th</sub>, R<sub>th</sub> and R<sub>load</sub>. We need to find the Voltage and current for power. Current will be measured from the open circuit, one point on the R<sub>th</sub> and another on R<sub>load</sub>. Voltage will be measured across R<sub>load</sub>.</p>
         </section>
 
         <section className="space-y-2">
@@ -36,19 +35,15 @@ export default function Page() {
         <section className="space-y-2">
           <h2 className="text-xl font-semibold text-blue-600">Circuits</h2>
           <div className="bg-gray-50 dark:bg-zinc-800 p-4 rounded-lg space-y-2 text-sm">
-            <p>Step 1: A point, before the last resistor that connects to ground. Holding Multimeter on that new point and last resistor&apos;s end. Finding Main V, the voltage we should get at the end of the experiment. </p>
+            <p>Step 1: Draw / make a thevenins circuit, using V<sub>th</sub>, R<sub>th</sub>, R<sub>load</sub> and source. </p>
             <p>
-              Step 2: Given circuit er end node er resistance ber kora, voltage
-              off kore{" "}
+              Step 2: Measure current (load current) from the end of R<sub>th</sub> and start of R<sub>load</sub>.
             </p>
             <p>
-              Step 3: Circuit with load resistance er end node er voltage ber
-              kora
+              Step 3: Measure voltage (load voltage) from across R<sub>load</sub>.
             </p>
             <p>
-              Step 4: new values, voltage from step 1, one resistor with
-              resistance from step 2, second resistor with resistance of load
-              resistance, finding voltage.{" "}
+              Step 4: Find power = load voltage * load current
             </p>
           </div>
         </section>
