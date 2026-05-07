@@ -83,7 +83,9 @@ export default function Home() {
       {/* Main */}
       <main className="main-box flex flex-col items-center gap-4 mt-6">
         <HomePageState items={items} />
-
+        <Link className="SubButton" href="/PLO">
+        PLO
+        </Link>
         {/* Semester links */}
         <Link className="SubButton" href="/S1">
           Semester 1
