@@ -207,7 +207,7 @@ public class modifier1 {
   /* */
   {
     id: 6,
-    title: "Hybrid ",
+    title: "6) Hybrid ",
     description: "double classes",
     code: `
       interface Eat {
@@ -303,8 +303,8 @@ public class advanced1 {
   },
 
   {
-    id: 6,
-    title: "inhertiance",
+    id: 7,
+    title: "7) inhertiance",
     description: "simple inheritance",
     code: `
       package inheritance;
@@ -343,8 +343,8 @@ public class start1{
     `,
   },
   {
-    id: 7,
-    title: "hierchical inheritnace",
+    id: 8,
+    title: "8) hierchical inheritnace",
     description: "simple inheritance",
     code: `
       package inheritance;
@@ -389,8 +389,8 @@ public class start {
     `,
   },
   {
-    id: 8,
-    title: "Multiple inheritance",
+    id: 9,
+    title: "9) Multiple inheritance",
     description: "Make a new Student object and pass parameters",
     code: `
       package inheritance;
