@@ -59,6 +59,15 @@ export default function wad() {
           WAD Course Outline <sub>-Download</sub>
         </Link>
 
+        <Link
+          href="/S2/Wad/wad-lab-manual.pdf"
+          className="SubButton"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          WAD Lab Manual <sub>-Download</sub>
+        </Link>
+
         <Link href="/S2/wad/WadCode" className="SubButton">
           Html Codes
         </Link>
@@ -79,6 +88,15 @@ export default function wad() {
           rel="noopener noreferrer"
         >
           Github link to js
+        </Link>
+        
+        <Link
+          href="/S2/Wad/js_jon-duckett.pdf"
+          className="SubButton"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          javascript book by Jon DUckett<sub> - Download</sub>
         </Link>
       </main>
     </div>
