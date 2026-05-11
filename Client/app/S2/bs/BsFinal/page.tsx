@@ -44,6 +44,22 @@ export default function bsfinal() {
         >
           Agartala conspiracy case <sub>- download</sub>
         </Link>
+        <Link
+          href="/S2/Bs/Swadhin-bangla-betar-kendra.pdf"
+          className="SubButton"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Swadhin bangla betar kendra<sub>- download</sub>
+        </Link>
+        <Link
+          href="/S2/Bs/mujibnagar-government.pdf"
+          className="SubButton"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          mujibnagar goverment <sub>- download</sub>
+        </Link>
       </main>
     </div>
   );

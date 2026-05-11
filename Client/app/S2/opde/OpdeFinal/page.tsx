@@ -8,11 +8,19 @@ export default function Page() {
           href="/S2/Opde/LDE-opde.pdf"
           target="_blank"
           rel="noopener noreferrer"
+          className="SubButton"
         >
-          <button className="SubButton">
             Non-Homogeneous LDE <sub>-Download, Thanks Forhad</sub>
-          </button>
         </Link>
+        <Link
+          href="/S2/Opde/pde-arbitary.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="SubButton"
+        >
+            arbitary constant & functions <sub>-Download</sub>
+        </Link>
+
       </main>
     </div>
   );
