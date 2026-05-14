@@ -10,6 +10,8 @@ import LabEx3 from "./LabEx3/page";
 import LabEx4 from "./LabEx4/page";
 import LabEx5 from "./LabEx5/page";
 import LabEx6 from "./LabEx6/page";
+import LabEx7 from "./LabEx7/page";
+
 
 export const metadata: Metadata = {
   title: "EEE Lab page",
@@ -29,6 +31,7 @@ export default function Page() {
     { id: "lab4", title: "Experiment 4", content: <LabEx4 /> },
     { id: "lab5", title: "Experiment 5", content: <LabEx5 /> },
     { id: "lab6", title: "Experiment 6", content: <LabEx6 /> },
+    { id: "lab7", title: "Experiment 7", content: <LabEx7 /> },
   ];
 
   const table = `p-1 bg-gray-700 border-2 border-white`;
