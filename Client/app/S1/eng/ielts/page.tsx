@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Header from "../../../components/Header/Index";
 
 const links = [
@@ -191,6 +192,30 @@ export default function Page() {
             </tr>
           </tbody>
         </table>
+        <Link
+          href="/S1/eng/ielts-reading-answer-sheet.pdf"
+          className="SubButton"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ielts-reading-answer-sheet
+        </Link>
+        <Link
+          href="/S1/eng/ielts-writing-answer-sheet.pdf"
+          className="SubButton"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ielts-writing-answer-sheet-task-1
+        </Link>
+        <Link
+          href="/S1/eng/ielts-writing-answer-sheet-2.pdf"
+          className="SubButton"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ielts-writing-answer-sheet-task-2
+        </Link>
       </main>
     </div>
   );

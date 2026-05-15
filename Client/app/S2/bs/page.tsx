@@ -90,6 +90,8 @@ export default function BangladeshStudiesPage() {
         <Link
           href="/S2/Bs/amar_dekha_rajnitir_50_bochor.pdf"
           className="SubButton text-red-600"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           Amar Dekha Rajnitir 50 Bochor <sub>-download</sub>
         </Link>
