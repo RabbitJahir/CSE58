@@ -36,7 +36,7 @@ export default function BangladeshStudiesPage() {
         <h2 className="page-header">Bangladesh Studies Page</h2>
 
         <div>
-          <table className="table-auto  bg-gray-700">
+          <table className="bg-gray-700">
             <tr>
               <th colSpan={2} className="p-3">
                 Mark Distribution

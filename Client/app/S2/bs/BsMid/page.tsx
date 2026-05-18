@@ -20,14 +20,22 @@ export default function bsmid() {
       >
         Geographical features of Bangladesh <sub>-Download</sub>
       </Link>
-      <a
+      <Link
         href="/S2/Bs/shashanka_full_notes.pdf"
         className="SubButton"
         target="_blank"
         rel="noopener noreferrer"
       >
         Shashanka <sub>-Download</sub>
-      </a>
+      </Link>
+      <Link
+          href="/S2/Bs/Agartala-conspiracy-case.pdf"
+          className="SubButton"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Agartala conspiracy case <sub>- download</sub>
+        </Link>
       </main>
     </div>
   );

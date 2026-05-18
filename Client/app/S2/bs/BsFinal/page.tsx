@@ -37,14 +37,6 @@ export default function bsfinal() {
           Culture <sub>- download</sub>
         </Link>
         <Link
-          href="/S2/Bs/Agartala-conspiracy-case.pdf"
-          className="SubButton"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Agartala conspiracy case <sub>- download</sub>
-        </Link>
-        <Link
           href="/S2/Bs/Swadhin-bangla-betar-kendra.pdf"
           className="SubButton"
           target="_blank"
@@ -59,6 +51,14 @@ export default function bsfinal() {
           rel="noopener noreferrer"
         >
           mujibnagar goverment <sub>- download</sub>
+        </Link>
+        <Link
+          href="/S2/Bs/sectors.pdf"
+          className="SubButton"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Sectors 1971 (map and table is important)  <sub>- download</sub>
         </Link>
       </main>
     </div>
