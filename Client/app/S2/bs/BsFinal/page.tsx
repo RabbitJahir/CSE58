@@ -60,6 +60,22 @@ export default function bsfinal() {
         >
           Sectors 1971 (map and table is important)  <sub>- download</sub>
         </Link>
+        <Link
+          href="#"
+          className="SubButton"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          1971 mass movement <sub>- empty</sub>
+        </Link>
+        <Link
+          href="#"
+          className="SubButton"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          operation searchlight <sub>- empty</sub>
+        </Link>
       </main>
     </div>
   );
