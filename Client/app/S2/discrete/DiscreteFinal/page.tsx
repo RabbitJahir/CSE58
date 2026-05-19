@@ -12,6 +12,14 @@ export default function Page() {
         >
           Chapter 4, CRT <sub>-Download</sub>
         </Link>
+        <Link
+          href="/S2/Discrete/discrete-final-assignment.pdf"
+          className="SubButton"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Discrete Final Assignment <sub>-Download</sub>
+        </Link>
       </main>
     </div>
   );
