@@ -13,6 +13,14 @@ export default function Page() {
             Non-Homogeneous LDE <sub>-Download, Thanks Forhad</sub>
         </Link>
         <Link
+          href="/S2/Opde/uc-method.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="SubButton"
+        >
+            using UC Method <sub>-Download</sub>
+        </Link>
+        <Link
           href="/S2/Opde/pde-arbitary.pdf"
           target="_blank"
           rel="noopener noreferrer"
