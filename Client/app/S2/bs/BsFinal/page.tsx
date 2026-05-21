@@ -69,12 +69,12 @@ export default function bsfinal() {
           1971 mass movement <sub>- empty</sub>
         </Link>
         <Link
-          href="#"
+          href="/S2/Bs/operation-searchlight.pdf"
           className="SubButton"
           target="_blank"
           rel="noopener noreferrer"
         >
-          operation searchlight <sub>- empty</sub>
+          operation searchlight <sub>- download</sub>
         </Link>
       </main>
     </div>
