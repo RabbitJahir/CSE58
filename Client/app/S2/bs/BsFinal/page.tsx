@@ -61,12 +61,12 @@ export default function bsfinal() {
           Sectors 1971 (map and table is important)  <sub>- download</sub>
         </Link>
         <Link
-          href="#"
+          href="/S2/Bs/mass-movement.pdf"
           className="SubButton"
           target="_blank"
           rel="noopener noreferrer"
         >
-          1971 mass movement <sub>- empty</sub>
+          Mass movement   (look near end)<sub>- download</sub>
         </Link>
         <Link
           href="/S2/Bs/operation-searchlight.pdf"

@@ -28,14 +28,6 @@ export default function bsmid() {
       >
         Shashanka <sub>-Download</sub>
       </Link>
-      <Link
-          href="/S2/Bs/Agartala-conspiracy-case.pdf"
-          className="SubButton"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Agartala conspiracy case <sub>- download</sub>
-        </Link>
       </main>
     </div>
   );
