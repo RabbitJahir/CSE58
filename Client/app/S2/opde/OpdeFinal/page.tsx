@@ -4,6 +4,14 @@ export default function Page() {
   return (
     <div>
       <main className="mid-container">
+        <Link
+          href="/S2/Opde/opde-final-questions.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="SubButton"
+        >
+            Final Questions <sub>-Download</sub>
+        </Link>
          <Link
           href="/S2/Opde/LDE-opde.pdf"
           target="_blank"
