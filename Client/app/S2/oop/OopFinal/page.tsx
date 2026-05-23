@@ -36,6 +36,14 @@ export default function Page() {
         >
           Abstract & Adapter<sub> Download</sub>
         </Link>
+        <Link
+          href="/S2/Oop/exceptions.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="SubButton "
+        >
+          Exception Handlind<sub> Download</sub>
+        </Link>
       </main>
     </div>
   );
