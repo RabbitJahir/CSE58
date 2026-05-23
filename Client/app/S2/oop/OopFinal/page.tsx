@@ -42,7 +42,15 @@ export default function Page() {
           rel="noopener noreferrer"
           className="SubButton "
         >
-          Exception Handlind<sub> Download</sub>
+          Exception Handling<sub> Download</sub>
+        </Link>
+        <Link
+          href="/S2/Oop/threads.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="SubButton "
+        >
+          Threads<sub> Download</sub>
         </Link>
       </main>
     </div>
