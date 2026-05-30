@@ -8,6 +8,7 @@ export default function Page() {
       files: [
         { label: "Ch 3 Book", href: "/S2/Eee/EeeCh3Book.pdf" },
         { label: "Ch 3 Ques", href: "/S2/Eee/EeeCh3Ques.pdf" },
+        { label: "Ch 3 Mesh by Thomas", href: "/S2/Eee/EeeCh3Nodal.pdf" },
         { label: "Ch 3 Mesh by Thomas", href: "/S2/Eee/EeeCh3Mesh.pdf" },
       ],
     },
