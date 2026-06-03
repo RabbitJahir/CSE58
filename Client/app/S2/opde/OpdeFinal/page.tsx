@@ -10,15 +10,15 @@ export default function Page() {
           rel="noopener noreferrer"
           className="SubButton"
         >
-            Final Questions <sub>-Download</sub>
+          Final Questions <sub>-Download</sub>
         </Link>
-         <Link
+        <Link
           href="/S2/Opde/LDE-opde.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="SubButton"
         >
-            Non-Homogeneous LDE <sub>-Download, Thanks Forhad</sub>
+          Non-Homogeneous LDE <sub>-Download, Thanks Forhad</sub>
         </Link>
         <Link
           href="/S2/Opde/uc-method.pdf"
@@ -26,17 +26,32 @@ export default function Page() {
           rel="noopener noreferrer"
           className="SubButton"
         >
-            using UC Method <sub>-Download</sub>
+          using UC Method <sub>-Download</sub>
         </Link>
         <Link
-          href="/S2/Opde/pde-arbitary.pdf"
+          href="/S2/Opde/lpde-arbitrary.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="SubButton"
         >
-            arbitary constant & functions <sub>-Download</sub>
+          LPDE arbitrary constant & functions <sub>-Download, by thomas</sub>
         </Link>
-
+        <Link
+          href="/S2/Opde/lpde-cc.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="SubButton"
+        >
+          LPDE constant coefficients <sub>-Download, by thomas</sub>
+        </Link>
+        <Link
+          href="/S2/Opde/lpde-lagrange.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="SubButton"
+        >
+          LPDE lagrange&apos;s method <sub>-Download, by thomas</sub>
+        </Link>
       </main>
     </div>
   );

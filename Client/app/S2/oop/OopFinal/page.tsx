@@ -29,7 +29,7 @@ export default function Page() {
             Polymorphism<sub> Download</sub>
           </Link>
         <Link
-          href="/S2/Oop/abstract&adapter.pdf"
+          href="/S2/Oop/abstract-adapter.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="SubButton "
