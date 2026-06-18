@@ -44,6 +44,14 @@ export default function Page() {
         >
           LPDE lagrange&apos;s method <sub>-Download, by thomas</sub>
         </Link>
+        <Link
+          href="/S2/Opde/opde_cauchy.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="SubButton"
+        >
+          Cauchy Boiler<sub>-Download, by thomas</sub>
+        </Link>
       </main>
     </div>
   );
