@@ -16,7 +16,7 @@ export default function S3_Home() {
           <Link href="/S3/db">Database Management System</Link>
           <Link href="/S3/eee">Electronic Devices and Circuits</Link>
           <Link href="/S3/math">
-            Coordinate Geometry, Linear Algebra, and Vector Analysis
+            CGLAVA
           </Link>
         </div>
       </main>
