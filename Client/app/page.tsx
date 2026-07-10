@@ -11,7 +11,8 @@ export default function Home() {
         <>
           <p>
             Create an account and start exploring! <br />
-            The beginning of an amazing journey! Discover handy resources and tools!
+            The beginning of an amazing journey! Discover handy resources and
+            tools!
             <br />
             <i>TIP</i>: go to tools, b1t scheduler.
           </p>
@@ -51,14 +52,9 @@ export default function Home() {
       title: "CSE 58",
       content: (
         <>
-          <p>
-            The Academic journey of Batch 58, made and handled by 1006.
-          </p>
+          <p>The Academic journey of Batch 58, made and handled by 1006.</p>
 
-          <Link
-            href="https://cse58.vercel.app/"
-            className="SubButton"
-          >
+          <Link href="https://cse58.vercel.app/" className="SubButton">
             This Link
           </Link>
         </>
@@ -76,15 +72,17 @@ export default function Home() {
           <h1 className="text-3xl font-bold text-black dark:text-white">
             Welcome to CSE 58 Batch Website
           </h1>
-          <sup className="text-white">testing</sup>
+          <sup className="text-white">YOLO</sup>
         </div>
       </header>
 
       {/* Main */}
       <main className="main-box flex flex-col items-center gap-4 mt-6">
+        
         <HomePageState items={items} />
+
         <Link className="SubButton" href="/PLO">
-        PLO
+          PLO
         </Link>
         {/* Semester links */}
         <Link className="SubButton" href="/S1">
@@ -93,6 +91,10 @@ export default function Home() {
 
         <Link className="SubButton" href="/S2">
           Semester 2
+        </Link>
+
+        <Link className="SubButton" href="/S3">
+          Semester 3
         </Link>
       </main>
     </div>

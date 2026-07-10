@@ -1,5 +1,5 @@
 import "./globals.css";
-import ServiceWorkerUpdater from "./components/ServiceWorkerUpdater";
+// import ServiceWorkerUpdater from "./components/ServiceWorkerUpdater";
 import type { Viewport } from "next";
 
 // Metadata (must stay in Server Component)
@@ -54,7 +54,7 @@ export default function RootLayout({
         />
         <meta name="apple-mobile-web-app-title" content="CSE58" />
 
-        <script
+        {/* <script
           dangerouslySetInnerHTML={{
             __html: `
         (function () {
@@ -76,11 +76,11 @@ export default function RootLayout({
         })();
       `,
           }}
-        />
+        /> */}
       </head>
 
       <body className="min-h-screen flex flex-col">
-        <ServiceWorkerUpdater />
+        {/* <ServiceWorkerUpdater /> */}
 
         {/* Main content */}
         <main className="flex-grow border-b-2 border-white">{children}</main>
