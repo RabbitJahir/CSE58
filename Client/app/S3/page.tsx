@@ -11,11 +11,22 @@ export default function S3_Home() {
       <main className="main-box">
         <h1 className="page-header">3rd Semester</h1>
         <div className={styles.links}>
-          <Link href="/S3/dsaI">Data Structure and Algorithm 1</Link>
-          <Link href="/S3/dld">Digital Logic Design</Link>
-          <Link href="/S3/db">Database Management System</Link>
-          <Link href="/S3/eee">Electronic Devices and Circuits</Link>
-          <Link href="/S3/math">
+          <Link className={styles.calendar} href="/S3/calendar">
+            Calendar
+          </Link>
+          <Link className={styles.dsaI} href="/S3/dsaI">
+            Data Structure and Algorithm 1
+          </Link>
+          <Link className={styles.dld} href="/S3/dld">
+            Digital Logic Design
+          </Link>
+          <Link className={styles.db} href="/S3/db">
+            Database Management System
+          </Link>
+          <Link className={styles.edc} href="/S3/eee">
+            Electronic Devices and Circuits
+          </Link>
+          <Link className={styles.cglava} href="/S3/math">
             CGLAVA
           </Link>
         </div>

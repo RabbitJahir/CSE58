@@ -3,8 +3,8 @@ import Header from "../../components/Header/Index";
 import Table from "@/app/components/Table";
 
 import ToggleButton from "../../components/ToggleButton";
-import MathMid from "./mathMid/page";
-import MathFinal from "./mathFinal/page";
+import MathMid from "./cglavaMid/page";
+import MathFinal from "./cglavaFinal/page";
 
 const links = [
   { href: "/", label: "Home", className: "HeaderButton" },
@@ -13,7 +13,7 @@ const links = [
 
 const markDistribution = [{ label: "Dey nai", value: 100 }];
 
-export default function math() {
+export default function cglava() {
   const sections = [
     {
       id: "mid",
