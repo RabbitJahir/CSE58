@@ -1,6 +1,9 @@
 import Link from "next/link";
 import Header from "../../../components/Header/Index";
 import Table from "@/app/components/Table";
+import ToggleButton from "../../../components/ToggleButton";
+
+import ICs from "../dldLab/ics/page";
 
 const links = [
   { href: "/", label: "Home", className: "HeaderButton" },
@@ -8,9 +11,25 @@ const links = [
   { href: "/S3/dld", label: "DLD theory", className: "HeaderButton" },
 ];
 
-const markDistribution = [{ label: "Dey nai", value: 100 }];
+const markDistribution = [
+  { label: "Attendance", value: 10 },
+  { label: "Performance", value: 10 },
+  { label: " Lab Test 1", value: 15 },
+  { label: " Lab Test 2", value: 15 },
+  { label: " Quiz", value: 20 },
+  { label: " Lab Report", value: 10 },
+  { label: "Project/Assignment", value: 10 },
+  { label: "Viva", value: 10 },
+];
 
 export default function dldLab() {
+  const sections = [
+    {
+      id: "IC",
+      title: "All IC's",
+      content: <ICs />,
+    },
+  ];
   return (
     <div>
       <Header links={links} />
@@ -18,6 +37,7 @@ export default function dldLab() {
         <h1 className="page-header">CSE0611216</h1>
 
         <Table title="Mark Distribution" rows={markDistribution} />
+        <ToggleButton sections={sections} />
       </main>
     </div>
   );

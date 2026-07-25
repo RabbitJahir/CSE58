@@ -11,7 +11,12 @@ const links = [
   { href: "/S3", label: "S3 Page", className: "HeaderButton" },
 ];
 
-const markDistribution = [{ label: "Dey nai", value: 100 }];
+const markDistribution = [
+  { label: "Attendance/ performance", value: 10 },
+  { label: "Test (best 2 out of three/four)", value: 20 },
+  { label: "Mid", value: 20 },
+  { label: "Final", value: 50 }
+];
 
 export default function dld() {
   const sections = [
@@ -32,12 +37,20 @@ export default function dld() {
       <main className="main-box">
         <h1 className="page-header">CSE0611215</h1>
 
+        <Link
+          href="/S3/dld/co-dld.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="SubButton"
+        >
+          Course Outline DLD<sub> Download</sub>
+        </Link>
         <Table title="Mark Distribution" rows={markDistribution} />
 
         <Link href="/S3/dld/dldLab" className="SubButton">
           DLD Lab Page
         </Link>
-        
+
         <ToggleButton sections={sections} />
       </main>
     </div>
