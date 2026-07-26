@@ -45,6 +45,7 @@ export default function dld() {
         >
           Course Outline DLD<sub> Download</sub>
         </Link>
+        
         <Table title="Mark Distribution" rows={markDistribution} />
 
         <Link href="/S3/dld/dldLab" className="SubButton">
