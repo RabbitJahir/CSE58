@@ -14,7 +14,7 @@ export default function Page() {
       },
       {
         name: "7408",
-        title: "Quad 2-Input AND",
+        title: "Quad 2-Input AND, multiplication",
         diagram: `
           +--notch(U)---+
 1A ----|1          14|---- VCC
@@ -26,10 +26,16 @@ export default function Page() {
 GND ---|7           8|---- 3Y
           +------------+
 `,
+        truthTable: [
+          { A: 0, B: 0, Y: 0 },
+          { A: 0, B: 1, Y: 0 },
+          { A: 1, B: 0, Y: 0 },
+          { A: 1, B: 1, Y: 1 },
+        ],
       },
       {
         name: "7432",
-        title: "Quad 2-Input OR",
+        title: "Quad 2-Input OR, addition",
         diagram: `
           +--notch(U)---+
 1A ----|1          14|---- VCC
@@ -41,10 +47,16 @@ GND ---|7           8|---- 3Y
 GND ---|7           8|---- 3Y
           +------------+
 `,
+        truthTable: [
+          { A: 0, B: 0, Y: 0 },
+          { A: 0, B: 1, Y: 1 },
+          { A: 1, B: 0, Y: 1 },
+          { A: 1, B: 1, Y: 1 },
+        ],
       },
       {
         name: "7404",
-        title: "Hex Inverter (NOT)",
+        title: "Hex Inverter (NOT), ulta",
         diagram: `
           +--notch(U)---+
 1A ----|1          14|---- VCC
@@ -56,10 +68,14 @@ GND ---|7           8|---- 3Y
 GND ---|7           8|---- 4Y
           +------------+
 `,
+        truthTable: [
+          { A: 0, Y: 1 },
+          { A: 1, Y: 0 },
+        ],
       },
       {
         name: "7400",
-        title: "Quad 2-Input NAND",
+        title: "Quad 2-Input NAND, and + not",
         diagram: `
           +--notch(U)---+
 1A ----|1          14|---- VCC
@@ -71,10 +87,16 @@ GND ---|7           8|---- 4Y
 GND ---|7           8|---- 3Y
           +------------+
 `,
+        truthTable: [
+          { A: 0, B: 0, Y: 1 },
+          { A: 0, B: 1, Y: 1 },
+          { A: 1, B: 0, Y: 1 },
+          { A: 1, B: 1, Y: 0 },
+        ],
       },
       {
         name: "7402",
-        title: "Quad 2-Input NOR",
+        title: "Quad 2-Input NOR, or + not",
         diagram: `
           +--notch(U)---+
 1Y ----|1          14|---- VCC
@@ -86,10 +108,16 @@ GND ---|7           8|---- 3Y
 GND ---|7           8|---- 3A
           +------------+
 `,
+        truthTable: [
+          { A: 0, B: 0, Y: 1 },
+          { A: 0, B: 1, Y: 0 },
+          { A: 1, B: 0, Y: 0 },
+          { A: 1, B: 1, Y: 0 },
+        ],
       },
       {
         name: "7486",
-        title: "Quad 2-Input XOR",
+        title: "Quad 2-Input XOR, same 0, different 1",
         diagram: `
           +--notch(U)---+
 1A ----|1          14|---- VCC
@@ -101,6 +129,12 @@ GND ---|7           8|---- 3A
 GND ---|7           8|---- 3Y
           +------------+
 `,
+        truthTable: [
+          { A: 0, B: 0, Y: 0 },
+          { A: 0, B: 1, Y: 1 },
+          { A: 1, B: 0, Y: 1 },
+          { A: 1, B: 1, Y: 0 },
+        ],
       },
     ],
 
@@ -167,14 +201,20 @@ GND ---|7           8|---- 3Y
   return (
     <main
       style={{
-        padding: 30,
+        width: "100%",
+        maxWidth: "100%",
+        boxSizing: "border-box",
+        overflowX: "hidden",
+        padding: "20px 16px",
         background: "#111",
         color: "#fff",
         minHeight: "100vh",
         fontFamily: "monospace",
       }}
     >
-      <h1>74xx Logic IC Family</h1>
+      <h1 style={{ fontSize: "1.4rem", marginBottom: 16 }}>
+        74xx Logic IC Family
+      </h1>
 
       <div
         style={{
@@ -182,6 +222,7 @@ GND ---|7           8|---- 3Y
           gap: 10,
           flexWrap: "wrap",
           marginBottom: 30,
+          width: "100%",
         }}
       >
         {categoryKeys.map((category) => (
@@ -202,31 +243,100 @@ GND ---|7           8|---- 3Y
         ))}
       </div>
 
-      {categories[selected].map((ic) => (
-        <div
-          key={ic.name}
-          style={{
-            border: "1px solid #555",
-            borderRadius: 8,
-            padding: 20,
-            marginBottom: 20,
-          }}
-        >
-          <h2>{ic.name}</h2>
-          <p>{ic.title}</p>
+      {categories[selected].map((ic) => {
+        const truthTable = (
+          ic as { truthTable?: Array<Record<string, number | string>> }
+        ).truthTable;
 
-          <pre
+        return (
+          <div
+            key={ic.name}
             style={{
-              background: "#000",
-              color: "#0f0",
-              padding: 15,
-              minHeight: 80,
+              border: "1px solid #555",
+              borderRadius: 8,
+              padding: 20,
+              marginBottom: 20,
             }}
           >
-            {ic.diagram}
-          </pre>
-        </div>
-      ))}
+            <h2>{ic.name}</h2>
+            <p>{ic.title}</p>
+
+            <pre
+              style={{
+                display: "block",
+                marginBottom: 12,
+                border: "1px solid #555",
+                borderRadius: 8,
+                padding: 12,
+                maxWidth: "100%",
+                overflowX: "auto",
+                overflowY: "hidden",
+                color: "green",
+                whiteSpace: "pre-wrap",
+                wordBreak: "break-word",
+                fontSize: "0.9rem",
+                lineHeight: 1.4,
+              }}
+            >
+              {ic.diagram}
+            </pre>
+
+            {truthTable && (
+              <div style={{ marginTop: 8 }}>
+                <div style={{ fontSize: "0.95rem", marginBottom: 6 }}>
+                  Truth Table
+                </div>
+                <div style={{ overflowX: "auto" }}>
+                  <table
+                    style={{
+                      width: "100%",
+                      borderCollapse: "collapse",
+                      fontSize: "0.9rem",
+                      minWidth: 180,
+                    }}
+                  >
+                    <thead>
+                      <tr>
+                        {Object.keys(truthTable[0] || {}).map((header) => (
+                          <th
+                            key={header}
+                            style={{
+                              border: "1px solid #666",
+                              padding: "8px 6px",
+                              textAlign: "center",
+                              background: "#222",
+                            }}
+                          >
+                            {header}
+                          </th>
+                        ))}
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {truthTable.map((row, index) => (
+                        <tr key={`${ic.name}-${index}`}>
+                          {Object.values(row).map((value, valueIndex) => (
+                            <td
+                              key={`${ic.name}-${index}-${valueIndex}`}
+                              style={{
+                                border: "1px solid #666",
+                                padding: "8px 6px",
+                                textAlign: "center",
+                              }}
+                            >
+                              {value}
+                            </td>
+                          ))}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            )}
+          </div>
+        );
+      })}
     </main>
   );
 }
