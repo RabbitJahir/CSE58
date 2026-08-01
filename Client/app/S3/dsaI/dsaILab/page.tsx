@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Header from "../../../components/Header/Index";
-import Table from "@/app/components/Table";
+import MarkDistributionTable from "@/app/components/MarkDistributionTable";
 
 const links = [
   { href: "/", label: "Home", className: "HeaderButton" },
@@ -17,7 +17,10 @@ export default function dsaILab() {
       <main className="main-box">
         <h1 className="page-header">CSE0613212</h1>
 
-        <Table title="Mark Distribution" rows={markDistribution} />
+        <MarkDistributionTable
+          title="Mark Distribution"
+          rows={markDistribution}
+        />
       </main>
     </div>
   );

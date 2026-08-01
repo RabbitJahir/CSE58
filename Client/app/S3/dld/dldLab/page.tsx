@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Header from "../../../components/Header/Index";
-import Table from "@/app/components/Table";
+import MarkDistributionTable from "@/app/components/MarkDistributionTable";
 import ToggleButton from "../../../components/ToggleButton";
 
 import ICs from "../dldLab/ics/page";
@@ -36,7 +36,7 @@ export default function dldLab() {
       <main className="main-box">
         <h1 className="page-header">CSE0611216</h1>
 
-        <Table title="Mark Distribution" rows={markDistribution} />
+        <MarkDistributionTable title="Mark Distribution" rows={markDistribution} />
         <ToggleButton sections={sections} />
       </main>
     </div>

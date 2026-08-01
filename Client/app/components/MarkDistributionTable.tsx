@@ -8,15 +8,14 @@ type TableProps = {
   rows: Row[];
 };
 
-export default function Table({ title, rows }: TableProps) {
-  const cell =
-    "border border-gray-500 px-4 py-2";
+export default function MarkDistributionTable({ title, rows }: TableProps) {
+  const cell = "border border-solid border-white/20 px-4 py-2";
 
   return (
-    <table className="bg-gray-700 text-white border-collapse">
+    <table className="w-full max-w-md border-collapse border border-white/30 bg-gray-700 text-white">
       <thead>
         <tr>
-          <th colSpan={2} className="p-3 border border-gray-500">
+          <th colSpan={2} className="border border-white/20 bg-gray-800 p-3">
             {title}
           </th>
         </tr>

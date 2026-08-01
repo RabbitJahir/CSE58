@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Header from "../../components/Header/Index";
-import Table from "@/app/components/Table";
+import MarkDistributionTable from "@/app/components/MarkDistributionTable";
 
 import ToggleButton from "../../components/ToggleButton";
 import DsaIMid from "./dsaIMid/page";
@@ -31,7 +31,10 @@ export default function dsaI() {
       <Header links={links} />
       <main className="main-box">
         <h1 className="page-header">CSE0613211</h1>
-        <Table title="Mark Distribution" rows={markDistribution} />
+        <MarkDistributionTable
+          title="Mark Distribution"
+          rows={markDistribution}
+        />
         <Link href="/S3/dsaI/dsaILab" className="SubButton">
           DSA 1 Lab Page
         </Link>

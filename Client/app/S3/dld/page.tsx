@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Header from "../../components/Header/Index";
-import Table from "@/app/components/Table";
+import MarkDistributionTable from "@/app/components/MarkDistributionTable";
 
 import ToggleButton from "../../components/ToggleButton";
 import DldMid from "./dldMid/page";
@@ -15,7 +15,7 @@ const markDistribution = [
   { label: "Attendance/ performance", value: 10 },
   { label: "Test (best 2 out of three/four)", value: 20 },
   { label: "Mid", value: 20 },
-  { label: "Final", value: 50 }
+  { label: "Final", value: 50 },
 ];
 
 export default function dld() {
@@ -45,8 +45,11 @@ export default function dld() {
         >
           Course Outline DLD<sub> Download</sub>
         </Link>
-        
-        <Table title="Mark Distribution" rows={markDistribution} />
+
+        <MarkDistributionTable
+          title="Mark Distribution"
+          rows={markDistribution}
+        />
 
         <Link href="/S3/dld/dldLab" className="SubButton">
           DLD Lab Page

@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Header from "../../components/Header/Index";
-import Table from "@/app/components/Table";
+import MarkDistributionTable from "@/app/components/MarkDistributionTable";
 
 import ToggleButton from "../../components/ToggleButton";
 import EeeMid from "./eeeMid/page";
@@ -32,7 +32,10 @@ export default function eee() {
       <main className="main-box">
         <h1 className="page-header">EEE0714211</h1>
 
-        <Table title="Mark Distribution" rows={markDistribution} />
+        <MarkDistributionTable
+          title="Mark Distribution"
+          rows={markDistribution}
+        />
 
         <Link href="/S3/eee/eeeLab" className="SubButton">
           EEE Lab Page

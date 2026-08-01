@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Header from "../../components/Header/Index";
-import Table from "@/app/components/Table";
+import MarkDistributionTable from "@/app/components/MarkDistributionTable";
 
 import ToggleButton from "../../components/ToggleButton";
 import DbMid from "./dbMid/page";
@@ -32,7 +32,10 @@ export default function db() {
       <main className="main-box">
         <h1 className="page-header">CSE0612215</h1>
 
-        <Table title="Mark Distribution" rows={markDistribution} />
+        <MarkDistributionTable
+          title="Mark Distribution"
+          rows={markDistribution}
+        />
 
         <Link href="/S3/db/dbLab" className="SubButton">
           Database Lab Page

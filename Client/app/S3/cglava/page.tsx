@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Header from "../../components/Header/Index";
-import Table from "@/app/components/Table";
+import MarkDistributionTable from "@/app/components/MarkDistributionTable";
 
 import ToggleButton from "../../components/ToggleButton";
 import MathMid from "./cglavaMid/page";
@@ -32,7 +32,10 @@ export default function cglava() {
       <main className="main-box">
         <h1 className="page-header">MATH0541211</h1>
 
-        <Table title="Mark Distribution" rows={markDistribution} />
+        <MarkDistributionTable
+          title="Mark Distribution"
+          rows={markDistribution}
+        />
 
         <ToggleButton sections={sections} />
       </main>
