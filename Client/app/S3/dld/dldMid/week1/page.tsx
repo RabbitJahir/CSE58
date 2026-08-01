@@ -1,6 +1,14 @@
-import Link from "next/link";
+"use client";
+
 import Header from "../../../../components/Header/Index";
-import DldGraph from "./graph";
+import dynamic from "next/dynamic";
+import { Box } from "@chakra-ui/react";
+import type { Node } from "reactflow";
+
+const ReactFlow = dynamic(
+  () => import("reactflow").then((mod) => mod.default),
+  { ssr: false },
+);
 
 const links = [
   { href: "/", label: "Home", className: "HeaderButton" },
@@ -8,22 +16,24 @@ const links = [
   { href: "/S3/dld", label: "DLD Page", className: "HeaderButton" },
 ];
 
+const nodes: Node[] = [
+  {
+    id: "NumberSystem",
+    data: {
+      label: "Number System",
+    },
+    position: { x: 0, y: 0 },
+  },
+];
 export default function Week1() {
   return (
-    <div className="h-screen flex flex-col">
+    <div className="page-container">
       <Header links={links} />
-      <main className="main-box, flex-1 overflow-hidden">
+      <main className="main-box">
         <h1 className="page-header">dld week 1 </h1>
-        <div
-          className="
-            w-[90%]
-            h-[85%]
-            max-w-6xl
-            max-h-[800px]
-        "
-        >
-          <DldGraph />
-        </div>
+        <Box w="100%" h="100%" border="1px solid black">
+          <ReactFlow nodes={nodes} />
+        </Box>
       </main>
     </div>
   );

@@ -17,13 +17,13 @@ export default function Page() {
         title: "Quad 2-Input AND, multiplication",
         diagram: `
           +--notch(U)---+
-1A ----|1          14|---- VCC
-1B ----|2          13|---- 4B
-1Y ----|3          12|---- 4A
-2A ----|4   7408   11|---- 4Y
-2B ----|5          10|---- 3B
-2Y ----|6           9|---- 3A
-GND ---|7           8|---- 3Y
+1A ---|1          14|--- VCC
+1B ---|2          13|--- 4B
+1Y ---|3          12|--- 4A
+2A ---|4   7408   11|--- 4Y
+2B ---|5          10|--- 3B
+2Y ---|6           9|--- 3A
+GND --|7           8|--- 3Y
           +------------+
 `,
         truthTable: [
