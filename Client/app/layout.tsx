@@ -1,6 +1,7 @@
 import "./globals.css";
 // import ServiceWorkerUpdater from "./components/ServiceWorkerUpdater";
 import type { Viewport } from "next";
+import LayoutChakraProvider from "./layoutChakraProvider";
 
 // Metadata (must stay in Server Component)
 export const metadata = {
@@ -83,7 +84,9 @@ export default function RootLayout({
         {/* <ServiceWorkerUpdater /> */}
 
         {/* Main content */}
-        <main className="flex-grow border-b-2 border-white">{children}</main>
+        <main className="flex-grow border-b-2 border-white">
+          <LayoutChakraProvider>{children}</LayoutChakraProvider>
+        </main>
 
         <footer className="p-4 bg-white/20 backdrop-blur-sm text-center">
           <p>
