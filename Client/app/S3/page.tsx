@@ -26,7 +26,7 @@ export default function S3_Home() {
           <Link className={styles.edc} href="/S3/eee">
             Electronic Devices and Circuits
           </Link>
-          <Link className={styles.cglava} href="/S3/math">
+          <Link className={styles.cglava} href="/S3/cglava">
             CGLAVA
           </Link>
         </div>

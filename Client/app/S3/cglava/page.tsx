@@ -3,8 +3,8 @@ import Header from "../../components/Header/Index";
 import MarkDistributionTable from "@/app/components/MarkDistributionTable";
 
 import ToggleButton from "../../components/ToggleButton";
-import MathMid from "./cglavaMid/page";
-import MathFinal from "./cglavaFinal/page";
+import CGLavaMid from "./cglavaMid/page";
+import CGLavaFinal from "./cglavaFinal/page";
 
 const links = [
   { href: "/", label: "Home", className: "HeaderButton" },
@@ -18,12 +18,12 @@ export default function cglava() {
     {
       id: "mid",
       title: "Mid Syllabus",
-      content: <MathMid />,
+      content: <CGLavaMid />,
     },
     {
       id: "final",
       title: "Final Syllabus",
-      content: <MathFinal />,
+      content: <CGLavaFinal />,
     },
   ];
   return (
