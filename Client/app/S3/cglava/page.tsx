@@ -37,6 +37,15 @@ export default function cglava() {
           rows={markDistribution}
         />
 
+        {/* <Link
+                href="/S3/cglava/CGLAVA-ch1.pdf"
+                className="SubButton"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+              Textbook on Coordinate Geometry 
+        </Link> */}
+
         <ToggleButton sections={sections} />
       </main>
     </div>
