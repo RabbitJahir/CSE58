@@ -57,14 +57,25 @@ export default function OopLab() {
           Java Codes
         </Link>
 
+                <Link
+          href="https://github.com/RabbitJahir/LanguagesP"
+          className="SubButton"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          More Java Codes and other Languages<sub> - RabbitJahir</sub>
+        </Link>
+
         <Link
           href="https://drive.google.com/drive/folders/1Rup6liK_sjp6DnQODJHbkU6Bh0vF2QCP"
           className="SubButton"
           target="_blank"
           rel="noopener noreferrer"
         >
-          More Java Codes<sub> - Kamrul Islam</sub>
+          Way more Java Codes<sub> - LulzSec6824</sub>
         </Link>
+
+        
 
       </main>
     </div>
