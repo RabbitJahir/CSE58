@@ -39,6 +39,10 @@ export default function dsaI() {
           DSA 1 Lab Page
         </Link>
 
+        <Link href="/S3/dsaI/CppCode" className="SubButton">
+          C++ Codes and Algorithm
+        </Link>
+
         <ToggleButton sections={sections} />
       </main>
     </div>
