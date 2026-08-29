@@ -37,7 +37,7 @@ export default function Home() {
           <p>Find Questions of previous batches: ct, mid, final.</p>
 
           <Link
-            href="https://university-companion.netlify.app/"
+            href="https://assessment-codex.netlify.app/"
             target="_blank"
             rel="noopener noreferrer"
             className="SubButton"
