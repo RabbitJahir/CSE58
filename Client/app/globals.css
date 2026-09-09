@@ -40,6 +40,44 @@ body::-webkit-scrollbar {
 }
 /*------------------------------------------------------------------------------------------------*/
 
+.syllabus-box {
+  background: #3a3a3a;
+  color: white;
+  padding: 10px 15px;
+  margin-bottom: 15px;
+  border-radius: 12px;
+  max-width: 800px;
+}
+
+.syllabus-box h2 {
+  margin: 0 0 10px;
+  font-size: 18px;
+}
+
+.chapter {
+  margin-bottom: 5px;
+}
+
+.chapter:last-child {
+  margin-bottom: 0;
+}
+
+.chapter strong {
+  font-size: 15px;
+}
+
+.chapter ul {
+  margin: 6px 0 0 10px;
+  padding: 0;
+}
+
+.chapter li {
+  margin: 5px 0;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+
 /* SubButtons styling */
 .SubButton {
   display: inline-block;
