@@ -42,6 +42,15 @@ export default function eee() {
           rows={markDistribution}
         />
 
+        <Link
+          href="/S3/edc/EDC_Book.pdf"
+          className="SubButton"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          EDC Book
+        </Link>
+
         <Link href="/S3/eee/eeeLab" className="SubButton">
           EEE Lab Page
         </Link>
