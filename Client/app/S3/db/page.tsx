@@ -37,6 +37,24 @@ export default function db() {
           rows={markDistribution}
         />
 
+        <Link
+          href="/S3/db/CO_dbms1.pdf"
+          className="SubButton"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          DBMS Theory Course Outline
+        </Link>
+
+        <Link
+          href="/S3/db/CO_dbms1.pdf"
+          className="SubButton"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          DBMS Lab Course Outline
+        </Link>
+
         <Link href="/S3/db/dbLab" className="SubButton">
           Database Lab Page
         </Link>

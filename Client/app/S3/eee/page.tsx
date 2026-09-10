@@ -11,7 +11,12 @@ const links = [
   { href: "/S3", label: "S3 Page", className: "HeaderButton" },
 ];
 
-const markDistribution = [{ label: "Dey nai", value: 100 }];
+const markDistribution = [
+  { label: "CT Best out of 3", value:20 },
+  { label: "Mid", value:20 },
+  { label: "Attendance/Performance", value:10 },
+  { label: "Final", value:50 }
+];
 
 export default function eee() {
   const sections = [

@@ -31,12 +31,31 @@ export default function dsaI() {
       <Header links={links} />
       <main className="main-box">
         <h1 className="page-header">CSE0613211</h1>
+
+
+
+
         <MarkDistributionTable
           title="Mark Distribution"
           rows={markDistribution}
         />
-        <Link href="/S3/dsaI/dsaILab" className="SubButton">
-          DSA 1 Lab Page
+
+        <Link
+          href="/S3/dsa/CO_dsa1.pdf"
+          className="SubButton"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          DSA Theory Course Outline
+        </Link>
+
+        <Link
+          href="/S3/dsa/CO_dsa2.pdf"
+          className="SubButton"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          DSA Lab Course Outline
         </Link>
 
         <Link href="/S3/dsaI/CppCode" className="SubButton">

@@ -37,19 +37,19 @@ export default function dld() {
       <main className="main-box">
         <h1 className="page-header">CSE0611215</h1>
 
+        <MarkDistributionTable
+          title="Mark Distribution"
+          rows={markDistribution}
+        />
+
         <Link
-          href="/S3/dld/co-dld.pdf"
+          href="/S3/dld/CO_dld.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="SubButton"
         >
           Course Outline DLD<sub> Download</sub>
         </Link>
-
-        <MarkDistributionTable
-          title="Mark Distribution"
-          rows={markDistribution}
-        />
 
         <Link href="/S3/dld/dldLab" className="SubButton">
           DLD Lab Page
