@@ -27,6 +27,7 @@ export default function Page() {
               <li>Multiplication</li>
               <li>Boundary elements,add</li>
               <li>diagonal elements, add</li>
+              <li>the Formula to find the nth number inside a 2D matrix:</li>
             </ul>
           </div>
 
