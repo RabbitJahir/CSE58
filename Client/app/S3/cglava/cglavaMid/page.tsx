@@ -43,6 +43,17 @@ export default function Page() {
               >
                 Chapter 4
         </Link>
+        
+        <Link
+                href="/S3/cglava/CGLAVA-ch5.pdf"
+                className="SubButton"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Chapter 5
+        </Link>
+
+
       </main>
     </div>
   );
