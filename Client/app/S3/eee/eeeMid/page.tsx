@@ -34,6 +34,25 @@ export default function Page() {
         >
           Diode Rectifier 3 types
         </Link>
+
+        <Link
+          href="/S3/edc/EDC_clippers.pdf"
+          className="SubButton"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Clippers
+        </Link>
+
+        <Link
+          href="/S3/edc/EDC_clamper.pdf"
+          className="SubButton"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Clampers
+        </Link>      
+
       </main>
     </div>
   );
