@@ -44,14 +44,14 @@ export default function Page() {
           Clippers
         </Link>
 
-        <Link
+        {/* <Link
           href="/S3/edc/EDC_clamper.pdf"
           className="SubButton"
           target="_blank"
           rel="noopener noreferrer"
         >
           Clampers
-        </Link>      
+        </Link>       */}
 
       </main>
     </div>

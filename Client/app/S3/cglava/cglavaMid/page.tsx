@@ -53,6 +53,15 @@ export default function Page() {
                 Chapter 5 <sub>By Ananda!!!</sub>
         </Link>
 
+        <Link
+                href="/S3/cglava/CGLAVA-ch6.pdf"
+                className="SubButton"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Chapter 6 <sub>By Ananda!!!!</sub>
+        </Link>
+
 
       </main>
     </div>
