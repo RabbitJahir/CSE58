@@ -19,7 +19,43 @@ export default function Page() {
           target="_blank"
           rel="noopener noreferrer"
             >
-          matrix
+          matrix formulas<sub> -Kanji</sub>
+        </Link>
+
+        <Link
+          href="/S3/cglava/cglava_vector_book_questions.pdf"
+          className="SubButton"
+          target="_blank"
+          rel="noopener noreferrer"
+            >
+          Vector Questions
+        </Link>
+
+        <Link
+          href="/S3/cglava/cglava_matrix_book_questions.pdf"
+          className="SubButton"
+          target="_blank"
+          rel="noopener noreferrer"
+            >
+          Matrix Questions<sub> -Kanji</sub>
+        </Link>
+        
+        <Link
+          href="/S3/cglava/cglava_linear-algebra_book_questions.pdf"
+          className="SubButton"
+          target="_blank"
+          rel="noopener noreferrer"
+            >
+          Linear Algebra Ques<sub> -Kanji</sub>
+        </Link>
+
+        <Link
+          href="/S3/cglava/cglava_solid-geometry_book_questions.pdf"
+          className="SubButton"
+          target="_blank"
+          rel="noopener noreferrer"
+            >
+          Solid Geometry Ques<sub> -Kanji</sub>
         </Link>
 
       </main>

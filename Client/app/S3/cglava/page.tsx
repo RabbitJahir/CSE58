@@ -32,10 +32,24 @@ export default function cglava() {
       <main className="main-box">
         <h1 className="page-header">MATH0541211</h1>
 
+
+
         <MarkDistributionTable
           title="Mark Distribution"
           rows={markDistribution}
         />
+
+        <div className="syllabus-box">
+          <h2>Syllabus at a Glance</h2>
+
+          <div className="chapter">
+            <strong>SET 1 : Solid Geometry</strong><br/>
+            <strong>SET 2 : Linear Algerbra + Matrix</strong><br/>
+            <strong>SET 3 : Vector Analysis</strong><br/>
+            
+          </div>
+
+        </div>
 
         {/* <Link
                 href="/S3/cglava/CGLAVA-ch1.pdf"

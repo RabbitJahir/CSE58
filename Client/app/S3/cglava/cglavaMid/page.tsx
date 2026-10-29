@@ -5,17 +5,6 @@ export default function Page() {
     <div>
       <main className="mid-container">
         
-        <div className="syllabus-box">
-          <h2>Syllabus at a Glance</h2>
-
-          <div className="chapter">
-            <strong>Allai jane.</strong>
-            <ul>
-              <li></li>
-            </ul>
-          </div>
-
-        </div>
 
         <Link
                 href="/S3/cglava/CGLAVA-ch1.pdf"
