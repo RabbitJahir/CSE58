@@ -5,7 +5,6 @@ export default function Page() {
     <div>
       <main className="mid-container">
         
-<<<<<<< Updated upstream
         <div className="syllabus-box">
           <h2>Syllabus at a Glance</h2>
 
@@ -27,8 +26,6 @@ export default function Page() {
           </div>
         </div>
         
-=======
->>>>>>> Stashed changes
         <Link
           href="/S3/edc/EDC_diode-rectifier-3types.pdf"
           className="SubButton"
