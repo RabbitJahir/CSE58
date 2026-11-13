@@ -84,6 +84,7 @@
    * Preorder
    * Postorder
    * Inorder
+   * Converting from given orders to tree
 5. **Constructing BST**
 6. **Building Heap (max, min)** *(page: 6)*
 7. **Huffman Coding** *(page: 7–10)*
