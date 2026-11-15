@@ -75,16 +75,19 @@
 1. **Definitions**
 2. **Node, Internal Node, Leaf (External Node), Root, Path, Height, Depth, Level**
 3. **Types**
-   * Binary
-   * Full / Proper / Strict
-   * Complete
-   * Perfect
-   * Degenerate / Pathological
+   * - Binary
+   * - Full / Proper / Strict
+   * - Complete
+   * - Perfect
+   * - Degenerate / Pathological
 4. **Traversing** *(page: 5 graphics)*
-   * Preorder
-   * Postorder
-   * Inorder
-   * Converting from given orders to tree
+   * - Preorder
+   * - Postorder
+   * - Inorder
+   * - **Converting from given orders to tree**
+      * - From Preorder and Postorder to Binary tree
+      * - From Preorder and Inorder to Binary tree
+      * - From Postorder and Inorder to Binary tree
 5. **Constructing BST**
 6. **Building Heap (max, min)** *(page: 6)*
 7. **Huffman Coding** *(page: 7–10)*
