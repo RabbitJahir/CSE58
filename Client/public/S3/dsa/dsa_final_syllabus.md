@@ -95,3 +95,16 @@
 ---
 
 ## Hashing — 
+1. **Hashing/ Message Digest Function**
+2. **Division Method**: 
+   * values given, use mod with total number of rows to find which value is in which index 
+   * h (key_value) = key_value mod m 
+   * write formula and draw the stack
+3. **Mid-square Method**
+   * square the value, 
+   * if square_value is less than 4, convert it to 4 using 0 at front, then take middle 2 digits,  
+   * 16 = 0016, 01 |  3 = 0003, 00 | 1890 = 89 | mod middle 2 digits with the total number of rows
+   * Have the value, need to find index
+4. **Folding Method**
+   * group the big number into 2 digits, add the 2 digits, then mod with total number of rows
+   * Have the value, need to find index
