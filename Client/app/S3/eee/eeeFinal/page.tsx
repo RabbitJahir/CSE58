@@ -21,6 +21,15 @@ export default function Page() {
         >
           BJT math <sub>By Prapty and Ananda!</sub>
         </Link>
+
+        <Link
+          href="/S3/edc/edc_mosfet_math.pdf"
+          className="SubButton"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          MOSFET math
+        </Link>
       </main>
     </div>
   );
