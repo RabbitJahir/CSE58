@@ -28,6 +28,7 @@ export default function Page() {
                       <ul>
                         <li>Diamond</li>
                         <li>Relationship Set</li>
+                        <li>Descriptive Attribute</li>
                         <li>Degree of relationships: unary, binary, ternary, n-ary</li>
                       </ul>
                       <strong>4. Mapping Cardinalities, Cardinality Ratio</strong><br/>
@@ -43,8 +44,8 @@ export default function Page() {
                     <ul> 
                         <strong>1. ER diagram to View Schem using SP or G or Sp / G to View Schema</strong><br/>
                         <ul>
-                          <li>Specialization: Top to Bottom from ISA</li>
-                          <li>Generalization: Bottom to Top from ISA</li>
+                          <li>Specialization: Top to Bottom from ISA, child entity/ subclass</li>
+                          <li>Generalization: Bottom to Top from ISA, parent entity/ superclass</li>
                         </ul>
                         <strong>2. Difference between Strong and weak Entity models</strong><br/>
                         <strong>3. Strong and Weak Entity </strong>
